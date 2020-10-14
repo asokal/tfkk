@@ -2,7 +2,8 @@ body
 {
 	font-size: 16px;
 	line-height: 1;
-	color: $main-color;
+	color: $black;
+	@include roboto;
 }
 
 ul
@@ -22,33 +23,39 @@ address
 	font-style: normal;
 }
 
+h1, h2, h3
+{
+	margin-top: 0;
+}
+
+h1, h2
+{
+	@include roboto(bold);
+	line-height: 1.45;
+}
+
 h1
 {
-	font-size: 42px;
-	line-height: 50px;
+	font-size: 30px;
 
 }
 
 h2
 {
-	font-size: 22px;
-	line-height: 28px;
+	font-size: 26px;
 }
 
 h3
 {
-	font-size: 16px;
-	margin-bottom: 10px;
-}
-
-h4
-{
-	font-size: 15px;
-	line-height: 24px;
+	@include roboto(500);
+	font-size: 20px;
+	line-height: 23px;
 }
 
 p
 {
+	line-height: 1.5;
+
 	&:last-child
 	{
 		margin-bottom: 0;
@@ -63,6 +70,11 @@ a:focus
 {
 	outline: 0;
 	text-decoration: none;
+}
+
+a
+{
+	color: $red;
 }
 
 @media (max-width: 767px)
