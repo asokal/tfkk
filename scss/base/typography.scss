@@ -1,0 +1,71 @@
+body
+{
+	font-size: 16px;
+	line-height: 1;
+	color: $main-color;
+}
+
+ul
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	li
+	{
+		margin: 0;
+		padding: 0;
+	}
+}
+
+address
+{
+	font-style: normal;
+}
+
+h1
+{
+	font-size: 42px;
+	line-height: 50px;
+
+}
+
+h2
+{
+	font-size: 22px;
+	line-height: 28px;
+}
+
+h3
+{
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+h4
+{
+	font-size: 15px;
+	line-height: 24px;
+}
+
+p
+{
+	&:last-child
+	{
+		margin-bottom: 0;
+	}
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus
+{
+	outline: 0;
+	text-decoration: none;
+}
+
+@media (max-width: 767px)
+{
+	
+}
