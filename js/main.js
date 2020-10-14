@@ -5,14 +5,14 @@
  */
 $(document).ready(function()
 {
-	o2.init();
+	global.init();
 });
 
 /**
  * основной объект
  * @type {object}
  */
-var o2 =
+var global =
 {
 	/**
 	 * вызов функций, которые должны запускаться при загрузке страницы
@@ -35,11 +35,11 @@ var o2 =
 
 	stickHeaderCall: function()
 	{
-		o2.stickHeader(window);
+		global.stickHeader(window);
 
 		$(window).scroll(function()
 		{
-			o2.stickHeader(this);
+			global.stickHeader(this);
 		});
 	},
 }
