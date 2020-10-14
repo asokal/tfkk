@@ -34,7 +34,7 @@ gulp.task('sass', () => {
 
 // файлы для сборки
 var jsFiles = [
-	'js/vendors/jquery-3.4.1.min.js',
+	'js/vendors/*.js',
 	'js/main.js'
 ];
 
