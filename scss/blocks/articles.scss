@@ -1,0 +1,41 @@
+.articles
+{
+	
+}
+
+.articles__title
+{
+	margin-bottom: 25px;
+}
+
+.articles__list
+{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px 25px;
+}
+
+@media (max-width: 1023px)
+{
+	.articles__title
+	{
+		margin-bottom: 15px;
+	}
+
+	.articles__list
+	{
+		margin: 0 -15px 20px;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.articles__list
+	{
+		margin: 0 -10px 20px;
+	}
+	.articles__title
+	{
+		line-height: 1.2;
+	}
+}

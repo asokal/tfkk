@@ -1,0 +1,151 @@
+<div class="header-catalog _headerCatalog">
+	<div class="container">
+		<div class="header-catalog__dropdown-wrap">
+			<button class="g-dropdown-btn">
+				<div class="g-dropdown-btn__icon">
+					<img src="./img/icons/burger.svg" alt="">
+				</div>
+				Каталог товаров
+			</button>
+
+			<div class="header-catalog-dropdown _catalogDropdown">
+				<ul class="header-catalog-dropdown__list">
+					{% for i in 0..5 %}	
+						<li class="header-catalog-dropdown__list-item _subListTrigger">
+							<a href="#" class="header-catalog-dropdown__list-item-wrap">
+								<div class="header-catalog-dropdown__list-item-img">
+									<img src="./img/fasad.jpg" alt="">
+								</div>
+
+								<div class="header-catalog-dropdown__list-item-name">
+									Фасадные материалы
+								</div>
+
+								<div class="header-catalog-dropdown__list-item-icon">
+									{% include "../../img/icons/arrow-right.svg" %}
+								</div>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+
+				{% for i in 0..5 %}
+					<ul class="header-catalog-dropdown__sublist _subList">
+						{% for i in 0..3 %}
+							<li class="header-catalog-dropdown__sublist-item">
+								<a href="#" class="header-catalog-dropdown__sublist-item-wrap">
+									<div class="header-catalog-dropdown__sublist-item-img">
+										<img src="./img/fasad.jpg" alt="">
+									</div>
+	
+									<div class="header-catalog-dropdown__sublist-item-name">
+										Фасадные материалы
+									</div>
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div class="header-catalog-search">
+			<label class="g-search _search">
+				<input type="text" class="g-search__input _searchInput" placeholder="Найти товар..." oninput="global.header.search(this);">
+
+				<button class="g-search__btn g-search__btn">
+					{% include "../../img/icons/search.svg" %}
+				</button>
+
+				<button class="g-search__btn g-search__btn--clear" onclick="global.header.searchClear()">
+					{% include "../../img/icons/close.svg" %}
+				</button>
+			</label>
+
+			<div class="header-catalog-search__dropdown _searchDropdown">
+				<ul class="header-catalog-search__list">
+					{% for i in 0..3 %}
+						<li class="header-catalog-search__list-item">
+							<a href="#" class="header-catalog-search__list-item-wrap">
+								<div class="header-catalog-search__list-item-img">
+									<img src="./img/fasad.jpg" alt="">
+								</div>
+
+								<div class="header-catalog-search__list-item-name">
+									Фиброцементный сайдинг Кедрал Клик (Cedral click)
+								</div>
+
+								<div class="header-catalog-search__list-item-price">
+									1590 ₽
+								</div>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+
+				<div class="header-catalog-search__sublist-title">Категории</div>
+
+				<ul class="header-catalog-search__sublist">
+					<li class="header-catalog-search__sublist-item">
+						<a href="#">
+							Фасадные материалы
+						</a>
+					</li>
+
+					<li class="header-catalog-search__sublist-item">
+						<a href="#">
+							Виниловый сайдинг
+						</a>
+					</li>
+
+					<li class="header-catalog-search__sublist-item">
+						<a href="#">
+							Фасадные панели
+						</a>
+					</li>
+
+					<li class="header-catalog-search__sublist-item">
+						<a href="#">
+							Металлический сайдинг
+						</a>
+					</li>
+
+					<li class="header-catalog-search__sublist-item">
+						<a href="#">
+							Фиброцементный сайдинг
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<nav class="header-catalog__links">
+			<a href="#" class="header-catalog__links-item">
+				Фасады
+			</a>
+
+			<a href="#" class="header-catalog__links-item">
+				Кровля
+			</a>
+
+			<a href="#" class="header-catalog__links-item">
+				Забор
+			</a>
+
+			<a href="#" class="header-catalog__links-item">
+				Водосток
+			</a>
+
+			<a href="#" class="header-catalog__links-item">
+				Утеплители
+			</a>
+
+			<a href="#" class="header-catalog__links-item">
+				<span class="header-catalog__links-item-icon">
+					{% include "../../img/icons/driller.svg" %}
+				</span>
+				Монтаж
+			</a>
+		</nav>
+	</div>
+</div>

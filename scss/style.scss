@@ -14,6 +14,12 @@
 
 /* blocks */
 @import 'blocks/header';
+@import 'blocks/header-nav';
+@import 'blocks/header-catalog';
+@import 'blocks/breadcrumbs';
+@import 'blocks/articles';
+@import 'blocks/article';
+@import 'blocks/article-preview';
 @import 'blocks/footer';
 
 @import 'pages/index';
@@ -49,6 +55,11 @@ body
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+
+	&.hidden
+	{
+		overflow: hidden;
+	}
 }
 
 // for sticky footer
