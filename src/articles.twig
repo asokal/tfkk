@@ -1,0 +1,18 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+
+	<section class="articles">
+		<div class="container">
+			<h1 class="articles__title">Статьи</h1>
+
+			<div class="articles__list">
+				{% for i in 0..5 %}
+					{% include "./blocks/article-preview.twig" %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

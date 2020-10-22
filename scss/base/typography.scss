@@ -6,7 +6,7 @@ body
 	@include roboto;
 }
 
-ul
+ul, ol
 {
 	padding: 0;
 	margin: 0;
@@ -52,6 +52,12 @@ h3
 	line-height: 23px;
 }
 
+h4
+{
+	font-size: 19px;
+	line-height: 22px;
+}
+
 p
 {
 	line-height: 1.5;
@@ -72,12 +78,71 @@ a:focus
 	text-decoration: none;
 }
 
-a
+.g-link, a.g-link
 {
+	font-size: 16px;
 	color: $red;
+	transition: .135s;
+
+	&:hover
+	{
+		color: $red-hover;
+
+		.g-link__icon
+		{
+			svg path
+			{
+				fill: $red-hover;
+			}
+		}
+	}
+
+	&:focus
+	{
+		color: $red-click;
+
+		.g-link__icon
+		{
+			svg path
+			{
+				color: $red-click;
+			}
+		}
+	}
+
+	&--underlined
+	{
+		text-decoration: underline;
+	}
 }
+
+.g-link__icon
+{
+	margin-left: 5px;
+
+	svg path
+	{
+		transition: fill .135s;
+	}
+}
+
+
 
 @media (max-width: 767px)
 {
-	
+	h1
+	{
+		font-size: 22px;
+	}
+
+	.g-link, a.g-link
+	{
+		font-size: 13px;
+	}
+
+	.g-link__icon
+	{
+		position: relative;
+		top: 1px;
+	}
 }
