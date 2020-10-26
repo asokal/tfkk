@@ -1,0 +1,164 @@
+.payment
+{
+	margin-bottom: 60px;
+}
+
+.payment__title
+{
+	margin-bottom: 25px;
+	line-height: 1.45;
+}
+
+.payment__cards
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.payment__card
+{
+	flex-basis: calc(50% - 15px);
+	max-width: calc(50% - 15px);;
+	background-color: rgba($spindle, .2);
+	border-radius: 4px;
+	padding: 45px 45px 35px;
+	background-image: url('../../img/entity.svg');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+
+	&:last-child
+	{
+		background-image: url('../../img/individual.svg');
+	}
+}
+
+.payment__card-title
+{
+	@include roboto(500);
+	font-size: 22px;
+	line-height: 26px;
+	margin-bottom: 35px;
+}
+
+.payment__card-list
+{
+
+}
+
+.payment__card-list-item
+{
+	display: flex;
+	font-size: 16px;
+	line-height: 1.75;
+
+	&:not(:last-child)
+	{
+		margin-bottom: 15px;
+	}
+}
+
+.payment__card-list-item-icon
+{
+	width: 21px;
+	height: 21px;
+	margin-right: 15px;
+	font-size: 0;
+	position: relative;
+	bottom: -2px;
+
+	img
+	{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.payment__card-cards
+{
+	width: 154px;
+	height: 25px;
+
+	img
+	{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media (max-width: 1023px)
+{
+	.payment
+	{
+		margin-bottom: 40px;
+	}
+
+	.payment__title
+	{
+		margin-bottom: 15px;
+		line-height: 1.3;
+	}
+
+	.payment__card
+	{
+		padding: 35px 35px 45px;
+		background-size: 181px 181px;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.payment
+	{
+		margin-bottom: 30px;
+	}
+
+	.payment__title
+	{
+		margin-bottom: 15px;
+		line-height: 1.2;
+	}
+
+	.payment__cards
+	{
+		flex-wrap: wrap;
+	}
+
+	.payment__card
+	{
+		flex-basis: 100%;
+		max-width: 100%;
+		padding: 25px;
+		margin-bottom: 10px;
+		background-size: 125px 125px;
+	}
+
+	.payment__card-title
+	{
+		font-size: 18px;
+		line-height: 21px;
+		margin-bottom: 20px;
+	}
+
+	.payment__card-list-item
+	{
+		font-size: 13px;
+	}
+
+	.payment__card-list-item:not(:last-child)
+	{
+		margin-bottom: 10px;
+	}
+
+	.payment__card-list-item-icon
+	{
+		width: 18px;
+		height: 18px;
+		margin-right: 15px;
+	}
+
+	.payment__card-cards
+	{
+		width: 123px;
+		height: 20px;
+	}
+}

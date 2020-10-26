@@ -1,0 +1,77 @@
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+
+	<section class="installment">
+		<div class="container">
+			<h1 class="installment__title">
+				Рассрочка
+			</h1>
+	
+			<div class="installment__descr">
+				<div class="installment__descr-text">
+					<p>
+						Комплексный заказ материалов, монтажа для фасада или кровли. Оформление рассрочки у нас в офисе. Никуда ехать не нужно. Необходимо при себе иметь паспорт, СНИЛС, а также мобильный телефон.
+					</p>
+		
+					<p>
+						При оформлении рассрочки другие акции и предложения не действуют. Рассрочка предоставляется банком партнёром АО "ОТП Банк" 
+					</p>
+				</div>
+
+				<div class="installment__descr-card">
+					<div class="installment__descr-card-title">
+						Банк-партнер
+					</div>
+
+					<div class="installment__descr-card-img">
+						<img src="./img/services/installment-bank.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="installment__terms">
+				<div class="installment__term">
+					<div class="installment__term-icon">
+						<img src="./img/icons/discount.svg" alt="">
+					</div>
+
+					<div class="installment__term-text">
+						Переплата по <br>рассрочке — 0%
+					</div>
+				</div>
+
+				<div class="installment__term">
+					<div class="installment__term-icon">
+						<img src="./img/icons/money.svg" alt="">
+					</div>
+
+					<div class="installment__term-text">
+						Максимальная сумма <br>— 300.000 р.
+					</div>
+				</div>
+
+				<div class="installment__term">
+					<div class="installment__term-icon">
+						<img src="./img/icons/calendar.svg" alt="">
+					</div>
+
+					<div class="installment__term-text">
+						Период рассрочки <br> — до 6 месяцев
+					</div>
+				</div>
+
+				<div class="installment__term">
+					<div class="installment__term-icon">
+						<img src="./img/icons/money-coins.svg" alt="">
+					</div>
+
+					<div class="installment__term-text">
+						Предоплата составляет 50% <br> от общей стоимости заказа
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

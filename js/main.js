@@ -18,16 +18,14 @@ var global =
 	*/
 	init()
 	{
-		this.header.stickHeaderCall();
+		this.header.stickCall();
 		this.header.dropdownShowSubList();
 	},
 
-	screenWidth: document.documentElement.clientWidth,
-
 	header: 
 	{
-
-		stickHeader: function(instance)
+		// прилипание меню
+		stick(instance)
 		{
 			let $catalog      = document.querySelector('._headerCatalog'),
 				$body         = document.querySelector('body'),
@@ -49,21 +47,30 @@ var global =
 			}
 		},
 		
-		stickHeaderCall: function()
+		// вызов прилипания при загрузке страницы и при скролле, если устройство не мобильное
+		stickCall()
 		{
-			this.stickHeader(window);
+			if(document.documentElement.clientWidth < 1199)
+				return
+
+			this.stick(window);
 
 			window.addEventListener('scroll', () => {
-				this.stickHeader(window);
+				this.stick(window);
 			});
 		},
 		
-		toggleNav(instance, navItem)
+		// переключение класса активности у передаваемых элементов
+		toggle(instance, elem)
 		{
-			instance.classList.toggle('active');
-			document.querySelector(navItem).classList.toggle('active');
+			if(instance)
+				instance.classList.toggle('active');
+
+			if(elem)
+				document.querySelector(elem).classList.toggle('active');
 		},
 		
+		// появляние подменю в меню каталога
 		dropdownShowSubList()
 		{
 			const $triggerList = document.querySelectorAll('._subListTrigger'),
@@ -81,9 +88,10 @@ var global =
 			}
 		},
 
+		// активность поля для поиска и появление дропдауна с результатами
 		search(instance)
 		{
-			if(instance.value)
+			if(instance.value && instance === document.activeElement)
 			{
 				document.querySelector('._searchDropdown').classList.add('active');
 				document.querySelector('._search').classList.add('g-search--has-value');
@@ -91,15 +99,37 @@ var global =
 			else
 			{
 				document.querySelector('._searchDropdown').classList.remove('active');
-				document.querySelector('._search').classList.remove('g-search--has-value');
+				setTimeout(() => document.querySelector('._search').classList.remove('g-search--has-value'), 100);
 			}
 		},
 
+		// очистить поле поиска
 		searchClear()
 		{
 			document.querySelector('._searchInput').value = '';
-			this.search('._searchInput');
+			// this.search('._searchInput');
 		}
 	},
 
+	// получить соседние элементы
+	getSiblings(elem)
+	{
+		let siblings = []; 
+		// if no parent, return no sibling
+		if(!e.parentNode) {
+			return siblings;
+		}
+		// first child of the parent node
+		let sibling  = e.parentNode.firstChild;
+		
+		// collecting siblings
+		while (sibling) {
+			if (sibling.nodeType === 1 && sibling !== e) {
+				siblings.push(sibling);
+			}
+			sibling = sibling.nextSibling;
+		}
+
+		return siblings;
+	}	
 }
