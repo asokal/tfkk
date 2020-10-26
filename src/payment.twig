@@ -1,0 +1,84 @@
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+
+	<section class="payment">
+		<div class="container">
+			<h1 class="payment__title">Оплата</h1>
+		
+
+			<div class="payment__cards">
+				<div class="payment__card">
+					<div class="payment__card-title">
+						Юридические лица
+					</div>
+
+					<ul class="payment__card-list">
+						<li class="payment__card-list-item">
+							<span class="payment__card-list-item-icon">
+								<img src="./img/icons/checkbox.svg" alt="">
+							</span>
+
+							Безналичная оплата по счету
+						</li>
+
+						<li class="payment__card-list-item">
+							<span class="payment__card-list-item-icon">
+								<img src="./img/icons/checkbox.svg" alt="">
+							</span>
+
+							Счета выставляются с НДС
+						</li>
+					</ul>
+				</div>
+
+				<div class="payment__card">
+					<div class="payment__card-title">
+						Физические лица
+					</div>
+
+					<ul class="payment__card-list">
+						<li class="payment__card-list-item">
+							<span class="payment__card-list-item-icon">
+								<img src="./img/icons/checkbox.svg" alt="">
+							</span>
+
+							Оплата наличными
+						</li>
+
+						<li class="payment__card-list-item">
+							<span class="payment__card-list-item-icon">
+								<img src="./img/icons/checkbox.svg" alt="">
+							</span>
+
+							<div class="payment__card-list-item-text">
+								Оплата банковской картой
+								
+								<div class="payment__card-cards">
+									<img src="./img/icons/cards-logos.png" alt="">
+								</div>
+							</div>
+						</li>
+
+						<li class="payment__card-list-item">
+							<span class="payment__card-list-item-icon">
+								<img src="./img/icons/checkbox.svg" alt="">
+							</span>
+
+							Безналичная оплата по счету
+						</li>
+
+						<li class="payment__card-list-item">
+							<span class="payment__card-list-item-icon">
+								<img src="./img/icons/checkbox.svg" alt="">
+							</span>
+
+							Рассрочка и кредит в офисе
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

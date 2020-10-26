@@ -51,7 +51,7 @@
 
 		<div class="header-catalog-search">
 			<label class="g-search _search">
-				<input type="text" class="g-search__input _searchInput" placeholder="Найти товар..." oninput="global.header.search(this);">
+				<input type="text" class="g-search__input _searchInput" placeholder="Найти товар..." oninput="global.header.search(this);" onblur="global.header.search(this);">
 
 				<button class="g-search__btn g-search__btn">
 					{% include "../../img/icons/search.svg" %}
@@ -64,7 +64,7 @@
 
 			<div class="header-catalog-search__dropdown _searchDropdown">
 				<ul class="header-catalog-search__list">
-					{% for i in 0..3 %}
+					{% for i in 0..2 %}
 						<li class="header-catalog-search__list-item">
 							<a href="#" class="header-catalog-search__list-item-wrap">
 								<div class="header-catalog-search__list-item-img">

@@ -1,0 +1,232 @@
+{# index.twig #}
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+
+	<article class="measure">
+		<div class="container">
+			<h1 class="measure__title">
+				Замер
+			</h1>
+	
+			<div class="measure__descr">
+				Стоимость замера возвращается при заключении договора на монтаж. Стоимость дефектовки не возвращается при заключении договора на монтаж.
+			</div>
+			
+			<ul class="measure__list">
+				<li class="measure__list-item">
+					<span class="measure__list-item-name">
+						Стоимость замера в радиусе 50 км от Тюмени
+					</span>
+
+					<span class="measure__list-item-value">
+						1000 руб.
+					</span>
+				</li>
+
+				<li class="measure__list-item">
+					<span class="measure__list-item-name">
+						Стоимость замера в 50 км от Тюмени
+					</span>
+
+					<span class="measure__list-item-value">
+						1000 руб. + 10 р./км
+					</span>
+				</li>
+
+				<li class="measure__list-item">
+					<span class="measure__list-item-name">
+						Дефектовка кровли в черте города
+					</span>
+
+					<span class="measure__list-item-value">
+						от 2000 руб.
+					</span>
+				</li>
+
+				<li class="measure__list-item">
+					<span class="measure__list-item-name">
+						Дефектовка кровли за городом
+					</span>
+
+					<span class="measure__list-item-value">
+						от 2000 руб. + 10 р./км
+					</span>
+				</li>
+			</ul>
+
+			<section class="measure-tools">
+				<h2 class="measure-tools__title">На замере мы используем следующие инструменты</h2>
+
+				<article class="measure-tool-main">
+					<picture class="measure-tool-main__img">
+						<source type="image/webp"
+								data-srcset="./img/services/measure1.webp 1x,
+								./img/services/measure1@2x.webp 2x">
+
+						<img data-srcset="./img/services/measure1.jpg 1x,
+									./img/services/measure1@2x.jpg 2x"
+								
+							data-src="./img/services/measure1.jpg" alt="" class="lazyload">
+					</picture>
+
+					<div class="measure-tool-main__text">
+						<h3 class="measure-tool-main__title">
+							Лазерная рулетка с визором и экраном. Дальность замера до 120 метров.
+						</h3>
+	
+						<div class="measure-tool-main__descr">
+							Этой рулеткой выполняем замеры фасадов( высота стены, высота до конька, оконный и дверной проёмы и т.д.) Так же применяем для замера кровли, там где нет возможности залезть на саму крышу. Заборы тоже измеряем данной рулеткой, если нет каких-то помех (деревья, кусты , постройки и т.д).
+						</div>
+					</div>
+				</article>
+
+				<div class="measure-tools__list">
+					<article class="measure-tool measure-tool">
+						<picture class="measure-tool__img">
+							<source type="image/webp"
+									data-srcset="./img/services/measure2.webp 1x,
+									./img/services/measure2@2x.webp 2x">
+	
+							<img data-srcset="./img/services/measure2.jpg 1x,
+										./img/services/measure2@2x.jpg 2x"
+									
+								data-src="./img/services/measure2.jpg" alt="" class="lazyload">
+						</picture>
+	
+						<h3 class="measure-tool__title">
+							Запасная лазерная рулетка. Дальность замера до 50 метров.
+						</h3>
+	
+						<div class="measure-tool__descr">
+							На случай разряда батарей или поломки основной во время замера.
+						</div>
+					</article>
+	
+					<article class="measure-tool measure-tool">
+						<picture class="measure-tool__img">
+							<source type="image/webp"
+									data-srcset="./img/services/measure3.webp 1x,
+									./img/services/measure3@2x.webp 2x">
+	
+							<img data-srcset="./img/services/measure3.jpg 1x,
+										./img/services/measure3@2x.jpg 2x"
+									
+								data-src="./img/services/measure3.jpg" alt="" class="lazyload">
+						</picture>
+	
+						<h3 class="measure-tool__title">
+							Рулетка мягкая 50 метров
+						</h3>
+	
+						<div class="measure-tool__descr">
+							Для замера заборов.
+						</div>
+					</article>
+	
+					<article class="measure-tool measure-tool">
+						<picture class="measure-tool__img">
+							<source type="image/webp"
+									data-srcset="./img/services/measure8.webp 1x,
+									./img/services/measure8@2x.webp 2x">
+					
+							<img data-srcset="./img/services/measure8.jpg 1x,
+										./img/services/measure8@2x.jpg 2x"
+									
+								data-src="./img/services/measure8.jpg" alt="" class="lazyload">
+						</picture>
+
+						<h3 class="measure-tool__title">
+							Рулетка жесткая 8 метров
+						</h3>
+						
+						<div class="measure-tool__descr">
+							Для замера кровли и фасада.
+						</div>
+					</article>
+					
+					<article class="measure-tool measure-tool">
+						<picture class="measure-tool__img">
+							<source type="image/webp"
+									data-srcset="./img/services/measure4.webp 1x,
+									./img/services/measure4@2x.webp 2x">
+	
+							<img data-srcset="./img/services/measure4.jpg 1x,
+										./img/services/measure4@2x.jpg 2x"
+									
+								data-src="./img/services/measure4.jpg" alt="" class="lazyload">
+						</picture>
+						
+						<h3 class="measure-tool__title">
+							Угломер
+						</h3>
+						
+						<div class="measure-tool__descr">
+							Для замера отливов, углов наклона кровли и т.д
+						</div>
+					</article>
+					
+					<article class="measure-tool measure-tool">
+						<picture class="measure-tool__img">
+							<source type="image/webp"
+									data-srcset="./img/services/measure5.webp 1x,
+									./img/services/measure5@2x.webp 2x">
+	
+							<img data-srcset="./img/services/measure5.jpg 1x,
+										./img/services/measure5@2x.jpg 2x"
+									
+								data-src="./img/services/measure5.jpg" alt="" class="lazyload">
+						</picture>
+						
+						<h3 class="measure-tool__title">
+							Уровень пузырьковый
+						</h3>
+					</article>
+					
+					<article class="measure-tool measure-tool">
+						<picture class="measure-tool__img">
+							<source type="image/webp"
+									data-srcset="./img/services/measure6.webp 1x,
+									./img/services/measure6@2x.webp 2x">
+	
+							<img data-srcset="./img/services/measure6.jpg 1x,
+										./img/services/measure6@2x.jpg 2x"
+									
+								data-src="./img/services/measure6.jpg" alt="" class="lazyload">
+						</picture>
+						
+						<h3 class="measure-tool__title">
+							Мини камера на выдвижной селфи-палке
+						</h3>
+						
+						<div class="measure-tool__descr">
+							Снимет самые недоступные <br> места во время замера.
+						</div>
+					</article>
+					
+					<article class="measure-tool measure-tool">
+						<picture class="measure-tool__img">
+							<source type="image/webp"
+									data-srcset="./img/services/measure7.webp 1x,
+									./img/services/measure7@2x.webp 2x">
+	
+							<img data-srcset="./img/services/measure7.jpg 1x,
+										./img/services/measure7@2x.jpg 2x"
+									
+								data-src="./img/services/measure7.jpg" alt="" class="lazyload">
+						</picture>
+						
+						<h3 class="measure-tool__title">
+							Фото-видеокамера с 50-ти кратным увеличением
+						</h3>
+						
+						<div class="measure-tool__descr">
+							Для обследования кровель <br>и фасадов высоких домов.
+						</div>
+					</article>
+				</div>
+			</section>
+		</div>
+	</article>
+	{% endblock %}

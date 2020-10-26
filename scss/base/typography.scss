@@ -110,6 +110,26 @@ a:focus
 		}
 	}
 
+	&:visited
+	{
+		color: #6736d0;
+	}
+
+	&--blue
+	{
+		color: $blue;
+
+		&:hover
+		{
+			color: $blue-hover;
+		}
+
+		&:focus
+		{
+			color: $blue-click;
+		}
+	}
+
 	&--underlined
 	{
 		text-decoration: underline;
@@ -133,6 +153,21 @@ a:focus
 	h1
 	{
 		font-size: 22px;
+	}
+
+	h2
+	{
+		font-size: 20px;
+	}
+
+	h3
+	{
+		font-size: 16px;
+	}
+
+	h4
+	{
+		font-size: 15px;
 	}
 
 	.g-link, a.g-link

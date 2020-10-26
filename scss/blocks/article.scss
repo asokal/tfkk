@@ -61,7 +61,12 @@
 
 		li
 		{
-			padding-left: 30px;
+			padding-left: 35px;
+
+			&::before
+			{
+				content: counters(item, ".") ""; counter-increment: item;
+			}
 		}
 
 	}
@@ -72,7 +77,7 @@
 		margin-bottom: 15px;
 		font-size: 18px;
 		line-height: 1.85;
-		padding-left: 22px;
+		padding-left: 26px;
 		position: relative;
 
 		&::before
@@ -267,6 +272,12 @@ picture.article__promo-img
 	text-align: center;
 	@include roboto(500);
 	font-size: 15px;
+	transition: .3s;
+
+	&:hover
+	{
+		background-color: $red-hover;
+	}
 }
 
 .article__promo-text
@@ -373,6 +384,17 @@ picture.article__promo-img
 	.article__promo
 	{
 		margin: 25px 0;
+	}
+
+	picture.article__promo-img
+	{
+		margin: 0;
+		margin-right: 50px;
+		
+		img, source
+		{
+			margin: 0;
+		}
 	}
 
 	.article__share-links-item

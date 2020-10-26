@@ -1,46 +1,166 @@
 {% block header %}
-	<header class="header _header">
-		{% include "./header-nav.twig" %}
-
-		<div class="header__main">
-			<div class="container">
-				<div class="header__mobile-nav">
-					<a onclick="o2.toggleNav(this)" class="header__burger" href="javascript:void(0);">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
-				</div>
-
-				<a href="#" class="header__logo">
-					<picture>
-                        <source media="(max-width: 1199px)" srcset="./img/logo-mob.png">
-                        <img src="./img/logo.png">
-                    </picture>
+<header class="header _header">
+	{% include "./header-nav.twig" %}
+	
+	<div class="header__main">
+		<div class="container">
+			<div class="header__mobile-dropdown-wrap">
+				<a onclick="global.header.toggle(this, '._mobileDropdown')" class="header__burger" href="javascript:void(0);">
+					<span></span>
+					<span></span>
+					<span></span>
 				</a>
+				
+				<div class="header__mobile-dropdown _mobileDropdown">
+					<div class="header__callback header__callback--mobile">
+						<a href="tel:+73452574710" class="header__number">+7 (3452) 57-47-10</a>
+						
+						<a href="tel:+73452574710" class="g-link g-link--underlined">Заказать звонок</a>
+					</div>
 
+					<ul class="header-catalog-dropdown__list">
+						{% for i in 0..5 %}	
+							<li class="header-catalog-dropdown__list-item" onclick="global.header.toggle(this)">
+								<div class="header-catalog-dropdown__list-item-wrap">
+									<div class="header-catalog-dropdown__list-item-img">
+										<img src="./img/fasad.jpg" alt="">
+									</div>
+	
+									<div class="header-catalog-dropdown__list-item-name">
+										Фасадные материалы
+									</div>
+	
+									<div class="header-catalog-dropdown__list-item-icon">
+										{% include "../../img/icons/arrow-right.svg" %}
+									</div>
+								</div>
+
+								<ul class="header-catalog-dropdown__sublist">
+									{% for i in 0..3 %}
+										<li class="header-catalog-dropdown__sublist-item">
+											<a href="#" class="header-catalog-dropdown__sublist-item-wrap">
+												<div class="header-catalog-dropdown__sublist-item-img">
+													<img src="./img/fasad.jpg" alt="">
+												</div>
+				
+												<div class="header-catalog-dropdown__sublist-item-name">
+													Фасадные материалы
+												</div>
+											</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</li>
+						{% endfor %}
+					</ul>
+
+					<div class="header__mobile-nav-title">
+						Меню
+					</div>
+
+					<nav class="header__mobile-nav">
+						<a href="#" class="header__mobile-nav-item">
+							Фото
+
+							<span class="header__mobile-nav-item-arrow">
+								{% include "../../img/icons/arrow-right.svg" %}
+							</span>
+						</a>
+
+						<a href="#" class="header__mobile-nav-item">
+							Видео
+
+							<span class="header__mobile-nav-item-arrow">
+								{% include "../../img/icons/arrow-right.svg" %}
+							</span>
+						</a>
+
+						<a href="#" class="header__mobile-nav-item">
+							Отзывы
+
+							<span class="header__mobile-nav-item-arrow">
+								{% include "../../img/icons/arrow-right.svg" %}
+							</span>
+						</a>
+
+						<a href="#" class="header__mobile-nav-item">
+							Калькуляторы
+
+							<span class="header__mobile-nav-item-arrow">
+								{% include "../../img/icons/arrow-right.svg" %}
+							</span>
+						</a>
+
+						<a href="#" class="header__mobile-nav-item">
+							Доставка
+
+							<span class="header__mobile-nav-item-arrow">
+								{% include "../../img/icons/arrow-right.svg" %}
+							</span>
+						</a>
+
+						<a href="#" class="header__mobile-nav-item">
+							Контакты
+
+							<span class="header__mobile-nav-item-arrow">
+								{% include "../../img/icons/arrow-right.svg" %}
+							</span>
+						</a>
+
+						<a href="#" class="header__mobile-nav-item">
+							<span class="header__mobile-nav-item-icon">
+								{% include "../../img/icons/driller.svg" %}
+							</span>
+
+							Монтаж
+
+							<span class="header__mobile-nav-item-arrow">
+								{% include "../../img/icons/arrow-right.svg" %}
+							</span>
+						</a>
+					</nav>
+				</div>
+			</div>
+			
+			<a href="#" class="header__logo">
+				<picture>
+					<source media="(max-width: 1199px)" srcset="./img/logo-mob.png">
+						<img src="./img/logo.png">
+					</picture>
+				</a>
+				
 				<div class="header__slogan">
 					Монтируем фасады и кровли тюменскими бригадами с 2008 года.
 				</div>
 
+				
+
+				<div class="header__search" onclick="global.header.toggle(this, '._headerCatalog')">
+					{% include "../../img/icons/search.svg" %}
+				</div>
+				
 				<a href="#" class="header__contact">
 					<div class="header__contact-icon">
 						{% include "../../img/icons/place.svg" %}
 					</div>
-
+					
 					<div class="header__contact-text">
 						ул. Циолковского, 15а <br> ул. Республики, 207
 					</div>
 				</a>
-
+				
 				<div class="header__callback">
+					<a href="tel:+73452574710" class="header__callback-icon">
+						{% include "../../img/icons/phone-transp-blue.svg" %}						
+					</a>
 					<a href="tel:+73452574710" class="header__number">+7 (3452) 57-47-10</a>
-
+					
 					<a href="tel:+73452574710" class="g-link g-link--underlined">Заказать звонок</a>
 				</div>
 			</div>
 		</div>
-
+		
 		{% include "./header-catalog.twig" %}
 	</header>
-{% endblock %}
+	{% endblock %}
+	
