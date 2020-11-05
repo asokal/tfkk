@@ -38,6 +38,7 @@
 	box-shadow: 0px 4px 30px rgba(35, 35, 35, 0.15);
 	border-radius: 2px;
 	display: none;
+	z-index: 5;
 }
 
 .header-catalog-dropdown__list-item
@@ -229,6 +230,7 @@
 	box-shadow: 0px 4px 30px rgba(35, 35, 35, 0.15);
 	border-radius: 2px;
 	padding: 30px 30px 25px;
+	z-index: 5;
 
 	&.active
 	{

@@ -20,8 +20,10 @@ var global =
 	{
 		this.header.stickCall();
 		this.header.dropdownShowSubList();
+		this.tabs();
+		this.selects();
 	},
-
+	
 	header: 
 	{
 		// прилипание меню
@@ -31,10 +33,10 @@ var global =
 				$body         = document.querySelector('body'),
 				catalogHeight = $catalog.offsetHeight + 'px',
 				catalogOffset = 157;
-
+			
 			if(instance.scrollY > catalogOffset && $catalog.classList.contains('header-catalog--fixed'))
 				return;
-		
+			
 			if(instance.scrollY > catalogOffset)
 			{
 				$catalog.classList.add('header-catalog--fixed');
@@ -52,9 +54,9 @@ var global =
 		{
 			if(document.documentElement.clientWidth < 1199)
 				return
-
+			
 			this.stick(window);
-
+			
 			window.addEventListener('scroll', () => {
 				this.stick(window);
 			});
@@ -65,7 +67,7 @@ var global =
 		{
 			if(instance)
 				instance.classList.toggle('active');
-
+			
 			if(elem)
 				document.querySelector(elem).classList.toggle('active');
 		},
@@ -87,7 +89,7 @@ var global =
 				});
 			}
 		},
-
+		
 		// активность поля для поиска и появление дропдауна с результатами
 		search(instance)
 		{
@@ -102,7 +104,7 @@ var global =
 				setTimeout(() => document.querySelector('._search').classList.remove('g-search--has-value'), 100);
 			}
 		},
-
+		
 		// очистить поле поиска
 		searchClear()
 		{
@@ -110,26 +112,80 @@ var global =
 			// this.search('._searchInput');
 		}
 	},
-
+	
 	// получить соседние элементы
-	getSiblings(elem)
+	getSiblings(e)
 	{
 		let siblings = []; 
 		// if no parent, return no sibling
-		if(!e.parentNode) {
+		if(!e.parentNode)
 			return siblings;
-		}
+		
 		// first child of the parent node
 		let sibling  = e.parentNode.firstChild;
 		
 		// collecting siblings
-		while (sibling) {
-			if (sibling.nodeType === 1 && sibling !== e) {
+		while (sibling)
+		{
+			if (sibling.nodeType === 1 && sibling !== e)
 				siblings.push(sibling);
-			}
+			
 			sibling = sibling.nextSibling;
 		}
-
+		
 		return siblings;
-	}	
+	},
+	
+	tabs()
+	{
+		const $btns = document.querySelectorAll('[data-nav-for]');
+			  $tabs = document.querySelectorAll('[data-tab]');
+		
+		if(!$btns.length)
+			return
+		
+		for(let i = 0; i < $btns.length; i++) {
+			
+			$btns[i].addEventListener('click', function() {
+				global.getSiblings(this).forEach((elem) => { elem.classList.remove('active') });
+				this.classList.add('active');
+				
+				$tabs.forEach((elem) => {
+					elem.classList.remove('active');
+					
+					if(elem.getAttribute('data-tab') === $btns[i].getAttribute('data-nav-for'))
+					elem.classList.add('active');
+				});
+			});
+		}
+	},
+	
+	selects()
+	{
+		const $select = document.querySelectorAll('._selectBtn'),
+			  $option = document.querySelectorAll('._selectOption');
+		let index = 1;
+
+		if(!$select.length)
+			return
+		
+		$select.forEach(a => {
+			a.addEventListener('click', b => {
+				b.target.parentElement.classList.toggle('active');
+			})
+		})
+
+		$option.forEach(a => {
+			a.addEventListener('click', b => {
+				const parent = b.target.closest('._select');
+				
+				parent.classList.remove('active');
+
+				if(b.target.hasAttribute('data-value'))
+					parent.children[0].setAttribute('data-value', b.target.getAttribute('data-value'));
+
+				parent.children[0].innerText = b.target.innerText;
+			})
+		})
+	}
 }

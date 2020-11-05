@@ -22,13 +22,13 @@
 	background-color: rgba($spindle, .2);
 	border-radius: 4px;
 	padding: 45px 45px 35px;
-	background-image: url('../../img/entity.svg');
+	background-image: url('../img/entity.svg');
 	background-repeat: no-repeat;
 	background-position: right bottom;
 
 	&:last-child
 	{
-		background-image: url('../../img/individual.svg');
+		background-image: url('../img/individual.svg');
 	}
 }
 
