@@ -1,0 +1,235 @@
+.delivery
+{
+	margin-bottom: 50px;
+
+	.g-tabs-nav
+	{
+		margin-bottom: 35px;
+	}
+
+	.g-select
+	{
+		display: none;
+	}
+}
+
+.delivery__title
+{
+	margin-bottom: 25px;
+}
+
+.delivery__content
+{
+	display: none;
+
+	h2
+	{
+		margin-bottom: 20px;
+	}
+
+	p
+	{
+		line-height: 1.75;
+		margin-top: 0;
+		margin-bottom: 25px;
+
+		&:last-of-type
+		{
+			margin-bottom: 20px;
+		}
+	}
+
+	strong
+	{
+		font-weight: 500;	
+	}
+
+	section:not(:last-child)
+	{
+		margin-bottom: 45px;
+	}
+
+	&.active
+	{
+		display: block;
+	}
+}
+
+.delivery__price-section
+{
+	width: 750px;
+	max-width: 100%;
+}
+
+.delivery__img
+{
+	display: block;
+	width: 750px;
+	max-width: 100%;
+	font-size: 0;
+
+	img
+	{
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.delivery__prices
+{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.delivery__price
+{
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.delivery__price-text
+{
+	line-height: 1.5;
+
+	strong
+	{
+		display: block;
+		margin-bottom: 6px;
+	}
+}
+
+.delivery__price-icon
+{
+	width: 42px;
+	height: 42px;
+	font-size: 0;
+	margin-right: 25px;
+
+	svg, img
+	{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.delivery__location
+{
+	display: flex;
+	align-items: center;
+	line-height: 1.75;
+	margin-bottom: 10px;
+}
+
+.delivery__location-icon
+{
+	font-size: 0;
+	margin-right: 13px;
+}
+
+.delivery__map
+{
+	max-width: 100%;
+	width: 970px;
+	height: 498px;
+	position: relative;
+	overflow: hidden;
+
+	iframe
+	{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	&--storage
+	{
+		width: 1170px;
+	}
+}
+
+@media (max-width: 1023px)
+{
+	.delivery
+	{
+		margin-bottom: 40px;
+	}
+
+	.delivery__prices
+	{
+		margin-bottom: 20px;
+	}
+
+	.delivery__price
+	{
+		flex-shrink: unset;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.delivery
+	{
+		margin-bottom: 30px;
+
+		.g-select
+		{
+			display: block;
+			margin-bottom: 15px;
+		}
+	}
+
+	.delivery__title
+	{
+		margin-bottom: 15px;
+	}
+
+	.delivery__prices
+	{
+		flex-wrap: wrap;
+		margin-bottom: 15px;
+	}
+
+	.delivery__price
+	{
+		align-items: flex-start;
+		&:first-child
+		{
+			margin-bottom: 25px;
+		}
+	}
+
+	.delivery__price-icon
+	{
+		width: 45px;
+		height: 45px;
+	}
+
+	.delivery__content
+	{
+		p
+		{
+			font-size: 13px;
+			line-height: 1.6;
+		}
+
+		h2
+		{
+			margin-bottom: 10px;
+		}
+
+		section:not(:last-child)
+		{
+			margin-bottom: 25px;
+		}
+	}
+}
+
+@media (max-width: 479px)
+{
+	.delivery__map--storage
+	{
+		height: 218px;
+	}
+}

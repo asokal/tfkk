@@ -118,6 +118,144 @@ button
 	}
 }
 
+.g-tabs-nav
+{
+	display: inline-flex;
+	border-radius: 3px;
+	background-color: rgba($spindle, .3);
+}
+
+.g-tabs-nav__btn
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 63px;
+	@include roboto(500);
+	color: $black;
+	font-size: 16px;
+	line-height: 19px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	position: relative;
+	padding: 0 67px;
+	overflow: hidden;
+	transition: color .3s;
+
+	&.active
+	{
+		background-color: #fff;
+		border-color: rgba(35, 35, 35, 0.07);
+
+		&::after
+		{
+			background-color: $red;
+			width: 100%;
+		}
+	}
+
+	&:hover
+	{
+		color: $red-hover;
+	}
+
+	&::after
+	{
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		width: 0;
+		height: 3px;
+		background-color: transparent;
+		transition: .3s;
+
+	}
+}
+
+.g-select
+{
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+
+	&.active
+	{
+		.g-select__btn::after
+		{
+			transform: scale(1, -1)
+		}
+
+		.g-select__dropdown
+		{
+			visibility: visible;
+			transform: scale(1, 1);
+			z-index: 5;
+		}
+	}
+}
+
+.g-select__btn
+{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 43px;
+	padding: 0 45px 0 25px;
+	background-color: #57ACE6;
+	@include roboto(500);
+	color: #fff;
+	border-radius: 2px;
+	font-size: 14px;
+	line-height: 1.2;
+
+	&::after
+	{
+		display: block;
+		content: '';
+		position: absolute;
+		right: 20px;
+		top: 13px;
+		width: 16px;
+		height: 16px;
+		background-image: url('../img/icons/select-arrow.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: .3s;
+	}
+}
+
+.g-select__dropdown
+{
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	padding: 0 15px;
+	border-radius: 0px 0px 2px 2px;
+	overflow: hidden;
+	visibility: hidden;
+	background-color: #DDE9F3;
+	transform: scale(1, 0);
+	transform-origin: top center;
+	transition: 0.2s ease;
+}
+
+.g-select__option
+{
+	padding: 13px 10px;
+	border-bottom: 1px solid rgba($black, .15);
+	@include roboto(500);
+	font-size: 14px;
+	line-height: 1.2;
+	color: $black;
+	cursor: pointer;
+
+	&:last-child
+	{
+		border-bottom: 0;
+	}
+}
+
 @media (max-width: 767px)
 {
 	.g-search
@@ -157,5 +295,10 @@ button
 		height: 16px;
 		right: 16px;
 		top: 12px;
+	}
+
+	.g-tabs-nav
+	{
+		display: none;
 	}
 }
