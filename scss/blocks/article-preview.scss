@@ -54,6 +54,11 @@
 	{
 		color: $red;
 	}
+
+	&:focus, &:visited, &:active
+	{
+		color: $red-click;
+	}
 }
 
 .article-preview__descr

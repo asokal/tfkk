@@ -22,6 +22,8 @@ var global =
 		this.header.dropdownShowSubList();
 		this.tabs();
 		this.selects();
+		this.reviewLazy();
+		this.sliders.init();
 	},
 	
 	header: 
@@ -60,16 +62,6 @@ var global =
 			window.addEventListener('scroll', () => {
 				this.stick(window);
 			});
-		},
-		
-		// переключение класса активности у передаваемых элементов
-		toggle(instance, elem)
-		{
-			if(instance)
-				instance.classList.toggle('active');
-			
-			if(elem)
-				document.querySelector(elem).classList.toggle('active');
 		},
 		
 		// появляние подменю в меню каталога
@@ -112,6 +104,16 @@ var global =
 			// this.search('._searchInput');
 		}
 	},
+
+	// переключение класса активности у передаваемых элементов
+	toggle(instance, elem)
+	{
+		if(instance)
+			instance.classList.toggle('active');
+		
+		if(elem)
+			document.querySelector(elem).classList.toggle('active');
+	},
 	
 	// получить соседние элементы
 	getSiblings(e)
@@ -136,6 +138,7 @@ var global =
 		return siblings;
 	},
 	
+	// инициализировать все табы на странице
 	tabs()
 	{
 		const $btns = document.querySelectorAll('[data-nav-for]');
@@ -159,7 +162,33 @@ var global =
 			});
 		}
 	},
+
+	reviewLazy()
+	{
+		let $youtube = document.querySelectorAll( '._reviewVideo' );
+		
+		for (let i = 0; i < $youtube.length; i++) {
+			let source = 'https://img.youtube.com/vi/'+ $youtube[i].dataset.embed +'/hqdefault.jpg';
+			
+			let image = new Image();
+			image.src = source;
+			image.addEventListener( 'load', function() {
+				$youtube[i].appendChild( image );
+			}.bind(this, i ) );
 	
+			$youtube[i].addEventListener( 'click', function() {
+				let iframe = document.createElement( 'iframe' );
+				iframe.setAttribute( 'frameborder', '0' );
+				iframe.setAttribute( 'allowfullscreen', '' );
+				iframe.setAttribute( 'src', 'https://www.youtube.com/embed/'+ this.dataset.embed +'?rel=0&showinfo=0&autoplay=1' );
+
+				this.innerHTML = '';
+				this.appendChild( iframe );
+			} );	
+		};
+	},
+	
+	// инициализировать все селекты на странице
 	selects()
 	{
 		const $select = document.querySelectorAll('._selectBtn'),
@@ -187,5 +216,123 @@ var global =
 				parent.children[0].innerText = b.target.innerText;
 			})
 		})
+	},
+
+	sliders:
+	{
+		init()
+		{
+			this.productsCarousel();
+			this.reviewsCarousel();
+			this.suppliersCarousel();
+		},
+
+		productsCarousel()
+		{
+			if(document.documentElement.clientWidth > 1023)
+				return
+
+			let $productsCarousel = document.querySelectorAll('._productsCarousel');
+
+			$productsCarousel.forEach(elem => {
+				new Splide(elem, {
+					perPage: 3,
+					perMove: 1,
+					pagination: true,
+					lazyLoad: 'nearby',
+					gap: '30px',
+					grid: {
+						rows: 2,
+						cols: 1,
+						gap : {
+							row: '20px',
+						}
+					},
+					breakpoints: {
+						479:
+						{
+							perPage: 2,
+							perMove: 1,
+							gap: '12px',
+							pagination: true,
+	
+							grid: {
+								gap : {
+									row: '10px',
+								}
+							},
+						}
+					}
+				} ).mount(window.splide.Extensions );
+			})
+		},
+
+		reviewsCarousel()
+		{
+			new Splide( '._reviewsCarousel', {
+				perPage: 2,
+				perMove: 1,
+				lazyLoad: 'nearby',
+				gap: '30px',
+				breakpoints: {
+					1023: {
+						perPage: 1,
+						perMove: 1,
+						fixedWidth: '575px',
+					},
+
+					600:
+					{
+						perPage: 1,
+						perMove: 1,
+						fixedWidth: 0
+					}
+				}
+			} ).mount();
+		},
+
+		suppliersCarousel()
+		{
+			new Splide( '._suppliersCarousel', {
+				perPage: 4,
+				perMove: 1,
+				pagination: false,
+				cover  : true,
+				lazyLoad: 'nearby',
+				fixedWidth: '270px',
+				fixedHeight: '268px',
+				gap: '30px',
+				grid: {
+					rows: 2,
+					cols: 1,
+					gap : {
+						row: '20px',
+					}
+				},
+				breakpoints: {
+					1023: {
+						perPage: 2,
+						perMove: 2,
+						pagination: true,
+					},
+
+					479:
+					{
+						fixedWidth: '156px',
+						fixedHeight: '152px',
+						perPage: 1,
+						perMove: 1,
+						gap: '10px',
+						pagination: true,
+
+						grid: {
+							gap : {
+								row: '8px',
+							}
+						},
+					}
+				}
+			} ).mount(window.splide.Extensions );
+		},
 	}
 }

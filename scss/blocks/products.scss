@@ -1,0 +1,124 @@
+.products
+{
+	padding: 75px 0 100px;
+
+	.product-preview
+	{
+		height: 100%;
+	}
+
+	.g-select
+	{
+		margin-bottom: 8px;
+	}
+}
+
+.products__nav
+{
+	display: flex;
+	margin-bottom: 35px;
+}
+
+.products__nav-item
+{
+	@include roboto(500);
+	font-size: 22px;
+	line-height: 1.45;
+	color: rgba($black, .3);
+	padding-bottom: 5px;
+	border-bottom: 3px solid transparent;
+	cursor: pointer;
+	transition: .135s;
+
+	&:not(:last-child)
+	{
+		margin-right: 40px;
+	}
+
+	&:hover
+	{
+		color: $black;
+	}
+
+	&.active
+	{
+		color: $black;
+		font-weight: bold;
+		border-color: $red;
+	}
+}
+
+.products__tab
+{
+	height: 0;
+	overflow: hidden;
+
+	&.active
+	{
+		height: auto;
+		overflow: visible;
+	}
+}
+
+.products__carousel
+{
+	@media (min-width: 1024px)
+	{
+		margin: 0 -15px;
+
+		&.splide
+		{
+			visibility: visible;
+		}
+
+		.splide__list, .splide__track
+		{
+			width: 100%;
+		}
+
+		.splide__arrows
+		{
+			display: none;
+		}
+
+		.splide__list
+		{
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.splide__track
+		{
+			overflow: visible;
+		}
+
+		.splide__slide
+		{
+			flex-basis: 25%;
+			max-width: 25%;
+			margin-bottom: 20px;
+			padding: 0 15px;
+		}
+	}
+}
+
+@media (max-width: 1023px)
+{
+	.products
+	{
+		padding: 50px 0 65px;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.products
+	{
+		padding: 20px 0 40px;
+	}
+
+	.products__nav
+	{
+		display: none;
+	}
+}

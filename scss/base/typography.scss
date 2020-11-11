@@ -84,6 +84,19 @@ a:focus
 	color: $red;
 	transition: .135s;
 
+	&:focus, &:visited, &:active
+	{
+		color: $red-click;
+
+		.g-link__icon
+		{
+			svg path
+			{
+				color: $red-click;
+			}
+		}
+	}
+
 	&:hover
 	{
 		color: $red-hover;
@@ -97,36 +110,18 @@ a:focus
 		}
 	}
 
-	&:focus
-	{
-		color: $red-click;
-
-		.g-link__icon
-		{
-			svg path
-			{
-				color: $red-click;
-			}
-		}
-	}
-
-	&:visited
-	{
-		color: #6736d0;
-	}
-
 	&--blue
 	{
 		color: $blue;
 
+		&:focus, &:visited, &:active
+		{
+			color: $blue-click;
+		}
+
 		&:hover
 		{
 			color: $blue-hover;
-		}
-
-		&:focus
-		{
-			color: $blue-click;
 		}
 	}
 

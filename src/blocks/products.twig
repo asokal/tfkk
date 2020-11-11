@@ -1,0 +1,68 @@
+<div class="products">
+	<div class="container">
+		<div class="g-select _select mobile-only">
+			<button class="g-select__btn _selectBtn">Офис №1</button>
+
+			<ul class="g-select__dropdown _selectDropdown">
+				<li class="g-select__option _selectOption" data-nav-for="products-1">Офис №1</li>
+				<li class="g-select__option _selectOption" data-nav-for="products-2">Офис №2</li>
+			</ul>
+		</div>
+
+		<ul class="products__nav">
+			<li class="products__nav-item active" data-nav-for="products-1">
+				Популярные товары
+			</li>
+
+			<li class="products__nav-item" data-nav-for="products-2">
+				Новинки
+			</li>
+		</ul>
+
+		<div class="products__tab active" data-tab="products-1">
+			<div class="_productsCarousel splide products__carousel">
+				<div class="splide__arrows">
+					<button class="splide__arrow splide__arrow--prev">
+						{% include "../../img/icons/slider-arrow.svg" %}
+					</button>
+					<button class="splide__arrow splide__arrow--next">
+						{% include "../../img/icons/slider-arrow.svg" %}
+					</button>
+				</div>
+	
+				<div class="splide__track">
+					<div class="splide__list">
+						{% for i in 0..7 %}	
+							<div class="splide__slide">
+								{% include "../blocks/product-preview.twig" %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="products__tab" data-tab="products-2">
+			<div class="_productsCarousel splide products__carousel">
+				<div class="splide__arrows">
+					<button class="splide__arrow splide__arrow--prev">
+						{% include "../../img/icons/slider-arrow.svg" %}
+					</button>
+					<button class="splide__arrow splide__arrow--next">
+						{% include "../../img/icons/slider-arrow.svg" %}
+					</button>
+				</div>
+	
+				<div class="splide__track">
+					<div class="splide__list">
+						{% for i in 0..7 %}	
+							<div class="splide__slide">
+								{% include "../blocks/product-preview.twig" %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

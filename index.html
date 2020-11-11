@@ -736,7 +736,7 @@
 
 
 
-                <div class="header__search" onclick="global.header.toggle(this, '._headerCatalog')">
+                <div class="header__search" onclick="global.toggle(this, '._headerCatalog')">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path d="M7.92682 0C3.55609 0 0 3.55609 0 7.92682C0 12.2978 3.55609 15.8536 7.92682 15.8536C12.2978 15.8536 15.8536 12.2978 15.8536 7.92682C15.8536 3.55609 12.2978 0 7.92682 0ZM7.92682 14.3903C4.36293 14.3903 1.46341 11.4908 1.46341 7.92686C1.46341 4.36296 4.36293 1.46341 7.92682 1.46341C11.4907 1.46341 14.3902 4.36293 14.3902 7.92682C14.3902 11.4907 11.4907 14.3903 7.92682 14.3903Z" fill="#57ACE5" />
@@ -786,8 +786,8 @@
         <div class="header-catalog _headerCatalog">
             <div class="container">
                 <div class="header-catalog__dropdown-wrap">
-                    <button class="g-dropdown-btn">
-                        <div class="g-dropdown-btn__icon">
+                    <button class="g-btn">
+                        <div class="g-btn__icon">
                             <img src="./img/icons/burger.svg" alt="">
                         </div>
                         Каталог товаров
@@ -1429,12 +1429,2363 @@
         </div>
     </header>
     <main class="wrapper">
-        <nav class="breadcrumbs">
+        <section class="split">
             <div class="container">
-                <a href="#" class="breadcrumbs__item">Главная</a>
-                <a href="#" class="breadcrumbs__item">Статьи</a>
+                <div class="split__wrap">
+                    <div class="split__inner">
+                        <a href="#" class="split__item">
+                            <div class="split__item-inner">
+                                <div class="split__first">
+                                    <div class="split__content">
+                                        <div class="split__text">Фасады</div>
+                                    </div>
+                                </div>
+
+                                <div class="split__second">
+                                    <div class="split__content">
+                                        <div class="split__text">Монтаж</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="split__item">
+                            <div class="split__item-inner">
+                                <div class="split__first">
+                                    <div class="split__content">
+                                        <div class="split__text">Кровля</div>
+                                    </div>
+                                </div>
+
+                                <div class="split__second">
+                                    <div class="split__content">
+                                        <div class="split__text">Монтаж</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </nav>
+        </section>
+        <div class="products">
+            <div class="container">
+                <div class="g-select _select mobile-only">
+                    <button class="g-select__btn _selectBtn">Офис №1</button>
+
+                    <ul class="g-select__dropdown _selectDropdown">
+                        <li class="g-select__option _selectOption" data-nav-for="products-1">Офис №1</li>
+                        <li class="g-select__option _selectOption" data-nav-for="products-2">Офис №2</li>
+                    </ul>
+                </div>
+
+                <ul class="products__nav">
+                    <li class="products__nav-item active" data-nav-for="products-1">
+                        Популярные товары
+                    </li>
+
+                    <li class="products__nav-item" data-nav-for="products-2">
+                        Новинки
+                    </li>
+                </ul>
+
+                <div class="products__tab active" data-tab="products-1">
+                    <div class="_productsCarousel splide products__carousel">
+                        <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev">
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="22.5" cy="22.5" r="21.5" stroke="#DD2D1F" stroke-width="2" />
+                                    <g>
+                                        <path d="M28.1695 21.4289L20.9743 14.2361C20.6586 13.9212 20.1471 13.9212 19.8306 14.2361C19.5149 14.5511 19.5149 15.0626 19.8306 15.3775L26.455 21.9995L19.8314 28.6215C19.5157 28.9365 19.5157 29.448 19.8314 29.7637C20.1471 30.0786 20.6594 30.0786 20.9751 29.7637L28.1703 22.571C28.4811 22.2594 28.4811 21.7398 28.1695 21.4289Z" fill="#DD2D1F" />
+                                    </g>
+                                    <defs>
+                                        <clipPath>
+                                            <rect width="16" height="16" fill="white" transform="translate(32 30) rotate(-180)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </button>
+                            <button class="splide__arrow splide__arrow--next">
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="22.5" cy="22.5" r="21.5" stroke="#DD2D1F" stroke-width="2" />
+                                    <g>
+                                        <path d="M28.1695 21.4289L20.9743 14.2361C20.6586 13.9212 20.1471 13.9212 19.8306 14.2361C19.5149 14.5511 19.5149 15.0626 19.8306 15.3775L26.455 21.9995L19.8314 28.6215C19.5157 28.9365 19.5157 29.448 19.8314 29.7637C20.1471 30.0786 20.6594 30.0786 20.9751 29.7637L28.1703 22.571C28.4811 22.2594 28.4811 21.7398 28.1695 21.4289Z" fill="#DD2D1F" />
+                                    </g>
+                                    <defs>
+                                        <clipPath>
+                                            <rect width="16" height="16" fill="white" transform="translate(32 30) rotate(-180)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </button>
+                        </div>
+
+                        <div class="splide__track">
+                            <div class="splide__list">
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__tab" data-tab="products-2">
+                    <div class="_productsCarousel splide products__carousel">
+                        <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev">
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="22.5" cy="22.5" r="21.5" stroke="#DD2D1F" stroke-width="2" />
+                                    <g>
+                                        <path d="M28.1695 21.4289L20.9743 14.2361C20.6586 13.9212 20.1471 13.9212 19.8306 14.2361C19.5149 14.5511 19.5149 15.0626 19.8306 15.3775L26.455 21.9995L19.8314 28.6215C19.5157 28.9365 19.5157 29.448 19.8314 29.7637C20.1471 30.0786 20.6594 30.0786 20.9751 29.7637L28.1703 22.571C28.4811 22.2594 28.4811 21.7398 28.1695 21.4289Z" fill="#DD2D1F" />
+                                    </g>
+                                    <defs>
+                                        <clipPath>
+                                            <rect width="16" height="16" fill="white" transform="translate(32 30) rotate(-180)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </button>
+                            <button class="splide__arrow splide__arrow--next">
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="22.5" cy="22.5" r="21.5" stroke="#DD2D1F" stroke-width="2" />
+                                    <g>
+                                        <path d="M28.1695 21.4289L20.9743 14.2361C20.6586 13.9212 20.1471 13.9212 19.8306 14.2361C19.5149 14.5511 19.5149 15.0626 19.8306 15.3775L26.455 21.9995L19.8314 28.6215C19.5157 28.9365 19.5157 29.448 19.8314 29.7637C20.1471 30.0786 20.6594 30.0786 20.9751 29.7637L28.1703 22.571C28.4811 22.2594 28.4811 21.7398 28.1695 21.4289Z" fill="#DD2D1F" />
+                                    </g>
+                                    <defs>
+                                        <clipPath>
+                                            <rect width="16" height="16" fill="white" transform="translate(32 30) rotate(-180)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </button>
+                        </div>
+
+                        <div class="splide__track">
+                            <div class="splide__list">
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="splide__slide">
+                                    <div class="product-preview">
+                                        <div class="product-preview__img">
+                                            <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
+                                        </div>
+
+                                        <div class="product__action">
+                                            Акция
+                                        </div>
+
+                                        <a href="#" class="product-preview__title">
+                                            Фиброцементный сайдинг Кедрал Клик (Cedral click)
+                                        </a>
+
+                                        <div class="product-preview__price">
+                                            <div class="product-preview__price-old">
+                                                1700 руб./шт.
+                                            </div>
+
+                                            <div class="product-preview__price-new">
+                                                1700 руб./шт.
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="g-btn">
+                                            Посмотреть
+                                        </a>
+
+
+                                        <div class="product-preview__additional">
+                                            <button class="g-btn-transp">
+                                                Быстрый расчет
+                                            </button>
+
+                                            <div class="product-preview__thickness-title">Толщины:</div>
+
+                                            <div class="product-preview__thickness">
+                                                <span>0,4</span>
+
+                                                <span>0,45</span>
+
+                                                <span>0,5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="services">
+            <div class="container">
+                <h2 class="services__title">
+                    Наши услуги
+                </h2>
+
+                <div class="services__previews _services">
+                    <div class="service-preview">
+                        <div class="service-preview__inner" style="background-image: url('./img/services/spreview1.png');">
+                            <a href="#" class="service-preview__title">
+                                Монтаж фасада
+                            </a>
+
+                            <div class="service-preview__descr">
+                                Монтаж сайдинга, <br> утепления, обрешетки, карнизов
+                            </div>
+
+                            <a href="#" class="g-link">
+                                Об услуге
+
+                                <span class="g-link__icon">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.75405 2.06716C8.57694 1.88386 8.28218 1.88386 8.09889 2.06716C7.92178 2.24426 7.92178 2.53902 8.09889 2.71571L11.4209 6.03775H0.458654C0.203112 6.03817 0 6.24128 0 6.49682C0 6.75236 0.203112 6.96208 0.458654 6.96208H11.4209L8.09889 10.2779C7.92178 10.4612 7.92178 10.7564 8.09889 10.9331C8.28218 11.1164 8.57736 11.1164 8.75405 10.9331L12.8625 6.82461C13.0458 6.6475 13.0458 6.35274 12.8625 6.17605L8.75405 2.06716Z" fill="#DD2D1F"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-preview">
+                        <div class="service-preview__inner" style="background-image: url('./img/services/spreview2.png');">
+                            <a href="#" class="service-preview__title">
+                                Кровельные работы
+                            </a>
+
+                            <div class="service-preview__descr">
+                                Строительство крыш с нуля. Монтаж кровли, водостоков, снегозадержаталей, утепление
+                            </div>
+
+                            <a href="#" class="g-link">
+                                Об услуге
+
+                                <span class="g-link__icon">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.75405 2.06716C8.57694 1.88386 8.28218 1.88386 8.09889 2.06716C7.92178 2.24426 7.92178 2.53902 8.09889 2.71571L11.4209 6.03775H0.458654C0.203112 6.03817 0 6.24128 0 6.49682C0 6.75236 0.203112 6.96208 0.458654 6.96208H11.4209L8.09889 10.2779C7.92178 10.4612 7.92178 10.7564 8.09889 10.9331C8.28218 11.1164 8.57736 11.1164 8.75405 10.9331L12.8625 6.82461C13.0458 6.6475 13.0458 6.35274 12.8625 6.17605L8.75405 2.06716Z" fill="#DD2D1F"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-preview">
+                        <div class="service-preview__inner" style="background-image: url('./img/services/spreview3.png');">
+                            <a href="#" class="service-preview__title">
+                                Монтаж забора
+                            </a>
+
+                            <div class="service-preview__descr">
+                                Установка столбов, <br> ворот, калитки, <br> парапетов, колпаков
+                            </div>
+
+                            <a href="#" class="g-link">
+                                Об услуге
+
+                                <span class="g-link__icon">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.75405 2.06716C8.57694 1.88386 8.28218 1.88386 8.09889 2.06716C7.92178 2.24426 7.92178 2.53902 8.09889 2.71571L11.4209 6.03775H0.458654C0.203112 6.03817 0 6.24128 0 6.49682C0 6.75236 0.203112 6.96208 0.458654 6.96208H11.4209L8.09889 10.2779C7.92178 10.4612 7.92178 10.7564 8.09889 10.9331C8.28218 11.1164 8.57736 11.1164 8.75405 10.9331L12.8625 6.82461C13.0458 6.6475 13.0458 6.35274 12.8625 6.17605L8.75405 2.06716Z" fill="#DD2D1F"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-preview">
+                        <div class="service-preview__inner" style="background-image: url('./img/services/spreview4.png');">
+                            <a href="#" class="service-preview__title">
+                                Ремонт кровли
+                            </a>
+
+                            <div class="service-preview__descr">
+                                Ремонт конструкции, устранение причин <br> протечек, промерзания, конденсата
+                            </div>
+
+                            <a href="#" class="g-link">
+                                Об услуге
+
+                                <span class="g-link__icon">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.75405 2.06716C8.57694 1.88386 8.28218 1.88386 8.09889 2.06716C7.92178 2.24426 7.92178 2.53902 8.09889 2.71571L11.4209 6.03775H0.458654C0.203112 6.03817 0 6.24128 0 6.49682C0 6.75236 0.203112 6.96208 0.458654 6.96208H11.4209L8.09889 10.2779C7.92178 10.4612 7.92178 10.7564 8.09889 10.9331C8.28218 11.1164 8.57736 11.1164 8.75405 10.9331L12.8625 6.82461C13.0458 6.6475 13.0458 6.35274 12.8625 6.17605L8.75405 2.06716Z" fill="#DD2D1F"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-preview">
+                        <div class="service-preview__inner" style="background-image: url('./img/services/spreview5.png');">
+                            <a href="#" class="service-preview__title">
+                                Замер
+                            </a>
+
+                            <div class="service-preview__descr">
+                                Выезд замерщика <br> с многолетним опытом: расскажет все подробности монтажа, ответит на вопросы
+                            </div>
+
+                            <a href="#" class="g-link">
+                                Об услуге
+
+                                <span class="g-link__icon">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.75405 2.06716C8.57694 1.88386 8.28218 1.88386 8.09889 2.06716C7.92178 2.24426 7.92178 2.53902 8.09889 2.71571L11.4209 6.03775H0.458654C0.203112 6.03817 0 6.24128 0 6.49682C0 6.75236 0.203112 6.96208 0.458654 6.96208H11.4209L8.09889 10.2779C7.92178 10.4612 7.92178 10.7564 8.09889 10.9331C8.28218 11.1164 8.57736 11.1164 8.75405 10.9331L12.8625 6.82461C13.0458 6.6475 13.0458 6.35274 12.8625 6.17605L8.75405 2.06716Z" fill="#DD2D1F"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-preview">
+                        <div class="service-preview__inner" style="background-image: url('./img/services/spreview6.png');">
+                            <a href="#" class="service-preview__title">
+                                Рассрочка без переплаты
+                            </a>
+
+                            <div class="service-preview__descr">
+                                Оформление <br> беспроцентной рассрочки до 1 года на месте в офисе
+                            </div>
+
+                            <a href="#" class="g-link">
+                                Об услуге
+
+                                <span class="g-link__icon">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.75405 2.06716C8.57694 1.88386 8.28218 1.88386 8.09889 2.06716C7.92178 2.24426 7.92178 2.53902 8.09889 2.71571L11.4209 6.03775H0.458654C0.203112 6.03817 0 6.24128 0 6.49682C0 6.75236 0.203112 6.96208 0.458654 6.96208H11.4209L8.09889 10.2779C7.92178 10.4612 7.92178 10.7564 8.09889 10.9331C8.28218 11.1164 8.57736 11.1164 8.75405 10.9331L12.8625 6.82461C13.0458 6.6475 13.0458 6.35274 12.8625 6.17605L8.75405 2.06716Z" fill="#DD2D1F"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="g-show-more" onclick="global.toggle(this, '._services')">
+                    <div class="g-show-more__icon">
+                        <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+                        <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+                    </div>
+
+                    <div class="g-show-more__text">
+                        <span class="g-show-more__text-more">Показать еще 2 преимущества</span>
+                        <span class="g-show-more__text-less">Скрыть</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="container">
+                <h2 class="advantages__title">
+                    Наши преимущества
+                </h2>
+
+                <div class="advantages__items _advantages">
+                    <div class="advantages__item">
+                        <div class="advantages__item-icon">
+                            <img src="./img/icons/advantage1.svg" alt="">
+                        </div>
+
+                        <div class="advantages__item-text">
+                            <div class="advantages__item-title">
+                                Заключаем договор
+                            </div>
+
+                            <div class="advantages__item-descr">
+                                <mark>Заключаем договор</mark> с юридическим лицом. Прежде, чем полностью оплатить услуги, вы подписываете акт выполненных работ
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages__item">
+                        <div class="advantages__item-icon">
+                            <img src="./img/icons/advantage2.svg" alt="">
+                        </div>
+
+                        <div class="advantages__item-text">
+                            <div class="advantages__item-title">
+                                Работаем без посредников
+                            </div>
+
+                            <div class="advantages__item-descr">
+                                Мы работаем <mark>напрямую</mark> с заводами <br class="desktop-only"> без посредников — вы экономите. <br class="desktop-only"> Свое производство комплектующих
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages__item">
+                        <div class="advantages__item-icon">
+                            <img src="./img/icons/advantage3.svg" alt="">
+                        </div>
+
+                        <div class="advantages__item-text">
+                            <div class="advantages__item-title">
+                                Даем гарантию
+                            </div>
+
+                            <div class="advantages__item-descr">
+                                Все гарантии прописаны. Гарантия на материалы до 50 лет, на работы <br class="desktop-only"> <mark>— 3 года</mark>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages__item">
+                        <div class="advantages__item-icon">
+                            <img src="./img/icons/advantage4.svg" alt="">
+                        </div>
+
+                        <div class="advantages__item-text">
+                            <div class="advantages__item-title">
+                                Большой опыт
+                            </div>
+
+                            <div class="advantages__item-descr">
+                                <mark>Более 1800</mark> сданных объектов за 12 лет. Накоплен колоссальный опыт, учились на своих ошибках, все исправляли
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages__item">
+                        <div class="advantages__item-icon">
+                            <img src="./img/icons/advantage5.svg" alt="">
+                        </div>
+
+                        <div class="advantages__item-text">
+                            <div class="advantages__item-title">
+                                Материалы в офисе
+                            </div>
+
+                            <div class="advantages__item-descr">
+                                Огромное количество <mark>стендов в офисе</mark> — можно наглядно заранее увидеть все материалы и выбрать понравившийся
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages__item">
+                        <div class="advantages__item-icon">
+                            <img src="./img/icons/advantage6.svg" alt="">
+                        </div>
+
+                        <div class="advantages__item-text">
+                            <div class="advantages__item-title">
+                                Надежные сотрудники
+                            </div>
+
+                            <div class="advantages__item-descr">
+                                Все монтажники — местные, с опытом работы <mark>от 7 лет</mark>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="g-show-more" onclick="global.toggle(this, '._advantages')">
+                    <div class="g-show-more__icon">
+                        <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+                        <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+                    </div>
+
+                    <div class="g-show-more__text">
+                        <span class="g-show-more__text-more">Показать еще 2 преимущества</span>
+                        <span class="g-show-more__text-less">Скрыть</span>
+                    </div>
+                </div>
+
+                <div class="advantages__stats">
+                    <div class="advantages__stat">
+                        <div class="advantages__stat-digit">
+                            12 лет
+                        </div>
+
+                        <div class="advantages__stat-descr">
+                            работы <br class="mobile-only"> на рынке
+                        </div>
+                    </div>
+
+                    <hr class="advantages__stats-devider">
+
+                    <div class="advantages__stat">
+                        <div class="advantages__stat-digit">
+                            50 лет
+                        </div>
+
+                        <div class="advantages__stat-descr">
+                            гарантии на <br class="mobile-only"> материалы
+                        </div>
+                    </div>
+
+                    <hr class="advantages__stats-devider">
+
+                    <div class="advantages__stat">
+                        <div class="advantages__stat-digit">
+                            98,4 %
+                        </div>
+
+                        <div class="advantages__stat-descr">
+                            положительных <br class="mobile-only"> отзывов
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <h2 class="reviews__title">
+                    Отзывы о нашей работе
+                </h2>
+
+                <div class="_reviewsCarousel splide">
+                    <div class="splide__arrows splide__arrows--centered">
+                        <button class="splide__arrow splide__arrow--prev">
+                            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="22.5" cy="22.5" r="21.5" stroke="#DD2D1F" stroke-width="2" />
+                                <g>
+                                    <path d="M28.1695 21.4289L20.9743 14.2361C20.6586 13.9212 20.1471 13.9212 19.8306 14.2361C19.5149 14.5511 19.5149 15.0626 19.8306 15.3775L26.455 21.9995L19.8314 28.6215C19.5157 28.9365 19.5157 29.448 19.8314 29.7637C20.1471 30.0786 20.6594 30.0786 20.9751 29.7637L28.1703 22.571C28.4811 22.2594 28.4811 21.7398 28.1695 21.4289Z" fill="#DD2D1F" />
+                                </g>
+                                <defs>
+                                    <clipPath>
+                                        <rect width="16" height="16" fill="white" transform="translate(32 30) rotate(-180)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </button>
+                        <button class="splide__arrow splide__arrow--next">
+                            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="22.5" cy="22.5" r="21.5" stroke="#DD2D1F" stroke-width="2" />
+                                <g>
+                                    <path d="M28.1695 21.4289L20.9743 14.2361C20.6586 13.9212 20.1471 13.9212 19.8306 14.2361C19.5149 14.5511 19.5149 15.0626 19.8306 15.3775L26.455 21.9995L19.8314 28.6215C19.5157 28.9365 19.5157 29.448 19.8314 29.7637C20.1471 30.0786 20.6594 30.0786 20.9751 29.7637L28.1703 22.571C28.4811 22.2594 28.4811 21.7398 28.1695 21.4289Z" fill="#DD2D1F" />
+                                </g>
+                                <defs>
+                                    <clipPath>
+                                        <rect width="16" height="16" fill="white" transform="translate(32 30) rotate(-180)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </button>
+                    </div>
+
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <div class="review">
+                                    <div class="review__gallery">
+                                        <div class="review__gallery-primary">
+                                            <div class="review-video _reviewVideo" data-embed="dQw4w9WgXcQ">
+                                                <div class="review-video__play">
+                                                    <img src="./img/icons/play.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="review__gallery-secondary">
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review__author">
+                                        <i><span class="review__author-name">Сурина Н.В.</span> Тюменский район, СО “Тюменец”</i>
+                                    </div>
+
+                                    <ul class="review__info">
+                                        <li>
+                                            <strong class="review__info-type">Оценка:</strong>
+
+                                            <div class="review__info-value">
+                                                <div class="review__rate">
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Вид работ:</strong>
+
+                                            <div class="review__info-value">
+                                                строительство крыши и монтаж кровли
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Материалы:</strong>
+
+                                            <div class="review__info-value review__info-value--long">
+                                                <div class="g-show-more" onclick="global.toggle(this)">
+                                                    <div class="g-show-more__icon">
+                                                        <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+                                                        <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+                                                    </div>
+
+                                                    <div class="g-show-more__text">
+                                                        <span class="g-show-more__text-more">Показать еще</span>
+                                                        <span class="g-show-more__text-less">Скрыть</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="review__info-value-text">
+                                                    Фиброцементный сайдинг Кедрал, утеплитель Тизол EURO-Лайт 35, фасадные панели Стоунн Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa provident facilis aut facere corrupti adipisci rem fugiat, maxime odio aliquid illum eveniet eos cupiditate modi ullam, optio placeat fugit!
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Площадь объекта:</strong>
+
+                                            <div class="review__info-value">
+                                                120 кв.м
+                                            </div>
+                                        </li>
+
+                                        <div class="review__text">
+                                            Выражаю огромную благодарность бригаде (в составе: Киселева С.В., Пульдас С.В., Тимофеева В.О.) и руководству Тюменской Фасадно-Кровельной Компании за отлично проделанную работу по монтажу покрытия сайдингом дачного домика. Работа произведена на высоком профессиональном уровне, все пожелания заказчика выполнялись с пониманием и хорошим качеством. Ребята обладают всеми человеческими качествами необходимыми <br> при работе с капризными заказчиками.
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="splide__slide">
+                                <div class="review">
+                                    <div class="review__gallery">
+                                        <div class="review__gallery-primary">
+                                            <div class="review-video _reviewVideo" data-embed="dQw4w9WgXcQ">
+                                                <div class="review-video__play">
+                                                    <img src="./img/icons/play.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="review__gallery-secondary">
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review__author">
+                                        <i><span class="review__author-name">Сурина Н.В.</span> Тюменский район, СО “Тюменец”</i>
+                                    </div>
+
+                                    <ul class="review__info">
+                                        <li>
+                                            <strong class="review__info-type">Оценка:</strong>
+
+                                            <div class="review__info-value">
+                                                <div class="review__rate">
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Вид работ:</strong>
+
+                                            <div class="review__info-value">
+                                                строительство крыши и монтаж кровли
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Материалы:</strong>
+
+                                            <div class="review__info-value review__info-value--long">
+                                                <div class="g-show-more" onclick="global.toggle(this)">
+                                                    <div class="g-show-more__icon">
+                                                        <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+                                                        <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+                                                    </div>
+
+                                                    <div class="g-show-more__text">
+                                                        <span class="g-show-more__text-more">Показать еще</span>
+                                                        <span class="g-show-more__text-less">Скрыть</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="review__info-value-text">
+                                                    Фиброцементный сайдинг Кедрал, утеплитель Тизол EURO-Лайт 35, фасадные панели Стоунн Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa provident facilis aut facere corrupti adipisci rem fugiat, maxime odio aliquid illum eveniet eos cupiditate modi ullam, optio placeat fugit!
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Площадь объекта:</strong>
+
+                                            <div class="review__info-value">
+                                                120 кв.м
+                                            </div>
+                                        </li>
+
+                                        <div class="review__text">
+                                            Выражаю огромную благодарность бригаде (в составе: Киселева С.В., Пульдас С.В., Тимофеева В.О.) и руководству Тюменской Фасадно-Кровельной Компании за отлично проделанную работу по монтажу покрытия сайдингом дачного домика. Работа произведена на высоком профессиональном уровне, все пожелания заказчика выполнялись с пониманием и хорошим качеством. Ребята обладают всеми человеческими качествами необходимыми <br> при работе с капризными заказчиками.
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="splide__slide">
+                                <div class="review">
+                                    <div class="review__gallery">
+                                        <div class="review__gallery-primary">
+                                            <div class="review-video _reviewVideo" data-embed="dQw4w9WgXcQ">
+                                                <div class="review-video__play">
+                                                    <img src="./img/icons/play.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="review__gallery-secondary">
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review__author">
+                                        <i><span class="review__author-name">Сурина Н.В.</span> Тюменский район, СО “Тюменец”</i>
+                                    </div>
+
+                                    <ul class="review__info">
+                                        <li>
+                                            <strong class="review__info-type">Оценка:</strong>
+
+                                            <div class="review__info-value">
+                                                <div class="review__rate">
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Вид работ:</strong>
+
+                                            <div class="review__info-value">
+                                                строительство крыши и монтаж кровли
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Материалы:</strong>
+
+                                            <div class="review__info-value review__info-value--long">
+                                                <div class="g-show-more" onclick="global.toggle(this)">
+                                                    <div class="g-show-more__icon">
+                                                        <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+                                                        <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+                                                    </div>
+
+                                                    <div class="g-show-more__text">
+                                                        <span class="g-show-more__text-more">Показать еще</span>
+                                                        <span class="g-show-more__text-less">Скрыть</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="review__info-value-text">
+                                                    Фиброцементный сайдинг Кедрал, утеплитель Тизол EURO-Лайт 35, фасадные панели Стоунн Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa provident facilis aut facere corrupti adipisci rem fugiat, maxime odio aliquid illum eveniet eos cupiditate modi ullam, optio placeat fugit!
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Площадь объекта:</strong>
+
+                                            <div class="review__info-value">
+                                                120 кв.м
+                                            </div>
+                                        </li>
+
+                                        <div class="review__text">
+                                            Выражаю огромную благодарность бригаде (в составе: Киселева С.В., Пульдас С.В., Тимофеева В.О.) и руководству Тюменской Фасадно-Кровельной Компании за отлично проделанную работу по монтажу покрытия сайдингом дачного домика. Работа произведена на высоком профессиональном уровне, все пожелания заказчика выполнялись с пониманием и хорошим качеством. Ребята обладают всеми человеческими качествами необходимыми <br> при работе с капризными заказчиками.
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="splide__slide">
+                                <div class="review">
+                                    <div class="review__gallery">
+                                        <div class="review__gallery-primary">
+                                            <div class="review-video _reviewVideo" data-embed="dQw4w9WgXcQ">
+                                                <div class="review-video__play">
+                                                    <img src="./img/icons/play.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="review__gallery-secondary">
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+
+                                            <div class="review__gallery-item">
+                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review__author">
+                                        <i><span class="review__author-name">Сурина Н.В.</span> Тюменский район, СО “Тюменец”</i>
+                                    </div>
+
+                                    <ul class="review__info">
+                                        <li>
+                                            <strong class="review__info-type">Оценка:</strong>
+
+                                            <div class="review__info-value">
+                                                <div class="review__rate">
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                    <div class="review__rate-star active">
+                                                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g>
+                                                                <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath>
+                                                                    <rect width="15" height="15" fill="white" />
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Вид работ:</strong>
+
+                                            <div class="review__info-value">
+                                                строительство крыши и монтаж кровли
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Материалы:</strong>
+
+                                            <div class="review__info-value review__info-value--long">
+                                                <div class="g-show-more" onclick="global.toggle(this)">
+                                                    <div class="g-show-more__icon">
+                                                        <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+                                                        <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+                                                    </div>
+
+                                                    <div class="g-show-more__text">
+                                                        <span class="g-show-more__text-more">Показать еще</span>
+                                                        <span class="g-show-more__text-less">Скрыть</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="review__info-value-text">
+                                                    Фиброцементный сайдинг Кедрал, утеплитель Тизол EURO-Лайт 35, фасадные панели Стоунн Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa provident facilis aut facere corrupti adipisci rem fugiat, maxime odio aliquid illum eveniet eos cupiditate modi ullam, optio placeat fugit!
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <strong class="review__info-type">Площадь объекта:</strong>
+
+                                            <div class="review__info-value">
+                                                120 кв.м
+                                            </div>
+                                        </li>
+
+                                        <div class="review__text">
+                                            Выражаю огромную благодарность бригаде (в составе: Киселева С.В., Пульдас С.В., Тимофеева В.О.) и руководству Тюменской Фасадно-Кровельной Компании за отлично проделанную работу по монтажу покрытия сайдингом дачного домика. Работа произведена на высоком профессиональном уровне, все пожелания заказчика выполнялись с пониманием и хорошим качеством. Ребята обладают всеми человеческими качествами необходимыми <br> при работе с капризными заказчиками.
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews__more">
+                    <a href="#" class="g-btn">Больше отзывов</a>
+                </div>
+            </div>
+        </section>
+        <section class="payment-example">
+            <div class="container">
+                <h2 class="payment-example__title">
+                    Покажем пример расчета
+                </h2>
+
+                <div class="payment-example__wrap">
+                    <div class="payment-example__img">
+                        <picture>
+                            <source type="image/webp" data-srcset="./img/payment-example.webp 1x,
+							./img/payment-example@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                            <img data-srcset="./img/payment-example.jpg 1x,
+								./img/payment-example@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/payment-example.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                        </picture>
+                    </div>
+
+                    <div class="payment-example__form">
+                        <div>
+                            Получите пример расчета кровли, оставив свой номер телефона
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="suppliers">
+            <div class="container">
+                <h2 class="suppliers__title">
+                    Наши поставщики
+                </h2>
+
+                <div class="_suppliersCarousel splide">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev">
+                            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="22.5" cy="22.5" r="21.5" stroke="#DD2D1F" stroke-width="2" />
+                                <g>
+                                    <path d="M28.1695 21.4289L20.9743 14.2361C20.6586 13.9212 20.1471 13.9212 19.8306 14.2361C19.5149 14.5511 19.5149 15.0626 19.8306 15.3775L26.455 21.9995L19.8314 28.6215C19.5157 28.9365 19.5157 29.448 19.8314 29.7637C20.1471 30.0786 20.6594 30.0786 20.9751 29.7637L28.1703 22.571C28.4811 22.2594 28.4811 21.7398 28.1695 21.4289Z" fill="#DD2D1F" />
+                                </g>
+                                <defs>
+                                    <clipPath>
+                                        <rect width="16" height="16" fill="white" transform="translate(32 30) rotate(-180)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </button>
+                        <button class="splide__arrow splide__arrow--next">
+                            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="22.5" cy="22.5" r="21.5" stroke="#DD2D1F" stroke-width="2" />
+                                <g>
+                                    <path d="M28.1695 21.4289L20.9743 14.2361C20.6586 13.9212 20.1471 13.9212 19.8306 14.2361C19.5149 14.5511 19.5149 15.0626 19.8306 15.3775L26.455 21.9995L19.8314 28.6215C19.5157 28.9365 19.5157 29.448 19.8314 29.7637C20.1471 30.0786 20.6594 30.0786 20.9751 29.7637L28.1703 22.571C28.4811 22.2594 28.4811 21.7398 28.1695 21.4289Z" fill="#DD2D1F" />
+                                </g>
+                                <defs>
+                                    <clipPath>
+                                        <rect width="16" height="16" fill="white" transform="translate(32 30) rotate(-180)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </button>
+                    </div>
+
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <img data-splide-lazy="./img/suppliers/ada.jpg" alt="">
+                            </div>
+
+                            <div class="splide__slide">
+                                <img data-splide-lazy="./img/suppliers/fakro.jpg" alt="">
+                            </div>
+
+                            <div class="splide__slide">
+                                <img data-splide-lazy="./img/suppliers/cedral.jpg" alt="">
+                            </div>
+
+                            <div class="splide__slide">
+                                <img data-splide-lazy="./img/suppliers/grandline.jpg" alt="">
+                            </div>
+
+                            <div class="splide__slide">
+                                <img data-splide-lazy="./img/suppliers/decover.jpg" alt="">
+                            </div>
+
+                            <div class="splide__slide">
+                                <img data-splide-lazy="./img/suppliers/isobox.jpg" alt="">
+                            </div>
+
+                            <div class="splide__slide">
+                                <img data-splide-lazy="./img/suppliers/braas.jpg" alt="">
+                            </div>
+
+                            <div class="splide__slide">
+                                <img data-splide-lazy="./img/suppliers/katepal.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts contacts--main">
+            <div class="container">
+                <h2 class="contacts__title">
+                    Контакты
+                </h2>
+
+
+                <div class="contacts__header">
+                    <div class="g-select _select">
+                        <button class="g-select__btn _selectBtn">Офис №1</button>
+
+                        <ul class="g-select__dropdown _selectDropdown">
+                            <li class="g-select__option _selectOption" data-nav-for="contacts-1">Офис №1</li>
+                            <li class="g-select__option _selectOption" data-nav-for="contacts-2">Офис №2</li>
+                        </ul>
+                    </div>
+
+                    <div class="contacts__offices">
+                        <div class="contacts__office active" data-nav-for="contacts-1">
+                            <div class="contacts__office-title">
+                                Офис №1
+                            </div>
+
+                            <ul class="contacts__office-info">
+                                <li>
+                                    <strong>
+                                        Адрес:
+                                    </strong>
+
+                                    <span>
+                                        г. Тюмень, ул. Циолковского, 15а
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <strong>
+                                        Телефон:
+                                    </strong>
+
+                                    <a href="tel:+73452578617">
+                                        8 (3452) 57-86-17
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <strong>
+                                        Email:
+                                    </strong>
+
+                                    <span>
+                                        tfkk@yandex.ru
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <strong>
+                                        Режим <br> работы:
+                                    </strong>
+
+                                    <span>
+                                        Пн-Пт 09:00 - 18:00 <br>
+                                        Сб 09:00 - 15:00 <br>
+                                        Вс Выходной
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="contacts__office" data-nav-for="contacts-2">
+                            <div class="contacts__office-title">
+                                Офис №2
+                            </div>
+
+                            <ul class="contacts__office-info">
+                                <li>
+                                    <strong>
+                                        Адрес:
+                                    </strong>
+
+                                    <span>
+                                        г. Тюмень, ул. Республики, д.207, офис 1
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <strong>
+                                        Телефон:
+                                    </strong>
+
+                                    <a href="tel:+73452578617">
+                                        8 (3452) 57-86-17
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <strong>
+                                        Email:
+                                    </strong>
+
+                                    <span>
+                                        tfkk@yandex.ru
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <strong>
+                                        Режим <br> работы:
+                                    </strong>
+
+                                    <span>
+                                        Пн-Пт 09:00 - 18:00 <br>
+                                        Сб 09:00 - 15:00 <br>
+                                        Вс Выходной
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                    <div class="contacts__common">
+                        <div class="social">
+                            <div class="social__title">
+                                Социальные сети:
+                            </div>
+
+                            <nav class="social__list">
+                                <a href="#" class="social__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--fb">
+                                        <path d="M0 0V32H17.042V19.6391H12.876V14.593H17.042V10.3552C17.042 7.27315 19.5404 4.77469 22.6224 4.77469H26.9777V9.31225H23.8613C22.882 9.31225 22.088 10.1062 22.088 11.0855V14.5931H26.8994L26.2344 19.6391H22.088V32H32V0H0Z" fill="#232323" />
+                                    </svg>
+
+                                </a>
+
+                                <a href="#" class="social__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--ig">
+                                        <path d="M15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM21.301 7.62978H10.699C9.00674 7.62978 7.62978 9.00674 7.62978 10.699V21.301C7.62978 22.9933 9.00674 24.3702 10.699 24.3702H21.301C22.9933 24.3702 24.3702 22.9933 24.3702 21.301V10.699C24.3702 9.00674 22.9933 7.62978 21.301 7.62978ZM15.9996 21.511C12.9614 21.511 10.489 19.0386 10.489 15.9996C10.489 12.9614 12.9614 10.489 15.9996 10.489C19.0386 10.489 21.511 12.9614 21.511 15.9996C21.511 19.0386 19.0386 21.511 15.9996 21.511ZM21.6879 11.6286C20.9689 11.6286 20.384 11.0437 20.384 10.3247C20.384 9.60569 20.9689 9.02078 21.6879 9.02078C22.4069 9.02078 22.9919 9.60569 22.9919 10.3247C22.9919 11.0437 22.4069 11.6286 21.6879 11.6286ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM21.301 7.62978H10.699C9.00674 7.62978 7.62978 9.00674 7.62978 10.699V21.301C7.62978 22.9933 9.00674 24.3702 10.699 24.3702H21.301C22.9933 24.3702 24.3702 22.9933 24.3702 21.301V10.699C24.3702 9.00674 22.9933 7.62978 21.301 7.62978ZM15.9996 21.511C12.9614 21.511 10.489 19.0386 10.489 15.9996C10.489 12.9614 12.9614 10.489 15.9996 10.489C19.0386 10.489 21.511 12.9614 21.511 15.9996C21.511 19.0386 19.0386 21.511 15.9996 21.511ZM21.6879 11.6286C20.9689 11.6286 20.384 11.0437 20.384 10.3247C20.384 9.60569 20.9689 9.02078 21.6879 9.02078C22.4069 9.02078 22.9919 9.60569 22.9919 10.3247C22.9919 11.0437 22.4069 11.6286 21.6879 11.6286ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM0 0V32H32V0H0ZM26.6986 21.301C26.6986 24.2775 24.2775 26.6986 21.301 26.6986H10.699C7.72247 26.6986 5.30138 24.2775 5.30138 21.301V10.699C5.30138 7.72247 7.72247 5.30138 10.699 5.30138H21.301C24.2775 5.30138 26.6986 7.72247 26.6986 10.699V21.301ZM21.301 7.62978H10.699C9.00674 7.62978 7.62978 9.00674 7.62978 10.699V21.301C7.62978 22.9933 9.00674 24.3702 10.699 24.3702H21.301C22.9933 24.3702 24.3702 22.9933 24.3702 21.301V10.699C24.3702 9.00674 22.9933 7.62978 21.301 7.62978ZM15.9996 21.511C12.9614 21.511 10.489 19.0386 10.489 15.9996C10.489 12.9614 12.9614 10.489 15.9996 10.489C19.0386 10.489 21.511 12.9614 21.511 15.9996C21.511 19.0386 19.0386 21.511 15.9996 21.511ZM21.6879 11.6286C20.9689 11.6286 20.384 11.0437 20.384 10.3247C20.384 9.60569 20.9689 9.02078 21.6879 9.02078C22.4069 9.02078 22.9919 9.60569 22.9919 10.3247C22.9919 11.0437 22.4069 11.6286 21.6879 11.6286ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM21.301 7.62978H10.699C9.00674 7.62978 7.62978 9.00674 7.62978 10.699V21.301C7.62978 22.9933 9.00674 24.3702 10.699 24.3702H21.301C22.9933 24.3702 24.3702 22.9933 24.3702 21.301V10.699C24.3702 9.00674 22.9933 7.62978 21.301 7.62978ZM15.9996 21.511C12.9614 21.511 10.489 19.0386 10.489 15.9996C10.489 12.9614 12.9614 10.489 15.9996 10.489C19.0386 10.489 21.511 12.9614 21.511 15.9996C21.511 19.0386 19.0386 21.511 15.9996 21.511ZM21.6879 11.6286C20.9689 11.6286 20.384 11.0437 20.384 10.3247C20.384 9.60569 20.9689 9.02078 21.6879 9.02078C22.4069 9.02078 22.9919 9.60569 22.9919 10.3247C22.9919 11.0437 22.4069 11.6286 21.6879 11.6286ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM21.301 7.62978H10.699C9.00674 7.62978 7.62978 9.00674 7.62978 10.699V21.301C7.62978 22.9933 9.00674 24.3702 10.699 24.3702H21.301C22.9933 24.3702 24.3702 22.9933 24.3702 21.301V10.699C24.3702 9.00674 22.9933 7.62978 21.301 7.62978ZM15.9996 21.511C12.9614 21.511 10.489 19.0386 10.489 15.9996C10.489 12.9614 12.9614 10.489 15.9996 10.489C19.0386 10.489 21.511 12.9614 21.511 15.9996C21.511 19.0386 19.0386 21.511 15.9996 21.511ZM21.6879 11.6286C20.9689 11.6286 20.384 11.0437 20.384 10.3247C20.384 9.60569 20.9689 9.02078 21.6879 9.02078C22.4069 9.02078 22.9919 9.60569 22.9919 10.3247C22.9919 11.0437 22.4069 11.6286 21.6879 11.6286ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181Z" fill="#232323" />
+                                    </svg>
+
+                                </a>
+
+                                <a href="#" class="social__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--yt">
+                                        <path d="M32 0H0V32H32V0Z" fill="#232323" />
+                                        <path d="M18.4868 20.4844C18.4861 20.365 18.451 20.2407 18.4067 20.1291C18.3477 19.9823 18.2213 19.9093 18.0627 19.8938C17.8766 19.8756 17.7277 19.9507 17.5929 20.0701C17.5388 20.1171 17.5143 20.1873 17.5143 20.1873L17.5171 23.977V24.0703C17.5171 24.0703 17.5494 24.1139 17.5543 24.1195C17.6638 24.2382 17.7916 24.3322 17.9552 24.366C18.2249 24.4214 18.4151 24.3091 18.4678 24.0591C18.4811 23.9966 18.4889 23.932 18.4889 23.8681C18.4903 22.7397 18.4924 21.612 18.4868 20.4844ZM18.4868 20.4844C18.4861 20.365 18.451 20.2407 18.4067 20.1291C18.3477 19.9823 18.2213 19.9093 18.0627 19.8938C17.8766 19.8756 17.7277 19.9507 17.5929 20.0701C17.5388 20.1171 17.5143 20.1873 17.5143 20.1873L17.5171 23.977V24.0703C17.5171 24.0703 17.5494 24.1139 17.5543 24.1195C17.6638 24.2382 17.7916 24.3322 17.9552 24.366C18.2249 24.4214 18.4151 24.3091 18.4678 24.0591C18.4811 23.9966 18.4889 23.932 18.4889 23.8681C18.4903 22.7397 18.4924 21.612 18.4868 20.4844ZM22.73 14.7694C18.2452 14.6732 13.7584 14.6732 9.27291 14.7694C7.7169 14.8024 6.47266 16.0747 6.47266 17.6315V24.6363C6.47266 26.1937 7.7169 27.466 9.27291 27.499C13.7584 27.5952 18.2452 27.5952 22.73 27.499C24.2867 27.466 25.5309 26.1937 25.5309 24.6363V17.6315C25.5309 16.0748 24.2867 14.8024 22.73 14.7694ZM10.5902 25.2746H9.29678V17.9629H7.95774V16.7398H11.932V17.9601H10.5902V25.2746ZM15.2189 22.2398V25.2753H14.0736V24.5815C14.0322 24.6258 14.009 24.6496 13.9873 24.6742C13.7408 24.9523 13.4613 25.184 13.1046 25.3069C12.9305 25.3665 12.7514 25.3869 12.5682 25.3553C12.3182 25.3139 12.1504 25.1699 12.0493 24.9424C11.9552 24.7325 11.9313 24.5078 11.9306 24.2817C11.9278 23.4461 11.9292 19.0239 11.9292 18.981H13.0716C13.0737 19.0196 13.078 22.1941 13.0787 23.7424C13.0787 23.8267 13.0794 23.9131 13.0962 23.9952C13.1383 24.2031 13.2977 24.2922 13.4979 24.2192C13.7282 24.1349 13.9037 23.9762 14.0512 23.786C14.0729 23.7586 14.0729 23.7094 14.0729 23.6701V18.974L15.2189 18.9712C15.2189 18.9713 15.2189 21.1879 15.2189 22.2398ZM19.5758 24.6686C19.4228 25.1292 19.0857 25.3637 18.6012 25.3588C18.2073 25.3553 17.8878 25.1987 17.6245 24.9129C17.595 24.8813 17.5136 24.795 17.5136 24.795V25.2739H16.3662V16.739H17.5136C17.5136 17.6476 17.5136 19.5484 17.5136 19.5484C17.5136 19.5484 17.5782 19.4192 17.6371 19.3525C17.8148 19.1538 18.0311 19 18.2979 18.9326C18.7381 18.8223 19.2458 18.9586 19.4874 19.4732C19.6299 19.7773 19.6699 20.1017 19.6699 20.4317C19.672 21.6247 19.672 22.8177 19.6706 24.0107C19.6699 24.2339 19.6467 24.4545 19.5758 24.6686ZM23.8134 24.4285C23.6147 25.0106 23.2039 25.3336 22.6015 25.4221C22.2279 25.4769 21.8579 25.4691 21.5075 25.3104C21.0279 25.0942 20.7562 24.7031 20.6396 24.2052C20.5855 23.9735 20.5589 23.7306 20.5561 23.4925C20.5469 22.5579 20.5511 21.6227 20.5532 20.6881C20.5539 20.1994 20.6705 19.7486 21.0054 19.3743C21.3874 18.9467 21.8761 18.7873 22.4344 18.8231C22.6022 18.8336 22.7735 18.861 22.9329 18.9137C23.4757 19.092 23.7657 19.4986 23.8794 20.0379C23.923 20.2457 23.9391 20.4613 23.9426 20.674C23.9517 21.1726 23.9391 22.2715 23.9391 22.2715H21.742V23.8464C21.742 24.1294 21.9709 24.3583 22.2539 24.3583C22.5362 24.3583 22.7651 24.1294 22.7651 23.8464V23.0368H23.9454C23.9454 23.0367 23.963 23.9925 23.8134 24.4285ZM22.7651 20.4107C22.7651 20.1284 22.5362 19.8988 22.2539 19.8988C21.9709 19.8988 21.742 20.1284 21.742 20.4107V21.2947H22.7651V20.4107ZM18.4067 20.1291C18.3477 19.9824 18.2213 19.9094 18.0627 19.8939C17.8766 19.8757 17.7277 19.9508 17.5929 20.0702C17.5388 20.1172 17.5143 20.1874 17.5143 20.1874L17.5171 23.977V24.0704C17.5171 24.0704 17.5494 24.1139 17.5543 24.1196C17.6638 24.2382 17.7916 24.3323 17.9552 24.366C18.2249 24.4215 18.4151 24.3091 18.4678 24.0592C18.4811 23.9967 18.4889 23.9321 18.4889 23.8682C18.4903 22.7398 18.4924 21.6121 18.4868 20.4844C18.4861 20.365 18.451 20.2407 18.4067 20.1291Z" fill="white" />
+                                        <path d="M21.3382 6.66992L21.3379 13.0066H20.1637L20.1651 12.3258C20.0353 12.4537 19.9245 12.5731 19.8027 12.6804C19.5869 12.8706 19.3424 13.0123 19.0564 13.0683C18.6173 13.1542 18.2433 13.0153 18.1033 12.5606C18.0567 12.4092 18.0285 12.2459 18.0273 12.0878V6.66992H19.1927V11.5023C19.1927 11.5664 19.1978 11.6311 19.209 11.6939C19.2444 11.893 19.3916 11.9867 19.5833 11.9202C19.8171 11.8394 19.9955 11.6775 20.1468 11.4868C20.1683 11.4596 20.1644 11.4087 20.1644 11.3688V6.66992H21.3382Z" fill="white" />
+                                        <path d="M11.6289 7.77117C11.3741 6.69679 10.8401 4.42871 10.8401 4.42871H9.50391C9.50391 4.42871 10.5305 7.83332 10.9896 9.35169C11.0061 9.4066 11.0136 9.46621 11.0136 9.52372L11.0131 13.0054H12.2452L12.2448 9.52372C12.2448 9.46621 12.2523 9.4066 12.2688 9.35169C12.7279 7.83332 13.7545 4.42871 13.7545 4.42871H12.4183C12.4183 4.42871 11.8843 6.69679 11.6294 7.77117H11.6289Z" fill="white" />
+                                        <path d="M15.361 6.51172C14.4324 6.51172 13.6797 7.26444 13.6797 8.19299V11.4833C13.6797 12.4118 14.4324 13.1646 15.361 13.1646C16.2895 13.1646 17.0422 12.4118 17.0422 11.4833V8.19299C17.0423 7.26444 16.2895 6.51172 15.361 6.51172ZM15.8462 11.5497C15.8462 11.8172 15.6285 12.0348 15.361 12.0348C15.0936 12.0348 14.8759 11.8172 14.8759 11.5497V8.1265C14.8759 7.85897 15.0936 7.64137 15.361 7.64137C15.6285 7.64137 15.8462 7.85904 15.8462 8.1265V11.5497Z" fill="white" />
+                                    </svg>
+
+                                </a>
+
+                                <a href="#" class="social__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--vk">
+                                        <path d="M32 0H0V32H32V0Z" fill="#232323" />
+                                        <path d="M8.29064 9.73838C9.05755 11.6323 10.0295 13.4179 11.3096 15.0209C11.4794 15.2342 11.6934 15.4238 11.9189 15.5782C12.2482 15.8044 12.5589 15.7249 12.6928 15.3482C12.8344 14.9529 12.9644 14.1517 12.9721 13.7366C12.9933 12.6519 12.969 11.941 12.9107 10.8576C12.8729 10.1638 12.6262 9.55448 11.6056 9.37058C11.2904 9.31357 11.2611 9.05412 11.4636 8.7953C11.8852 8.25645 12.4725 8.17058 13.1093 8.13659C14.1415 8.08084 15.1775 8.12634 16.211 8.13659C16.6319 8.14046 17.0554 8.17437 17.4699 8.26474C18.0107 8.38263 18.3003 8.76194 18.3894 9.28983C18.4355 9.56214 18.4592 9.84209 18.4528 10.1176C18.4259 11.3016 18.3689 12.485 18.3554 13.6683C18.3496 14.1328 18.3835 14.6089 18.4829 15.0612C18.6219 15.6916 19.0512 15.8499 19.4901 15.3944C20.0475 14.8159 20.5389 14.1649 21.0002 13.5038C21.8382 12.3012 22.4641 10.9814 23.003 9.62056C23.2817 8.91839 23.495 8.76588 24.2504 8.76398C25.6702 8.76075 27.0899 8.75949 28.5097 8.76398C28.7615 8.76524 29.0248 8.78898 29.2625 8.8646C29.6482 8.98762 29.8014 9.30219 29.711 9.70138C29.5002 10.6368 28.9947 11.4319 28.4533 12.1962C27.5845 13.4225 26.6741 14.6194 25.7849 15.8315C25.6715 15.9859 25.5716 16.1506 25.4786 16.3178C25.1461 16.9188 25.1692 17.2557 25.6541 17.7561C26.4262 18.5525 27.2527 19.2976 28.0004 20.1157C28.5437 20.711 29.0466 21.3567 29.4772 22.0365C30.0218 22.8963 29.6854 23.7061 28.668 23.8503C28.028 23.9406 24.9015 23.851 24.7399 23.8503C23.8994 23.8465 23.1626 23.5549 22.5692 22.9841C21.9093 22.3485 21.3096 21.6514 20.676 20.9883C20.4851 20.7884 20.2813 20.5969 20.0616 20.4296C19.5432 20.0343 19.0345 20.122 18.7923 20.7308C18.5854 21.2536 18.4066 22.6265 18.3983 22.7438C18.3548 23.3569 17.9646 23.7478 17.2777 23.7855C15.2948 23.8932 13.3733 23.6721 11.5832 22.713C10.0661 21.9006 8.85455 20.7519 7.80509 19.4122C6.138 17.2844 4.82122 14.9454 3.61904 12.5377C3.5576 12.4146 2.33997 9.82362 2.30725 9.70123C2.19848 9.29145 2.29995 8.89999 2.64619 8.76524C2.86203 8.68127 6.87661 8.76496 6.94339 8.76854C7.58398 8.80323 8.0208 9.0735 8.29064 9.73838Z" fill="white" />
+                                    </svg>
+
+                                </a>
+
+                                <a href="#" class="social__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--vb">
+                                        <path d="M32 0H0V32H32V0Z" fill="#232323" />
+                                        <path d="M26.1209 10.315L26.1146 10.2897C25.6034 8.22326 23.2989 6.00581 21.1826 5.54448L21.1587 5.53957C17.7356 4.88655 14.2648 4.88655 10.8424 5.53957L10.8179 5.54448C8.70223 6.00581 6.39771 8.22326 5.88583 10.2897L5.88021 10.315C5.24826 13.2009 5.24826 16.1276 5.88021 19.0135L5.88583 19.0388C6.37587 21.0171 8.50878 23.1326 10.5461 23.7144V26.0212C10.5461 26.8561 11.5636 27.2661 12.1422 26.6637L14.4793 24.2342C14.9862 24.2626 15.4934 24.2784 16.0006 24.2784C17.7237 24.2784 19.4475 24.1155 21.1587 23.789L21.1826 23.7841C23.2989 23.3228 25.6034 21.1053 26.1146 19.0388L26.1209 19.0136C26.7529 16.1276 26.7529 13.2009 26.1209 10.315ZM24.2714 18.595C23.9302 19.9432 22.1804 21.6192 20.7901 21.9289C18.97 22.275 17.1355 22.4229 15.3028 22.3722C15.2664 22.3712 15.2313 22.3853 15.2059 22.4114C14.9458 22.6784 13.4994 24.1632 13.4994 24.1632L11.6843 26.026C11.5516 26.1644 11.3185 26.0703 11.3185 25.8793V22.0579C11.3185 21.9948 11.2734 21.9412 11.2114 21.929C11.2111 21.929 11.2107 21.9289 11.2104 21.9288C9.82008 21.6192 8.07098 19.9431 7.72902 18.5949C7.16027 15.9864 7.16027 13.342 7.72902 10.7334C8.07098 9.38528 9.82008 7.7092 11.2104 7.39954C14.3891 6.79497 17.612 6.79497 20.7901 7.39954C22.1811 7.7092 23.9302 9.38528 24.2714 10.7334C24.8408 13.3421 24.8408 15.9864 24.2714 18.595Z" fill="white" />
+                                        <path d="M19.0245 20.3586C18.8108 20.2937 18.6071 20.2501 18.4179 20.1716C16.4577 19.3583 14.6537 18.3091 13.2247 16.7008C12.4121 15.7863 11.7761 14.7537 11.2385 13.661C10.9835 13.1428 10.7686 12.6043 10.5496 12.0693C10.3499 11.5815 10.6441 11.0774 10.9538 10.7099C11.2444 10.3649 11.6184 10.1009 12.0234 9.90629C12.3395 9.75441 12.6514 9.84197 12.8822 10.1099C13.3813 10.6892 13.8398 11.2981 14.211 11.9696C14.4393 12.3826 14.3767 12.8875 13.9629 13.1686C13.8624 13.2369 13.7708 13.3171 13.6771 13.3942C13.5949 13.4619 13.5176 13.5302 13.4613 13.6217C13.3584 13.7893 13.3535 13.9869 13.4197 14.169C13.9299 15.5711 14.7899 16.6614 16.2011 17.2486C16.4269 17.3425 16.6537 17.4519 16.9139 17.4216C17.3496 17.3707 17.4906 16.8928 17.7959 16.6431C18.0944 16.3991 18.4757 16.3959 18.7972 16.5993C19.1187 16.8028 19.4304 17.0212 19.7402 17.242C20.0443 17.4587 20.3471 17.6707 20.6276 17.9177C20.8973 18.1552 20.9902 18.4669 20.8383 18.7892C20.5602 19.3796 20.1557 19.8708 19.572 20.1843C19.4072 20.2727 19.2104 20.3013 19.0245 20.3586C18.8108 20.2936 19.2104 20.3013 19.0245 20.3586Z" fill="white" />
+                                        <path d="M16.0052 9.23154C18.5692 9.30337 20.6751 11.0049 21.1263 13.5398C21.2032 13.9717 21.2306 14.4133 21.2648 14.8516C21.2792 15.036 21.1748 15.2112 20.9758 15.2136C20.7703 15.2161 20.6778 15.0441 20.6645 14.8598C20.638 14.4949 20.6197 14.1285 20.5694 13.7666C20.304 11.8567 18.781 10.2765 16.8799 9.93743C16.5938 9.88638 16.301 9.87297 16.0113 9.84256C15.8281 9.82332 15.5881 9.81223 15.5475 9.58452C15.5135 9.3936 15.6746 9.24158 15.8564 9.23182C15.9059 9.22908 15.9556 9.23132 16.0052 9.23154C18.5692 9.30337 15.9556 9.23132 16.0052 9.23154Z" fill="white" />
+                                        <path d="M19.9034 14.2834C19.8992 14.3155 19.8969 14.3907 19.8782 14.4616C19.8102 14.7191 19.4199 14.7513 19.33 14.4915C19.3034 14.4144 19.2994 14.3267 19.2993 14.2437C19.2983 13.7006 19.1803 13.1581 18.9065 12.6856C18.625 12.2 18.1949 11.7918 17.6905 11.5448C17.3854 11.3954 17.0556 11.3026 16.7213 11.2472C16.5751 11.2231 16.4275 11.2084 16.2806 11.188C16.1027 11.1633 16.0077 11.0499 16.0161 10.8745C16.024 10.7102 16.1441 10.5921 16.3231 10.6022C16.9115 10.6356 17.4799 10.7628 18.003 11.0398C19.0668 11.6031 19.6744 12.4923 19.8518 13.6797C19.8598 13.7335 19.8727 13.7868 19.8768 13.8408C19.8868 13.9741 19.8932 14.1076 19.9034 14.2834C19.8992 14.3155 19.8932 14.1076 19.9034 14.2834Z" fill="white" />
+                                        <path d="M18.3059 14.221C18.0914 14.2249 17.9766 14.1061 17.9544 13.9095C17.9391 13.7723 17.9269 13.6334 17.8942 13.5C17.8297 13.2372 17.6901 12.9937 17.469 12.8327C17.3647 12.7567 17.2464 12.7012 17.1226 12.6655C16.9652 12.6201 16.8018 12.6326 16.6448 12.5941C16.4743 12.5523 16.38 12.4143 16.4069 12.2543C16.4312 12.1088 16.5729 11.9951 16.7319 12.0067C17.726 12.0784 18.4364 12.5923 18.5378 13.7626C18.545 13.8452 18.5534 13.9324 18.5351 14.0114C18.5037 14.1467 18.4036 14.2144 18.3059 14.221C18.0914 14.2249 18.4036 14.2144 18.3059 14.221Z" fill="white" />
+                                    </svg>
+
+                                </a>
+
+                                <a href="#" class="social__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--ok">
+                                        <rect width="32" height="32" fill="#232323" />
+                                        <g>
+                                            <path d="M10.1386 16.3732C9.6132 17.4061 10.2098 17.8998 11.5709 18.7432C12.7281 19.4581 14.3266 19.7195 15.3535 19.8241L14.4929 20.6521C13.2732 21.8135 12.1161 22.9381 11.3069 23.7172C10.1292 24.8461 12.0252 26.6572 13.2021 25.5524L16.3881 22.4795C17.6078 23.6529 18.7769 24.7775 19.5741 25.5567C20.7518 26.6658 22.6469 24.8701 21.4821 23.7215L18.2961 20.6564L17.4235 19.8284C18.4632 19.7238 20.0378 19.447 21.1812 18.7475L21.1803 18.7467C22.5415 17.899 23.1381 17.4061 22.6203 16.3732C22.3075 15.787 21.4641 15.2967 20.3412 16.1444C20.3412 16.1444 18.8249 17.3058 16.3795 17.3058C13.9332 17.3058 12.4178 16.1444 12.4178 16.1444C11.2949 15.2924 10.4481 15.787 10.1386 16.3732Z" fill="white" />
+                                            <path d="M16.3772 15.7404C19.3584 15.7404 21.7927 13.4107 21.7927 10.5427C21.7927 7.66272 19.3584 5.33301 16.3772 5.33301C13.3952 5.33301 10.9609 7.66272 10.9609 10.5427C10.9609 13.4107 13.3952 15.7404 16.3772 15.7404ZM16.3772 7.97215C17.8421 7.97215 19.0369 9.12158 19.0369 10.5427C19.0369 11.9519 17.8421 13.1013 16.3772 13.1013C14.9124 13.1013 13.7175 11.9519 13.7175 10.5427C13.7167 9.12072 14.9115 7.97215 16.3772 7.97215Z" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath>
+                                                <rect width="20.5714" height="20.5714" fill="white" transform="translate(6.09375 5.33301)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </a>
+                            </nav>
+                        </div>
+                        <div class="contacts__adv">
+                            <div class="contacts__adv-title">Для рекламных предложений:</div>
+                            <a href="tel:+79829316157" class="contacts__adv-number">8 (982) 931-61-57</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contacts__tab active" data-tab="contacts-1">
+                    <div class="contacts__office active">
+                        <div class="contacts__office-title">
+                            Офис №1
+                        </div>
+
+                        <ul class="contacts__office-info">
+                            <li>
+                                <strong>
+                                    Адрес:
+                                </strong>
+
+                                <span>
+                                    г. Тюмень, ул. Циолковского, 15а
+                                </span>
+                            </li>
+
+                            <li>
+                                <strong>
+                                    Телефон:
+                                </strong>
+
+                                <a href="tel:+73452578617">
+                                    8 (3452) 57-86-17
+                                </a>
+                            </li>
+
+                            <li>
+                                <strong>
+                                    Email:
+                                </strong>
+
+                                <span>
+                                    tfkk@yandex.ru
+                                </span>
+                            </li>
+
+                            <li>
+                                <strong>
+                                    Режим <br> работы:
+                                </strong>
+
+                                <span>
+                                    Пн-Пт 09:00 - 18:00 <br>
+                                    Сб 09:00 - 15:00 <br>
+                                    Вс Выходной
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts__map">
+                        <iframe data-src="https://yandex.ru/map-widget/v1/-/CCQ~vLEY~B" allowfullscreen="true" class="lazyload"></iframe>
+                    </div>
+                </div>
+
+                <div class="contacts__tab" data-tab="contacts-2">
+                    <div class="contacts__office active">
+                        <div class="contacts__office-title">
+                            Офис №2
+                        </div>
+
+                        <ul class="contacts__office-info">
+                            <li>
+                                <strong>
+                                    Адрес:
+                                </strong>
+
+                                <span>
+                                    г. Тюмень, ул. Республики, д.207, офис 1
+                                </span>
+                            </li>
+
+                            <li>
+                                <strong>
+                                    Телефон:
+                                </strong>
+
+                                <a href="tel:+73452578617">
+                                    8 (3452) 57-86-17
+                                </a>
+                            </li>
+
+                            <li>
+                                <strong>
+                                    Email:
+                                </strong>
+
+                                <span>
+                                    tfkk@yandex.ru
+                                </span>
+                            </li>
+
+                            <li>
+                                <strong>
+                                    Режим <br> работы:
+                                </strong>
+
+                                <span>
+                                    Пн-Пт 09:00 - 18:00 <br>
+                                    Сб 09:00 - 15:00 <br>
+                                    Вс Выходной
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts__map">
+                        <iframe data-src="https://yandex.ru/map-widget/v1/-/CCQ~vLEY~B" allowfullscreen="true" class="lazyload"></iframe>
+                    </div>
+                </div>
+
+                <div class="contacts__common">
+                    <div class="social">
+                        <div class="social__title">
+                            Социальные сети:
+                        </div>
+
+                        <nav class="social__list">
+                            <a href="#" class="social__item">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--fb">
+                                    <path d="M0 0V32H17.042V19.6391H12.876V14.593H17.042V10.3552C17.042 7.27315 19.5404 4.77469 22.6224 4.77469H26.9777V9.31225H23.8613C22.882 9.31225 22.088 10.1062 22.088 11.0855V14.5931H26.8994L26.2344 19.6391H22.088V32H32V0H0Z" fill="#232323" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#" class="social__item">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--ig">
+                                    <path d="M15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM21.301 7.62978H10.699C9.00674 7.62978 7.62978 9.00674 7.62978 10.699V21.301C7.62978 22.9933 9.00674 24.3702 10.699 24.3702H21.301C22.9933 24.3702 24.3702 22.9933 24.3702 21.301V10.699C24.3702 9.00674 22.9933 7.62978 21.301 7.62978ZM15.9996 21.511C12.9614 21.511 10.489 19.0386 10.489 15.9996C10.489 12.9614 12.9614 10.489 15.9996 10.489C19.0386 10.489 21.511 12.9614 21.511 15.9996C21.511 19.0386 19.0386 21.511 15.9996 21.511ZM21.6879 11.6286C20.9689 11.6286 20.384 11.0437 20.384 10.3247C20.384 9.60569 20.9689 9.02078 21.6879 9.02078C22.4069 9.02078 22.9919 9.60569 22.9919 10.3247C22.9919 11.0437 22.4069 11.6286 21.6879 11.6286ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM21.301 7.62978H10.699C9.00674 7.62978 7.62978 9.00674 7.62978 10.699V21.301C7.62978 22.9933 9.00674 24.3702 10.699 24.3702H21.301C22.9933 24.3702 24.3702 22.9933 24.3702 21.301V10.699C24.3702 9.00674 22.9933 7.62978 21.301 7.62978ZM15.9996 21.511C12.9614 21.511 10.489 19.0386 10.489 15.9996C10.489 12.9614 12.9614 10.489 15.9996 10.489C19.0386 10.489 21.511 12.9614 21.511 15.9996C21.511 19.0386 19.0386 21.511 15.9996 21.511ZM21.6879 11.6286C20.9689 11.6286 20.384 11.0437 20.384 10.3247C20.384 9.60569 20.9689 9.02078 21.6879 9.02078C22.4069 9.02078 22.9919 9.60569 22.9919 10.3247C22.9919 11.0437 22.4069 11.6286 21.6879 11.6286ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM0 0V32H32V0H0ZM26.6986 21.301C26.6986 24.2775 24.2775 26.6986 21.301 26.6986H10.699C7.72247 26.6986 5.30138 24.2775 5.30138 21.301V10.699C5.30138 7.72247 7.72247 5.30138 10.699 5.30138H21.301C24.2775 5.30138 26.6986 7.72247 26.6986 10.699V21.301ZM21.301 7.62978H10.699C9.00674 7.62978 7.62978 9.00674 7.62978 10.699V21.301C7.62978 22.9933 9.00674 24.3702 10.699 24.3702H21.301C22.9933 24.3702 24.3702 22.9933 24.3702 21.301V10.699C24.3702 9.00674 22.9933 7.62978 21.301 7.62978ZM15.9996 21.511C12.9614 21.511 10.489 19.0386 10.489 15.9996C10.489 12.9614 12.9614 10.489 15.9996 10.489C19.0386 10.489 21.511 12.9614 21.511 15.9996C21.511 19.0386 19.0386 21.511 15.9996 21.511ZM21.6879 11.6286C20.9689 11.6286 20.384 11.0437 20.384 10.3247C20.384 9.60569 20.9689 9.02078 21.6879 9.02078C22.4069 9.02078 22.9919 9.60569 22.9919 10.3247C22.9919 11.0437 22.4069 11.6286 21.6879 11.6286ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM21.301 7.62978H10.699C9.00674 7.62978 7.62978 9.00674 7.62978 10.699V21.301C7.62978 22.9933 9.00674 24.3702 10.699 24.3702H21.301C22.9933 24.3702 24.3702 22.9933 24.3702 21.301V10.699C24.3702 9.00674 22.9933 7.62978 21.301 7.62978ZM15.9996 21.511C12.9614 21.511 10.489 19.0386 10.489 15.9996C10.489 12.9614 12.9614 10.489 15.9996 10.489C19.0386 10.489 21.511 12.9614 21.511 15.9996C21.511 19.0386 19.0386 21.511 15.9996 21.511ZM21.6879 11.6286C20.9689 11.6286 20.384 11.0437 20.384 10.3247C20.384 9.60569 20.9689 9.02078 21.6879 9.02078C22.4069 9.02078 22.9919 9.60569 22.9919 10.3247C22.9919 11.0437 22.4069 11.6286 21.6879 11.6286ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181ZM21.301 7.62978H10.699C9.00674 7.62978 7.62978 9.00674 7.62978 10.699V21.301C7.62978 22.9933 9.00674 24.3702 10.699 24.3702H21.301C22.9933 24.3702 24.3702 22.9933 24.3702 21.301V10.699C24.3702 9.00674 22.9933 7.62978 21.301 7.62978ZM15.9996 21.511C12.9614 21.511 10.489 19.0386 10.489 15.9996C10.489 12.9614 12.9614 10.489 15.9996 10.489C19.0386 10.489 21.511 12.9614 21.511 15.9996C21.511 19.0386 19.0386 21.511 15.9996 21.511ZM21.6879 11.6286C20.9689 11.6286 20.384 11.0437 20.384 10.3247C20.384 9.60569 20.9689 9.02078 21.6879 9.02078C22.4069 9.02078 22.9919 9.60569 22.9919 10.3247C22.9919 11.0437 22.4069 11.6286 21.6879 11.6286ZM15.9996 12.8181C14.2456 12.8181 12.8174 14.2456 12.8174 15.9996C12.8174 17.7544 14.2456 19.1826 15.9996 19.1826C17.7544 19.1826 19.1819 17.7544 19.1819 15.9996C19.1819 14.2456 17.7544 12.8181 15.9996 12.8181Z" fill="#232323" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#" class="social__item">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--yt">
+                                    <path d="M32 0H0V32H32V0Z" fill="#232323" />
+                                    <path d="M18.4868 20.4844C18.4861 20.365 18.451 20.2407 18.4067 20.1291C18.3477 19.9823 18.2213 19.9093 18.0627 19.8938C17.8766 19.8756 17.7277 19.9507 17.5929 20.0701C17.5388 20.1171 17.5143 20.1873 17.5143 20.1873L17.5171 23.977V24.0703C17.5171 24.0703 17.5494 24.1139 17.5543 24.1195C17.6638 24.2382 17.7916 24.3322 17.9552 24.366C18.2249 24.4214 18.4151 24.3091 18.4678 24.0591C18.4811 23.9966 18.4889 23.932 18.4889 23.8681C18.4903 22.7397 18.4924 21.612 18.4868 20.4844ZM18.4868 20.4844C18.4861 20.365 18.451 20.2407 18.4067 20.1291C18.3477 19.9823 18.2213 19.9093 18.0627 19.8938C17.8766 19.8756 17.7277 19.9507 17.5929 20.0701C17.5388 20.1171 17.5143 20.1873 17.5143 20.1873L17.5171 23.977V24.0703C17.5171 24.0703 17.5494 24.1139 17.5543 24.1195C17.6638 24.2382 17.7916 24.3322 17.9552 24.366C18.2249 24.4214 18.4151 24.3091 18.4678 24.0591C18.4811 23.9966 18.4889 23.932 18.4889 23.8681C18.4903 22.7397 18.4924 21.612 18.4868 20.4844ZM22.73 14.7694C18.2452 14.6732 13.7584 14.6732 9.27291 14.7694C7.7169 14.8024 6.47266 16.0747 6.47266 17.6315V24.6363C6.47266 26.1937 7.7169 27.466 9.27291 27.499C13.7584 27.5952 18.2452 27.5952 22.73 27.499C24.2867 27.466 25.5309 26.1937 25.5309 24.6363V17.6315C25.5309 16.0748 24.2867 14.8024 22.73 14.7694ZM10.5902 25.2746H9.29678V17.9629H7.95774V16.7398H11.932V17.9601H10.5902V25.2746ZM15.2189 22.2398V25.2753H14.0736V24.5815C14.0322 24.6258 14.009 24.6496 13.9873 24.6742C13.7408 24.9523 13.4613 25.184 13.1046 25.3069C12.9305 25.3665 12.7514 25.3869 12.5682 25.3553C12.3182 25.3139 12.1504 25.1699 12.0493 24.9424C11.9552 24.7325 11.9313 24.5078 11.9306 24.2817C11.9278 23.4461 11.9292 19.0239 11.9292 18.981H13.0716C13.0737 19.0196 13.078 22.1941 13.0787 23.7424C13.0787 23.8267 13.0794 23.9131 13.0962 23.9952C13.1383 24.2031 13.2977 24.2922 13.4979 24.2192C13.7282 24.1349 13.9037 23.9762 14.0512 23.786C14.0729 23.7586 14.0729 23.7094 14.0729 23.6701V18.974L15.2189 18.9712C15.2189 18.9713 15.2189 21.1879 15.2189 22.2398ZM19.5758 24.6686C19.4228 25.1292 19.0857 25.3637 18.6012 25.3588C18.2073 25.3553 17.8878 25.1987 17.6245 24.9129C17.595 24.8813 17.5136 24.795 17.5136 24.795V25.2739H16.3662V16.739H17.5136C17.5136 17.6476 17.5136 19.5484 17.5136 19.5484C17.5136 19.5484 17.5782 19.4192 17.6371 19.3525C17.8148 19.1538 18.0311 19 18.2979 18.9326C18.7381 18.8223 19.2458 18.9586 19.4874 19.4732C19.6299 19.7773 19.6699 20.1017 19.6699 20.4317C19.672 21.6247 19.672 22.8177 19.6706 24.0107C19.6699 24.2339 19.6467 24.4545 19.5758 24.6686ZM23.8134 24.4285C23.6147 25.0106 23.2039 25.3336 22.6015 25.4221C22.2279 25.4769 21.8579 25.4691 21.5075 25.3104C21.0279 25.0942 20.7562 24.7031 20.6396 24.2052C20.5855 23.9735 20.5589 23.7306 20.5561 23.4925C20.5469 22.5579 20.5511 21.6227 20.5532 20.6881C20.5539 20.1994 20.6705 19.7486 21.0054 19.3743C21.3874 18.9467 21.8761 18.7873 22.4344 18.8231C22.6022 18.8336 22.7735 18.861 22.9329 18.9137C23.4757 19.092 23.7657 19.4986 23.8794 20.0379C23.923 20.2457 23.9391 20.4613 23.9426 20.674C23.9517 21.1726 23.9391 22.2715 23.9391 22.2715H21.742V23.8464C21.742 24.1294 21.9709 24.3583 22.2539 24.3583C22.5362 24.3583 22.7651 24.1294 22.7651 23.8464V23.0368H23.9454C23.9454 23.0367 23.963 23.9925 23.8134 24.4285ZM22.7651 20.4107C22.7651 20.1284 22.5362 19.8988 22.2539 19.8988C21.9709 19.8988 21.742 20.1284 21.742 20.4107V21.2947H22.7651V20.4107ZM18.4067 20.1291C18.3477 19.9824 18.2213 19.9094 18.0627 19.8939C17.8766 19.8757 17.7277 19.9508 17.5929 20.0702C17.5388 20.1172 17.5143 20.1874 17.5143 20.1874L17.5171 23.977V24.0704C17.5171 24.0704 17.5494 24.1139 17.5543 24.1196C17.6638 24.2382 17.7916 24.3323 17.9552 24.366C18.2249 24.4215 18.4151 24.3091 18.4678 24.0592C18.4811 23.9967 18.4889 23.9321 18.4889 23.8682C18.4903 22.7398 18.4924 21.6121 18.4868 20.4844C18.4861 20.365 18.451 20.2407 18.4067 20.1291Z" fill="white" />
+                                    <path d="M21.3382 6.66992L21.3379 13.0066H20.1637L20.1651 12.3258C20.0353 12.4537 19.9245 12.5731 19.8027 12.6804C19.5869 12.8706 19.3424 13.0123 19.0564 13.0683C18.6173 13.1542 18.2433 13.0153 18.1033 12.5606C18.0567 12.4092 18.0285 12.2459 18.0273 12.0878V6.66992H19.1927V11.5023C19.1927 11.5664 19.1978 11.6311 19.209 11.6939C19.2444 11.893 19.3916 11.9867 19.5833 11.9202C19.8171 11.8394 19.9955 11.6775 20.1468 11.4868C20.1683 11.4596 20.1644 11.4087 20.1644 11.3688V6.66992H21.3382Z" fill="white" />
+                                    <path d="M11.6289 7.77117C11.3741 6.69679 10.8401 4.42871 10.8401 4.42871H9.50391C9.50391 4.42871 10.5305 7.83332 10.9896 9.35169C11.0061 9.4066 11.0136 9.46621 11.0136 9.52372L11.0131 13.0054H12.2452L12.2448 9.52372C12.2448 9.46621 12.2523 9.4066 12.2688 9.35169C12.7279 7.83332 13.7545 4.42871 13.7545 4.42871H12.4183C12.4183 4.42871 11.8843 6.69679 11.6294 7.77117H11.6289Z" fill="white" />
+                                    <path d="M15.361 6.51172C14.4324 6.51172 13.6797 7.26444 13.6797 8.19299V11.4833C13.6797 12.4118 14.4324 13.1646 15.361 13.1646C16.2895 13.1646 17.0422 12.4118 17.0422 11.4833V8.19299C17.0423 7.26444 16.2895 6.51172 15.361 6.51172ZM15.8462 11.5497C15.8462 11.8172 15.6285 12.0348 15.361 12.0348C15.0936 12.0348 14.8759 11.8172 14.8759 11.5497V8.1265C14.8759 7.85897 15.0936 7.64137 15.361 7.64137C15.6285 7.64137 15.8462 7.85904 15.8462 8.1265V11.5497Z" fill="white" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#" class="social__item">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--vk">
+                                    <path d="M32 0H0V32H32V0Z" fill="#232323" />
+                                    <path d="M8.29064 9.73838C9.05755 11.6323 10.0295 13.4179 11.3096 15.0209C11.4794 15.2342 11.6934 15.4238 11.9189 15.5782C12.2482 15.8044 12.5589 15.7249 12.6928 15.3482C12.8344 14.9529 12.9644 14.1517 12.9721 13.7366C12.9933 12.6519 12.969 11.941 12.9107 10.8576C12.8729 10.1638 12.6262 9.55448 11.6056 9.37058C11.2904 9.31357 11.2611 9.05412 11.4636 8.7953C11.8852 8.25645 12.4725 8.17058 13.1093 8.13659C14.1415 8.08084 15.1775 8.12634 16.211 8.13659C16.6319 8.14046 17.0554 8.17437 17.4699 8.26474C18.0107 8.38263 18.3003 8.76194 18.3894 9.28983C18.4355 9.56214 18.4592 9.84209 18.4528 10.1176C18.4259 11.3016 18.3689 12.485 18.3554 13.6683C18.3496 14.1328 18.3835 14.6089 18.4829 15.0612C18.6219 15.6916 19.0512 15.8499 19.4901 15.3944C20.0475 14.8159 20.5389 14.1649 21.0002 13.5038C21.8382 12.3012 22.4641 10.9814 23.003 9.62056C23.2817 8.91839 23.495 8.76588 24.2504 8.76398C25.6702 8.76075 27.0899 8.75949 28.5097 8.76398C28.7615 8.76524 29.0248 8.78898 29.2625 8.8646C29.6482 8.98762 29.8014 9.30219 29.711 9.70138C29.5002 10.6368 28.9947 11.4319 28.4533 12.1962C27.5845 13.4225 26.6741 14.6194 25.7849 15.8315C25.6715 15.9859 25.5716 16.1506 25.4786 16.3178C25.1461 16.9188 25.1692 17.2557 25.6541 17.7561C26.4262 18.5525 27.2527 19.2976 28.0004 20.1157C28.5437 20.711 29.0466 21.3567 29.4772 22.0365C30.0218 22.8963 29.6854 23.7061 28.668 23.8503C28.028 23.9406 24.9015 23.851 24.7399 23.8503C23.8994 23.8465 23.1626 23.5549 22.5692 22.9841C21.9093 22.3485 21.3096 21.6514 20.676 20.9883C20.4851 20.7884 20.2813 20.5969 20.0616 20.4296C19.5432 20.0343 19.0345 20.122 18.7923 20.7308C18.5854 21.2536 18.4066 22.6265 18.3983 22.7438C18.3548 23.3569 17.9646 23.7478 17.2777 23.7855C15.2948 23.8932 13.3733 23.6721 11.5832 22.713C10.0661 21.9006 8.85455 20.7519 7.80509 19.4122C6.138 17.2844 4.82122 14.9454 3.61904 12.5377C3.5576 12.4146 2.33997 9.82362 2.30725 9.70123C2.19848 9.29145 2.29995 8.89999 2.64619 8.76524C2.86203 8.68127 6.87661 8.76496 6.94339 8.76854C7.58398 8.80323 8.0208 9.0735 8.29064 9.73838Z" fill="white" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#" class="social__item">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--vb">
+                                    <path d="M32 0H0V32H32V0Z" fill="#232323" />
+                                    <path d="M26.1209 10.315L26.1146 10.2897C25.6034 8.22326 23.2989 6.00581 21.1826 5.54448L21.1587 5.53957C17.7356 4.88655 14.2648 4.88655 10.8424 5.53957L10.8179 5.54448C8.70223 6.00581 6.39771 8.22326 5.88583 10.2897L5.88021 10.315C5.24826 13.2009 5.24826 16.1276 5.88021 19.0135L5.88583 19.0388C6.37587 21.0171 8.50878 23.1326 10.5461 23.7144V26.0212C10.5461 26.8561 11.5636 27.2661 12.1422 26.6637L14.4793 24.2342C14.9862 24.2626 15.4934 24.2784 16.0006 24.2784C17.7237 24.2784 19.4475 24.1155 21.1587 23.789L21.1826 23.7841C23.2989 23.3228 25.6034 21.1053 26.1146 19.0388L26.1209 19.0136C26.7529 16.1276 26.7529 13.2009 26.1209 10.315ZM24.2714 18.595C23.9302 19.9432 22.1804 21.6192 20.7901 21.9289C18.97 22.275 17.1355 22.4229 15.3028 22.3722C15.2664 22.3712 15.2313 22.3853 15.2059 22.4114C14.9458 22.6784 13.4994 24.1632 13.4994 24.1632L11.6843 26.026C11.5516 26.1644 11.3185 26.0703 11.3185 25.8793V22.0579C11.3185 21.9948 11.2734 21.9412 11.2114 21.929C11.2111 21.929 11.2107 21.9289 11.2104 21.9288C9.82008 21.6192 8.07098 19.9431 7.72902 18.5949C7.16027 15.9864 7.16027 13.342 7.72902 10.7334C8.07098 9.38528 9.82008 7.7092 11.2104 7.39954C14.3891 6.79497 17.612 6.79497 20.7901 7.39954C22.1811 7.7092 23.9302 9.38528 24.2714 10.7334C24.8408 13.3421 24.8408 15.9864 24.2714 18.595Z" fill="white" />
+                                    <path d="M19.0245 20.3586C18.8108 20.2937 18.6071 20.2501 18.4179 20.1716C16.4577 19.3583 14.6537 18.3091 13.2247 16.7008C12.4121 15.7863 11.7761 14.7537 11.2385 13.661C10.9835 13.1428 10.7686 12.6043 10.5496 12.0693C10.3499 11.5815 10.6441 11.0774 10.9538 10.7099C11.2444 10.3649 11.6184 10.1009 12.0234 9.90629C12.3395 9.75441 12.6514 9.84197 12.8822 10.1099C13.3813 10.6892 13.8398 11.2981 14.211 11.9696C14.4393 12.3826 14.3767 12.8875 13.9629 13.1686C13.8624 13.2369 13.7708 13.3171 13.6771 13.3942C13.5949 13.4619 13.5176 13.5302 13.4613 13.6217C13.3584 13.7893 13.3535 13.9869 13.4197 14.169C13.9299 15.5711 14.7899 16.6614 16.2011 17.2486C16.4269 17.3425 16.6537 17.4519 16.9139 17.4216C17.3496 17.3707 17.4906 16.8928 17.7959 16.6431C18.0944 16.3991 18.4757 16.3959 18.7972 16.5993C19.1187 16.8028 19.4304 17.0212 19.7402 17.242C20.0443 17.4587 20.3471 17.6707 20.6276 17.9177C20.8973 18.1552 20.9902 18.4669 20.8383 18.7892C20.5602 19.3796 20.1557 19.8708 19.572 20.1843C19.4072 20.2727 19.2104 20.3013 19.0245 20.3586C18.8108 20.2936 19.2104 20.3013 19.0245 20.3586Z" fill="white" />
+                                    <path d="M16.0052 9.23154C18.5692 9.30337 20.6751 11.0049 21.1263 13.5398C21.2032 13.9717 21.2306 14.4133 21.2648 14.8516C21.2792 15.036 21.1748 15.2112 20.9758 15.2136C20.7703 15.2161 20.6778 15.0441 20.6645 14.8598C20.638 14.4949 20.6197 14.1285 20.5694 13.7666C20.304 11.8567 18.781 10.2765 16.8799 9.93743C16.5938 9.88638 16.301 9.87297 16.0113 9.84256C15.8281 9.82332 15.5881 9.81223 15.5475 9.58452C15.5135 9.3936 15.6746 9.24158 15.8564 9.23182C15.9059 9.22908 15.9556 9.23132 16.0052 9.23154C18.5692 9.30337 15.9556 9.23132 16.0052 9.23154Z" fill="white" />
+                                    <path d="M19.9034 14.2834C19.8992 14.3155 19.8969 14.3907 19.8782 14.4616C19.8102 14.7191 19.4199 14.7513 19.33 14.4915C19.3034 14.4144 19.2994 14.3267 19.2993 14.2437C19.2983 13.7006 19.1803 13.1581 18.9065 12.6856C18.625 12.2 18.1949 11.7918 17.6905 11.5448C17.3854 11.3954 17.0556 11.3026 16.7213 11.2472C16.5751 11.2231 16.4275 11.2084 16.2806 11.188C16.1027 11.1633 16.0077 11.0499 16.0161 10.8745C16.024 10.7102 16.1441 10.5921 16.3231 10.6022C16.9115 10.6356 17.4799 10.7628 18.003 11.0398C19.0668 11.6031 19.6744 12.4923 19.8518 13.6797C19.8598 13.7335 19.8727 13.7868 19.8768 13.8408C19.8868 13.9741 19.8932 14.1076 19.9034 14.2834C19.8992 14.3155 19.8932 14.1076 19.9034 14.2834Z" fill="white" />
+                                    <path d="M18.3059 14.221C18.0914 14.2249 17.9766 14.1061 17.9544 13.9095C17.9391 13.7723 17.9269 13.6334 17.8942 13.5C17.8297 13.2372 17.6901 12.9937 17.469 12.8327C17.3647 12.7567 17.2464 12.7012 17.1226 12.6655C16.9652 12.6201 16.8018 12.6326 16.6448 12.5941C16.4743 12.5523 16.38 12.4143 16.4069 12.2543C16.4312 12.1088 16.5729 11.9951 16.7319 12.0067C17.726 12.0784 18.4364 12.5923 18.5378 13.7626C18.545 13.8452 18.5534 13.9324 18.5351 14.0114C18.5037 14.1467 18.4036 14.2144 18.3059 14.221C18.0914 14.2249 18.4036 14.2144 18.3059 14.221Z" fill="white" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#" class="social__item">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon social-icon--ok">
+                                    <rect width="32" height="32" fill="#232323" />
+                                    <g>
+                                        <path d="M10.1386 16.3732C9.6132 17.4061 10.2098 17.8998 11.5709 18.7432C12.7281 19.4581 14.3266 19.7195 15.3535 19.8241L14.4929 20.6521C13.2732 21.8135 12.1161 22.9381 11.3069 23.7172C10.1292 24.8461 12.0252 26.6572 13.2021 25.5524L16.3881 22.4795C17.6078 23.6529 18.7769 24.7775 19.5741 25.5567C20.7518 26.6658 22.6469 24.8701 21.4821 23.7215L18.2961 20.6564L17.4235 19.8284C18.4632 19.7238 20.0378 19.447 21.1812 18.7475L21.1803 18.7467C22.5415 17.899 23.1381 17.4061 22.6203 16.3732C22.3075 15.787 21.4641 15.2967 20.3412 16.1444C20.3412 16.1444 18.8249 17.3058 16.3795 17.3058C13.9332 17.3058 12.4178 16.1444 12.4178 16.1444C11.2949 15.2924 10.4481 15.787 10.1386 16.3732Z" fill="white" />
+                                        <path d="M16.3772 15.7404C19.3584 15.7404 21.7927 13.4107 21.7927 10.5427C21.7927 7.66272 19.3584 5.33301 16.3772 5.33301C13.3952 5.33301 10.9609 7.66272 10.9609 10.5427C10.9609 13.4107 13.3952 15.7404 16.3772 15.7404ZM16.3772 7.97215C17.8421 7.97215 19.0369 9.12158 19.0369 10.5427C19.0369 11.9519 17.8421 13.1013 16.3772 13.1013C14.9124 13.1013 13.7175 11.9519 13.7175 10.5427C13.7167 9.12072 14.9115 7.97215 16.3772 7.97215Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath>
+                                            <rect width="20.5714" height="20.5714" fill="white" transform="translate(6.09375 5.33301)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="contacts__adv">
+                        <div class="contacts__adv-title">Для рекламных предложений:</div>
+                        <a href="tel:+79829316157" class="contacts__adv-number">8 (982) 931-61-57</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">

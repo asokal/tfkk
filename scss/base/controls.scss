@@ -4,10 +4,11 @@ button
 	border: 0;
 }
 
-.g-dropdown-btn
+.g-btn
 {
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	height: 52px;
 	padding: 0 26px;
 	background-color: $red;
@@ -26,15 +27,46 @@ button
 	&:focus
 	{
 		background-color: $red-click;
-
-		&+.header-catalog-dropdown
-		{
-			display: flex;
-		}
 	}
 }
 
-.g-dropdown-btn__icon
+.g-btn-transp
+{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	padding: 0 26px;
+	background-color: #fff;
+	color: $blue;
+	@include roboto(500);
+	font-size: 16px;
+	line-height: 19px;
+	border-radius: 3px;
+	border: 2px solid $blue;
+	transition: .3s;
+	
+	&:hover
+	{
+		background-color: $blue;
+		color: #fff;
+	}
+	
+	&:focus
+	{
+		color: #fff;
+		border-color: #52A5DC;
+		background-color: #52A5DC;
+	}
+
+	&:disabled
+	{
+		border-color: #BABABA;
+		color: #BABABA;
+	}
+}
+
+.g-btn__icon
 {
 	flex-shrink: 0;
 	width: 22px;
@@ -101,6 +133,8 @@ button
 .g-search__btn
 {
 	position: absolute;
+	height: 18px;
+	width: 18px;
 	top: 17px;
 	right: 25px;
 	transition: .3s;
