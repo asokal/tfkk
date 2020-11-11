@@ -4649,12 +4649,6 @@ body.hidden {
   }
 }
 
-@media (max-width: 1999px) {
-  .split {
-    display: none;
-  }
-}
-
 @media (max-width: 1199px) {
   .header__main {
     position: fixed;
@@ -4748,6 +4742,10 @@ body.hidden {
   .header-catalog-search__dropdown {
     width: 100%;
     position: static;
+  }
+
+  .split {
+    display: none;
   }
 
   .product-preview {
