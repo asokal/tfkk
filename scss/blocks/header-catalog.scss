@@ -28,6 +28,11 @@
 {
 	position: relative;
 	margin-right: 10px;
+
+	.g-btn:focus + .header-catalog-dropdown
+	{
+		display: flex;
+	}
 }
 
 .header-catalog-dropdown

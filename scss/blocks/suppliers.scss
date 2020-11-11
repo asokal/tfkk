@@ -1,0 +1,36 @@
+.suppliers
+{
+	padding: 80px 0 100px;
+	background-color: rgba($spindle, .2);
+}
+
+.suppliers__title
+{
+	margin-bottom: 35px;
+}
+
+@media (max-width: 1023px)
+{
+	.suppliers
+	{
+		padding: 60px 0 50px;
+	}
+
+	.suppliers__title
+	{
+		margin-bottom: 33px;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.suppliers
+	{
+		padding: 40px 0 45px;
+	}
+
+	.suppliers__title
+	{
+		margin-bottom: 18px;
+	}
+}

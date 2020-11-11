@@ -736,7 +736,7 @@
 
 
 
-                <div class="header__search" onclick="global.header.toggle(this, '._headerCatalog')">
+                <div class="header__search" onclick="global.toggle(this, '._headerCatalog')">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path d="M7.92682 0C3.55609 0 0 3.55609 0 7.92682C0 12.2978 3.55609 15.8536 7.92682 15.8536C12.2978 15.8536 15.8536 12.2978 15.8536 7.92682C15.8536 3.55609 12.2978 0 7.92682 0ZM7.92682 14.3903C4.36293 14.3903 1.46341 11.4908 1.46341 7.92686C1.46341 4.36296 4.36293 1.46341 7.92682 1.46341C11.4907 1.46341 14.3902 4.36293 14.3902 7.92682C14.3902 11.4907 11.4907 14.3903 7.92682 14.3903Z" fill="#57ACE5" />
@@ -786,8 +786,8 @@
         <div class="header-catalog _headerCatalog">
             <div class="container">
                 <div class="header-catalog__dropdown-wrap">
-                    <button class="g-dropdown-btn">
-                        <div class="g-dropdown-btn__icon">
+                    <button class="g-btn">
+                        <div class="g-btn__icon">
                             <img src="./img/icons/burger.svg" alt="">
                         </div>
                         Каталог товаров
@@ -1448,9 +1448,9 @@
                 </div>
 
                 <picture class="article__prev-img">
-                    <source type="image/webp" data-srcset="./img/articles/article-preview.webp">
+                    <source type="image/webp" data-srcset="./img/articles/article-preview.webp" srcset="./img/pholder.svg">
 
-                    <img data-src="./img/articles/article-preview.jpg" alt="" class="lazyload">
+                    <img data-src="./img/articles/article-preview.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                 </picture>
 
                 <nav class="article__nav">
@@ -1507,9 +1507,9 @@
                     </h2>
 
                     <picture>
-                        <source type="image/webp" data-srcset="./img/articles/article-preview.webp">
+                        <source type="image/webp" data-srcset="./img/articles/article-preview.webp" srcset="./img/pholder.svg">
 
-                        <img data-src="./img/articles/article-preview.jpg" alt="" class="lazyload">
+                        <img data-src="./img/articles/article-preview.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                     </picture>
 
                     <p>
@@ -1586,10 +1586,10 @@
 
                     <picture class="article__float-img">
                         <source type="image/webp" data-srcset="./img/articles/previews/article-placeholder.webp 1x,
-							./img/articles/previews/article-placeholder@2x.webp 2x">
+							./img/articles/previews/article-placeholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
 
                         <img data-srcset="./img/articles/previews/article-placeholder.jpg 1x,
-								./img/articles/previews/article-placeholder@2x.jpg 2x" data-src="./img/articles/previews/article-placeholder.jpg" alt="" class="lazyload">
+								./img/articles/previews/article-placeholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/articles/previews/article-placeholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                     </picture>
 
                     <p>
@@ -1603,10 +1603,10 @@
                     <aside class="article__promo">
                         <picture class="article__promo-img">
                             <source type="image/webp" data-srcset="./img/articles/article-promo.webp 1x,
-								./img/articles/article-promo@2x.webp 2x">
+								./img/articles/article-promo@2x.webp 2x" srcset="./img/pholder.svg 1x">
 
                             <img data-srcset="./img/articles/article-promo.jpg 1x,
-									./img/articles/article-promo@2x.jpg 2x" data-src="./img/articles/article-promo.jpg" alt="" class="lazyload">
+									./img/articles/article-promo@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/articles/article-promo.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                         </picture>
 
                         <a href="#" class="article__promo-btn">Читайте также</a>

@@ -1,6 +1,5 @@
 /* vendors */
-// @import 'vendors/slick';
-// @import 'vendors/slick-theme';
+@import 'vendors/splide-core';
 
 /* base */
 @import 'base/variables';
@@ -17,6 +16,16 @@
 @import 'blocks/header-nav';
 @import 'blocks/header-catalog';
 @import 'blocks/breadcrumbs';
+@import 'blocks/split';
+@import 'blocks/products';
+@import 'blocks/product-preview';
+@import 'blocks/services';
+@import 'blocks/advantages';
+@import 'blocks/reviews';
+@import 'blocks/review';
+@import 'blocks/review-video';
+@import 'blocks/payment-example';
+@import 'blocks/suppliers';
 @import 'blocks/articles';
 @import 'blocks/article';
 @import 'blocks/article-preview';
@@ -119,5 +128,88 @@ body
 	{
 		width: 100%;
 		padding: 0 15px;
+	}
+}
+
+.desktop-only
+{
+	display: block;
+
+	@media (max-width: 767px)
+	{
+		display: none;
+	}
+}
+
+.mobile-only
+{
+	display: none;
+
+	@media (max-width: 767px)
+	{
+		display: block;
+	}
+}
+
+.g-show-more
+{
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+
+	&.active
+	{
+		.g-show-more__icon-more, .g-show-more__text-more
+		{
+			display: none;
+		}
+
+		.g-show-more__icon-less, .g-show-more__text-less
+		{
+			display: block;
+		}
+	}
+}
+
+.g-show-more__icon
+{
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+	font-size: 0;
+	position: relative;
+	top: 2px;
+
+	img
+	{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.g-show-more__icon-less, .g-show-more__text-less
+{
+	display: none;
+}
+
+.g-show-more__text
+{
+	color: $red;
+	font-size: 15px;
+	line-height: 1.45;
+	padding-bottom: 3px;
+	border-bottom: 1px dashed $red;
+}
+
+@media (max-width: 767px)
+{
+	.g-show-more__icon
+	{
+		top: 0;
+	}
+
+	.g-show-more__text
+	{
+		font-size: 13px;
 	}
 }

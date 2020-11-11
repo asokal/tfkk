@@ -2,5 +2,262 @@
 {% extends "layouts/layout.twig" %}
 
 {% block page %}
-	{% include "./blocks/breadcrumbs.twig" %}
+	{% include "./blocks/split.twig" %}
+	{% include "./blocks/products.twig" %}
+	{% include "./blocks/services.twig" %}
+	{% include "./blocks/advantages.twig" %}
+	{% include "./blocks/reviews.twig" %}
+	{% include "./blocks/payment-example.twig" %}
+	{% include "./blocks/suppliers.twig" %}
+	<section class="contacts contacts--main">
+		<div class="container">
+			<h2 class="contacts__title">
+				Контакты
+			</h2>
+
+			
+			<div class="contacts__header">
+				<div class="g-select _select">
+					<button class="g-select__btn _selectBtn">Офис №1</button>
+	
+					<ul class="g-select__dropdown _selectDropdown">
+						<li class="g-select__option _selectOption" data-nav-for="contacts-1">Офис №1</li>
+						<li class="g-select__option _selectOption" data-nav-for="contacts-2">Офис №2</li>
+					</ul>
+				</div>
+
+				<div class="contacts__offices">
+					<div class="contacts__office active" data-nav-for="contacts-1">
+						<div class="contacts__office-title">
+							Офис №1
+						</div>
+
+						<ul class="contacts__office-info">
+							<li>
+								<strong>
+									Адрес:
+								</strong>
+
+								<span>
+									г. Тюмень, ул. Циолковского, 15а
+								</span>
+							</li>
+
+							<li>
+								<strong>
+									Телефон:
+								</strong>
+
+								<a href="tel:+73452578617">
+									8 (3452) 57-86-17
+								</a>
+							</li>
+
+							<li>
+								<strong>
+									Email:
+								</strong>
+
+								<span>
+									tfkk@yandex.ru
+								</span>
+							</li>
+
+							<li>
+								<strong>
+									Режим <br> работы:
+								</strong>
+
+								<span>
+									Пн-Пт	09:00 - 18:00 <br>
+									Сб	09:00 - 15:00 <br>
+									Вс	Выходной
+								</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="contacts__office" data-nav-for="contacts-2">
+						<div class="contacts__office-title">
+							Офис №2
+						</div>
+
+						<ul class="contacts__office-info">
+							<li>
+								<strong>
+									Адрес:
+								</strong>
+
+								<span>
+									г. Тюмень, ул. Республики, д.207, офис 1
+								</span>
+							</li>
+
+							<li>
+								<strong>
+									Телефон:
+								</strong>
+
+								<a href="tel:+73452578617">
+									8 (3452) 57-86-17
+								</a>
+							</li>
+
+							<li>
+								<strong>
+									Email:
+								</strong>
+
+								<span>
+									tfkk@yandex.ru
+								</span>
+							</li>
+
+							<li>
+								<strong>
+									Режим <br> работы:
+								</strong>
+
+								<span>
+									Пн-Пт	09:00 - 18:00 <br>
+									Сб	09:00 - 15:00 <br>
+									Вс	Выходной
+								</span>
+							</li>
+						</ul>
+					</div>
+
+					
+				</div>
+
+				<div class="contacts__common">
+					{% include "./blocks/social.twig" %}
+
+					<div class="contacts__adv">
+						<div class="contacts__adv-title">Для рекламных предложений:</div>
+						<a href="tel:+79829316157" class="contacts__adv-number">8 (982) 931-61-57</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="contacts__tab active" data-tab="contacts-1">
+				<div class="contacts__office active">
+					<div class="contacts__office-title">
+						Офис №1
+					</div>
+
+					<ul class="contacts__office-info">
+						<li>
+							<strong>
+								Адрес:
+							</strong>
+
+							<span>
+								г. Тюмень, ул. Циолковского, 15а
+							</span>
+						</li>
+
+						<li>
+							<strong>
+								Телефон:
+							</strong>
+
+							<a href="tel:+73452578617">
+								8 (3452) 57-86-17
+							</a>
+						</li>
+
+						<li>
+							<strong>
+								Email:
+							</strong>
+
+							<span>
+								tfkk@yandex.ru
+							</span>
+						</li>
+
+						<li>
+							<strong>
+								Режим <br> работы:
+							</strong>
+
+							<span>
+								Пн-Пт	09:00 - 18:00 <br>
+								Сб	09:00 - 15:00 <br>
+								Вс	Выходной
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="contacts__map">
+					<iframe data-src="https://yandex.ru/map-widget/v1/-/CCQ~vLEY~B" allowfullscreen="true" class="lazyload"></iframe>
+				</div>
+			</div>
+
+			<div class="contacts__tab" data-tab="contacts-2">
+				<div class="contacts__office active">
+					<div class="contacts__office-title">
+						Офис №2
+					</div>
+
+					<ul class="contacts__office-info">
+						<li>
+							<strong>
+								Адрес:
+							</strong>
+
+							<span>
+								г. Тюмень, ул. Республики, д.207, офис 1
+							</span>
+						</li>
+
+						<li>
+							<strong>
+								Телефон:
+							</strong>
+
+							<a href="tel:+73452578617">
+								8 (3452) 57-86-17
+							</a>
+						</li>
+
+						<li>
+							<strong>
+								Email:
+							</strong>
+
+							<span>
+								tfkk@yandex.ru
+							</span>
+						</li>
+
+						<li>
+							<strong>
+								Режим <br> работы:
+							</strong>
+
+							<span>
+								Пн-Пт	09:00 - 18:00 <br>
+								Сб	09:00 - 15:00 <br>
+								Вс	Выходной
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="contacts__map">
+					<iframe data-src="https://yandex.ru/map-widget/v1/-/CCQ~vLEY~B" allowfullscreen="true" class="lazyload"></iframe>
+				</div>
+			</div>
+
+			<div class="contacts__common">
+				{% include "./blocks/social.twig" %}
+
+				<div class="contacts__adv">
+					<div class="contacts__adv-title">Для рекламных предложений:</div>
+					<a href="tel:+79829316157" class="contacts__adv-number">8 (982) 931-61-57</a>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}

@@ -1,6 +1,11 @@
 .contacts
 {
 	margin-bottom: 50px;
+
+	&--main
+	{
+		padding: 100px 0 85px;
+	}
 }
 
 .contacts__title
@@ -116,7 +121,6 @@
 
 .contacts__tab
 {
-	margin-bottom: 45px;
 	display: none;
 
 	&.active
@@ -148,6 +152,8 @@
 
 .contacts__company
 {
+	margin-top: 45px;
+
 	.g-title-tertiary
 	{
 		margin-bottom: 20px;
@@ -175,6 +181,7 @@
 	.contacts__common
 	{
 		display: flex;
+		margin-top: 45px;
 		margin-bottom: 55px;
 
 		.social
@@ -194,6 +201,16 @@
 
 @media (max-width: 1023px)
 {
+	.contacts--main
+	{
+		padding: 60px 0 50px;
+
+		.contacts__common
+		{
+			margin-bottom: 0;
+		}
+	}
+
 	.contacts__title
 	{
 		margin-bottom: 15px;
@@ -218,6 +235,11 @@
 	.contacts
 	{
 		margin-bottom: 30px;
+
+		&--main
+		{
+			padding: 35px 0 30px;
+		}
 	}
 
 	.contacts__header
@@ -268,6 +290,8 @@
 
 	.contacts__common
 	{
+		margin-top: 20px;
+
 		.social
 		{
 			margin-right: 35px;
