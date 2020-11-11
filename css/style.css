@@ -2148,21 +2148,21 @@ button {
 }
 
 .split__item:nth-child(1) .split__first .split__img {
-  background-image: url("../../img/split1.jpg");
+  background-image: url("../img/split1.jpg");
   background-position-x: 100px;
 }
 
 .split__item:nth-child(1) .split__second .split__img {
-  background-image: url("../../img/split2.jpg");
+  background-image: url("../img/split2.jpg");
   background-position-x: -150px;
 }
 
 .split__item:nth-child(2) .split__first .split__img {
-  background-image: url("../../img/split3.jpg");
+  background-image: url("../img/split3.jpg");
 }
 
 .split__item:nth-child(2) .split__second .split__img {
-  background-image: url("../../img/split4.jpg");
+  background-image: url("../img/split4.jpg");
   background-position-x: -250px;
 }
 
@@ -2456,6 +2456,7 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.45;
+  color: #232323;
   margin-bottom: 22px;
   -webkit-transition: .135s;
   -o-transition: .135s;
