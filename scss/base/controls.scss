@@ -30,6 +30,14 @@ button
 	}
 }
 
+.g-btn__icon
+{
+	flex-shrink: 0;
+	width: 22px;
+	height: 22px;
+	margin-right: 15px;
+}
+
 .g-btn-transp
 {
 	display: inline-flex;
@@ -64,14 +72,6 @@ button
 		border-color: #BABABA;
 		color: #BABABA;
 	}
-}
-
-.g-btn__icon
-{
-	flex-shrink: 0;
-	width: 22px;
-	height: 22px;
-	margin-right: 15px;
 }
 
 .g-search
@@ -290,6 +290,69 @@ button
 	}
 }
 
+.g-input
+{
+	display: flex;
+	flex-direction: column;
+	@include roboto();
+	color: $black;
+	font-size: 16px;
+	line-height: 19px;
+	position: relative;
+
+	&.error
+	{
+		.g-input__field
+		{
+			color: $red;
+			border-color: $red;
+		}
+
+		.g-input__error-msg
+		{
+			visibility: visible;
+			opacity: 1;
+			bottom: -28px;
+		}
+	}
+}
+
+.g-input__field
+{
+	font-weight: 500;
+	border: 0;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba($black, .3);
+
+	&::placeholder
+	{
+		color: rgba($black, .4);
+	}
+
+	&:focus
+	{
+		border-color: $blue;
+	}
+}
+
+.g-input__name
+{
+	margin-bottom: 30px;
+}
+
+.g-input__error-msg
+{
+	opacity: 0;
+	visibility: hidden;
+	font-style: italic;
+	font-size: 15px;
+	line-height: 18px;
+	color: $red;
+	position: absolute;
+	bottom: 0;
+	transition: .2s;
+}
+
 @media (max-width: 767px)
 {
 	.g-search
@@ -334,5 +397,24 @@ button
 	.g-tabs-nav
 	{
 		display: none;
+	}
+
+	.g-input
+	{
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.g-input__name
+	{
+		margin-bottom: 25px;
+	}
+
+	.g-btn
+	{
+		padding: 0 22px;
+		font-size: 13px;
+		line-height: 15px;
+		height: 46px;
 	}
 }

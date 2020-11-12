@@ -20,11 +20,39 @@
 				</picture>
 			</div>
 
-			<div class="payment-example__form">
-				<div>
+			<form class="payment-example__form">
+				<div class="payment-example__form-title">
 					Получите пример расчета кровли, оставив свой номер телефона
 				</div>
-			</div>
+				
+				<label class="g-input">
+					<span class="g-input__name">Введите телефон:</span>
+					<input type="tel" class="g-input__field _masked" placeholder="+7 (943) 763 - 84 - 57" data-mask="+7 (###) ### - ## - ##">
+					<span class="g-input__error-msg">текст ошибки</span>
+				</label>
+
+				<div class="payment-example__download">
+					<button class="g-btn">
+						Скачать пример
+
+						<span class="g-btn__icon">
+							<img src="./img/icons/download.svg" alt="">
+						</span>
+					</button>
+
+					<div class="payment-example__download-file">
+						<span class="payment-example__download-file-icon">
+							<img src="./img/icons/clip.svg" alt="">
+						</span>
+
+						pdf, 171 КБ
+					</div>
+				</div>
+
+				<div class="payment-example__form-note">
+					Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с Политикой конфиденциальности
+				</div>
+			</form>
 		</div>
 	</div>
 </section>

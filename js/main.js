@@ -24,6 +24,7 @@ var global =
 		this.selects();
 		this.reviewLazy();
 		this.sliders.init();
+		Maska.create('._masked');
 	},
 	
 	header: 
