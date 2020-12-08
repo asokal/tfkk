@@ -4056,6 +4056,199 @@ picture.article__promo-img source {
   font-size: 0;
 }
 
+.calc-roof-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.calc-roof__select {
+  border: 2px solid #57ACE5;
+  color: #57ACE5;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 55px;
+  width: 326px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#calc-roof-color p {
+  position: relative;
+}
+
+#calc-roof-color p::after {
+  display: block;
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+#calc-roof-color span {
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+#calc-roof-cover p {
+  position: relative;
+}
+
+#calc-roof-cover p::after {
+  display: block;
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+#calc-roof-cover span {
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+#calc-roof {
+  padding-bottom: 60px;
+}
+
+.calc-roof-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.calc-roof-list li {
+  text-align: center;
+}
+
+.calc-roof-list li a {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  display: block;
+  width: 170px;
+  height: 170px;
+}
+
+.calc-roof-list li a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.single-line {
+  height: 42px;
+  border: none;
+  border-bottom: 1px solid rgba(35, 35, 35, 0.35);
+}
+
+.mainTable img {
+  width: 235px;
+  height: 235px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.table__img {
+  margin-right: 50px;
+}
+
+.calc-table-input {
+  width: 100%;
+}
+
+.calc-table-input tbody {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 680px;
+}
+
+.calc-table-input tbody tr {
+  width: 48%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.calc-table-input tbody tr input {
+  width: 100%;
+}
+
+.calc-table-input tbody tr.table__buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.calc-table-input tbody tr.table__buttons button {
+  width: 176px;
+  margin-right: 10px;
+}
+
+.result {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: left;
+}
+
 .payment {
   margin-bottom: 60px;
 }
@@ -5286,6 +5479,89 @@ body.hidden {
     margin-right: 45px;
   }
 
+  .calc-roof-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  #calc-roof-color {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  #calc-roof-cover {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  #calc-roof-cover select {
+    width: auto;
+  }
+
+  .calc-roof-list {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+
+  .calc-roof-list li {
+    width: 47%;
+  }
+
+  .calc-roof-list li a {
+    width: 136px;
+    height: 165px;
+  }
+
+  .calc-table-input tbody tr.table__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .calc-table-input tbody tr.table__buttons td {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .calc-table-input tbody tr.table__buttons button {
+    width: 100%;
+  }
+
+  .mainTable tbody tr {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .calc-table-input tbody {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .calc-table-input tbody tr {
+    width: 100%;
+  }
+
   .contacts__common {
     display: -webkit-box;
     display: -webkit-flex;
@@ -5859,6 +6135,26 @@ body.hidden {
   .container {
     width: 734px;
     padding: 0 10px;
+  }
+}
+
+@media (max-width: 787px) {
+  .calc-roof__select {
+    width: 100%;
+  }
+
+  #calc-roof-color p::after {
+    right: 10px;
+    top: 43px;
+  }
+
+  #calc-roof-cover select {
+    width: 100%;
+  }
+
+  #calc-roof-cover p::after {
+    right: 10px;
+    top: 43px;
   }
 }
 
