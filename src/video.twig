@@ -1,0 +1,68 @@
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	<div class="video-gallery">
+		<div class="container">
+			<h1 class="video-gallery__title">Видео</h1>
+			<section class="video-gallery__section">
+				<h2 class="video-gallery__section-title">
+					Видео-отзывы наших клиентов
+				</h2>
+
+				<div class="video-gallery__items">
+					{% for i in 0..9 %}
+						<div class="video-gallery__item">
+							<div class="video-gallery__item-video">
+								{% include "./blocks/youtube-video.twig" %}
+							</div>
+
+							<div class="video-gallery__item-name">
+								Отзыв о монтаже фасадных панелей. Третий заказ клиента
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</section>
+
+			<section class="video-gallery__section">
+				<h2 class="video-gallery__section-title">
+					Видео наших работ
+				</h2>
+
+				<div class="video-gallery__items">
+					{% for i in 0..9 %}
+						<div class="video-gallery__item">
+							<div class="video-gallery__item-video">
+								{% include "./blocks/youtube-video.twig" %}
+							</div>
+
+							<div class="video-gallery__item-name">
+								Отзыв о монтаже фасадных панелей. Третий заказ клиента
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</section>
+	
+			<div class="more">
+				<button class="g-show-more more__btn" onclick="global.toggle(this)">
+					<span class="g-show-more__icon">
+						<img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+						<img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+					</span>
+		
+					<span class="g-show-more__text">
+						<span class="g-show-more__text-more">Показать еще 7 видео</span>
+						<span class="g-show-more__text-less">Скрыть</span>
+					</span>
+				</button>
+	
+				<div class="more__note">
+					Всего 21 видео
+				</div>
+	
+				{% include "./blocks/pagination.twig" %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

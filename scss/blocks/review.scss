@@ -95,7 +95,7 @@
 		margin-right: 4px;
 	}
 
-	&.active
+	&.is-active
 	{
 		path
 		{
@@ -128,7 +128,7 @@
 		{
 			order: 2;
 
-			&.active+.review__info-value-text
+			&.is-active+.review__info-value-text
 			{
 				-webkit-line-clamp: unset;
 			}

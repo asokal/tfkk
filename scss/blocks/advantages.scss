@@ -173,7 +173,7 @@
 		margin-bottom: 0;
 		box-shadow: none;
 
-		&.active .advantages__item:nth-last-child(-n+2)
+		&.is-active .advantages__item:nth-last-child(-n+2)
 		{
 			display: flex;
 		}

@@ -1,0 +1,114 @@
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	<section class="photo-gallery">
+		<div class="container">
+			<h1 class="photo-gallery__title">Фото наших объектов</h1>
+	
+			<div class="photo-gallery__wrap">
+				<nav class="photo-gallery__nav">
+					<a href="#" class="photo-gallery__nav-item is-active">
+						Цокольный сайдинг
+					</a>
+		
+					<a href="#" class="photo-gallery__nav-item">
+						Виниловый сайдинг
+					</a>
+		
+					<a href="#" class="photo-gallery__nav-item">
+						Металлосайдинг Брус
+					</a>
+		
+					<a href="#" class="photo-gallery__nav-item">
+						Фасадные кассеты
+					</a>
+		
+					<a href="#" class="photo-gallery__nav-item">
+						Заборы из профнастила
+					</a>
+				</nav>
+
+				<div class="g-select _select">
+					<button class="g-select__btn _selectBtn">Открыть категории</button>
+	
+					<ul class="g-select__dropdown _selectDropdown">
+						<li class="g-select__option _selectOption">
+							<a href="#">
+								Цокольный сайдинг
+							</a>
+						</li>
+			
+						<li class="g-select__option _selectOption">
+							<a href="#">
+								Виниловый сайдинг
+							</a>
+						</li>
+			
+						<li class="g-select__option _selectOption">
+							<a href="#">
+								Металлосайдинг Брус
+							</a>
+						</li>
+			
+						<li class="g-select__option _selectOption">
+							<a href="#">
+								Фасадные кассеты
+							</a>
+						</li>
+			
+						<li class="g-select__option _selectOption">
+							<a href="#">
+								Заборы из профнастила
+							</a>
+						</li>
+					</ul>
+				</div>
+		
+				<div class="photo-gallery__items">
+					{% for i in 0..15 %}	
+						<div class="photo-gallery__item">
+							<div class="photo-gallery__item-img">
+								<picture>
+									<source type="image/webp"
+											data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x"
+											srcset="./img/pholder.svg 1x">
+						
+									<img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x"
+											srcset="./img/pholder.svg 1x"
+											
+										data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+								</picture>
+							</div>
+			
+							<div class="photo-gallery__item-name">
+								Виниловый сайдинг под дерево
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+
+				<div class="more">
+					<button class="g-show-more more__btn" onclick="global.toggle(this)">
+						<span class="g-show-more__icon">
+							<img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+							<img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+						</span>
+			
+						<span class="g-show-more__text">
+							<span class="g-show-more__text-more">Показать еще 25 фото</span>
+							<span class="g-show-more__text-less">Скрыть</span>
+						</span>
+					</button>
+
+					<div class="more__note">
+						Всего 700 фото
+					</div>
+
+					{% include "./blocks/pagination.twig" %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

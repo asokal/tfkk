@@ -1,20 +1,20 @@
 <div class="review">
 	<div class="review__gallery">
 		<div class="review__gallery-primary">
-			{% include "../blocks/review-video.twig" %}
+			{% include "../blocks/youtube-video.twig" %}
 		</div>
 
 		<div class="review__gallery-secondary">
 			<div class="review__gallery-item">
-				<img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+				<img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
 			</div>
 
 			<div class="review__gallery-item">
-				<img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+				<img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
 			</div>
 
 			<div class="review__gallery-item">
-				<img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+				<img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
 			</div>
 		</div>
 	</div>
@@ -30,7 +30,7 @@
 			<div class="review__info-value">
 				<div class="review__rate">
 					{% for i in 0..4 %}	
-						<div class="review__rate-star active">
+						<div class="review__rate-star is-active">
 							{% include "../../img/icons/star.svg" %}
 						</div>
 					{% endfor %}
@@ -50,17 +50,17 @@
 			<strong class="review__info-type">Материалы:</strong>
 
 			<div class="review__info-value review__info-value--long">
-				<div class="g-show-more" onclick="global.toggle(this)">
-					<div class="g-show-more__icon">
+				<button class="g-show-more" onclick="global.toggle(this)">
+					<span class="g-show-more__icon">
 						<img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
 						<img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
-					</div>
+					</span>
 		
-					<div class="g-show-more__text">
+					<span class="g-show-more__text">
 						<span class="g-show-more__text-more">Показать еще</span>
 						<span class="g-show-more__text-less">Скрыть</span>
-					</div>
-				</div>
+					</span>
+				</button>
 
 				<div class="review__info-value-text">
 					Фиброцементный сайдинг Кедрал, утеплитель Тизол EURO-Лайт 35, фасадные панели Стоунн Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa provident facilis aut facere corrupti adipisci rem fugiat, maxime odio aliquid illum eveniet eos cupiditate modi ullam, optio placeat fugit!

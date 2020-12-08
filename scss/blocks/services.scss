@@ -118,7 +118,7 @@
 		margin: 0;
 		margin-bottom: 18px;
 
-		&.active .service-preview:nth-last-child(-n+3)
+		&.is-active .service-preview:nth-last-child(-n+3)
 		{
 			display: block;
 		}
