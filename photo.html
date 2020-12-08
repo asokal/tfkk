@@ -1430,154 +1430,357 @@
     </header>
     <main class="wrapper">
 
-        <nav class="breadcrumbs">
+        <section class="photo-gallery">
             <div class="container">
-                <a href="#" class="breadcrumbs__item">Главная</a>
-                <a href="#" class="breadcrumbs__item">Статьи</a>
-            </div>
-        </nav>
+                <h1 class="photo-gallery__title">Фото наших объектов</h1>
 
-        <article class="delivery">
-            <div class="container">
-                <h1 class="delivery__title">
-                    Доставка
-                </h1>
+                <div class="photo-gallery__wrap">
+                    <nav class="photo-gallery__nav">
+                        <a href="#" class="photo-gallery__nav-item is-active">
+                            Цокольный сайдинг
+                        </a>
 
-                <div class="g-select _select">
-                    <button class="g-select__btn _selectBtn">Доставка</button>
+                        <a href="#" class="photo-gallery__nav-item">
+                            Виниловый сайдинг
+                        </a>
 
-                    <ul class="g-select__dropdown _selectDropdown">
-                        <li class="g-select__option _selectOption" data-nav-for="delivery-1">Доставка</li>
-                        <li class="g-select__option _selectOption" data-nav-for="delivery-2">Самовывоз</li>
-                        <li class="g-select__option _selectOption" data-nav-for="delivery-2">Другие регионы</li>
-                    </ul>
-                </div>
+                        <a href="#" class="photo-gallery__nav-item">
+                            Металлосайдинг Брус
+                        </a>
 
-                <div class="g-tabs-nav">
-                    <button class="g-tabs-nav__btn is-active" data-nav-for="delivery-1">
-                        Доставка
-                    </button>
+                        <a href="#" class="photo-gallery__nav-item">
+                            Фасадные кассеты
+                        </a>
 
-                    <button class="g-tabs-nav__btn" data-nav-for="delivery-2">
-                        Самовывоз
-                    </button>
+                        <a href="#" class="photo-gallery__nav-item">
+                            Заборы из профнастила
+                        </a>
+                    </nav>
 
-                    <button class="g-tabs-nav__btn" data-nav-for="delivery-3">
-                        Другие регионы
-                    </button>
-                </div>
+                    <div class="g-select _select">
+                        <button class="g-select__btn _selectBtn">Открыть категории</button>
 
-                <div class="delivery__content is-active" data-tab="delivery-1">
-                    <p>
-                        Мы осуществляем доставку собственным транспортом: Газель 4,2 метра (длина груза до 6 метров), грузоподъёмность 1,5 тонны. <br>
-                        При доставке материала длиной более 5 метров +20% к стоимости доставки.
-                    </p>
+                        <ul class="g-select__dropdown _selectDropdown">
+                            <li class="g-select__option _selectOption">
+                                <a href="#">
+                                    Цокольный сайдинг
+                                </a>
+                            </li>
 
-                    <section class="delivery__price-section">
-                        <h2 class="g-title-tertiary">Доставка по югу Тюменской области нашим автомобилем:</h2>
+                            <li class="g-select__option _selectOption">
+                                <a href="#">
+                                    Виниловый сайдинг
+                                </a>
+                            </li>
 
-                        <div class="delivery__prices">
-                            <div class="delivery__price">
-                                <div class="delivery__price-icon">
-                                    <img src="./img/icons/town.svg" alt="">
-                                </div>
+                            <li class="g-select__option _selectOption">
+                                <a href="#">
+                                    Металлосайдинг Брус
+                                </a>
+                            </li>
 
-                                <div class="delivery__price-text">
-                                    <strong>
-                                        В черте города Тюмени:
-                                    </strong>
+                            <li class="g-select__option _selectOption">
+                                <a href="#">
+                                    Фасадные кассеты
+                                </a>
+                            </li>
 
-                                    1000 руб.
-                                </div>
+                            <li class="g-select__option _selectOption">
+                                <a href="#">
+                                    Заборы из профнастила
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="photo-gallery__items">
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
                             </div>
 
-                            <div class="delivery__price">
-                                <div class="delivery__price-icon">
-                                    <img src="./img/icons/road.svg" alt="">
-                                </div>
-
-                                <div class="delivery__price-text">
-                                    <strong>
-                                        За городом:
-                                    </strong>
-
-                                    1000 руб. + 25 руб. за каждый километр
-                                </div>
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
                             </div>
                         </div>
 
-                        <picture class="delivery__img">
-                            <source type="image/webp" data-srcset="./img/services/car.webp 1x,
-								./img/services/car@2x.webp 2x">
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
 
-                            <img data-srcset="./img/services/car.jpg 1x,
-									./img/services/car@2x.jpg 2x" data-src="./img/services/car.jpg" alt="" class="lazyload">
-                        </picture>
-                    </section>
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
 
-                    <section>
-                        <h2 class="g-title-tertiary">Область доставки</h2>
-
-                        <p>
-                            Доставляем по области в радиусе 300 км от Тюмени. В другие регионы (ХМАО + ЯНАО) доставляем через транспортную компанию.
-                        </p>
-
-                        <div class="delivery__map">
-                            <iframe data-src="https://yandex.ru/map-widget/v1/-/CCQ~7KtYWD" allowfullscreen="true" class="lazyload"></iframe>
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
                         </div>
-                    </section>
 
-                    <section>
-                        <h2 class="g-title-tertiary">Разгрузка</h2>
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
 
-                        <p>
-                            При заказе материалов с монтажом разгрузка бесплатно. При заказе одних материалов разгрузка осуществляется самостоятельно.
-                        </p>
-                    </section>
-                </div>
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
 
-                <div class="delivery__content" data-tab="delivery-2">
-                    <p>
-                        Большинство материалов вы забираете на заводе как только они будут изготовлены. Срок готовности как правило составляет 1-3 дня.
-                    </p>
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
 
-                    <p>
-                        Накладные и доверенности вы можете получить в наших офисах у менеджера. При получении материалов на заводе рекомендуем их осмотреть и сверить с накладной, а также убедиться, что в их целостности.
-                    </p>
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
 
-                    <p>
-                        Гибочные изделия вы можете получить на нашем <strong>складе по адресу:</strong>
-                    </p>
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
 
-                    <div class="delivery__location">
-                        <span class="delivery__location-icon">
-                            <img src="./img/icons/google-place.svg" alt="">
-                        </span>
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
 
-                        г.Тюмень, ул.Республики, 207.
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
+                        <div class="photo-gallery__item">
+                            <div class="photo-gallery__item-img">
+                                <picture>
+                                    <source type="image/webp" data-srcset="./img/gallery-pholder.webp 1x,
+											./img/gallery-pholder@2x.webp 2x" srcset="./img/pholder.svg 1x">
+
+                                    <img data-srcset="./img/gallery-pholder.jpg 1x,
+												./img/gallery-pholder@2x.jpg 2x" srcset="./img/pholder.svg 1x" data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
+                                </picture>
+                            </div>
+
+                            <div class="photo-gallery__item-name">
+                                Виниловый сайдинг под дерево
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="delivery__map delivery__map--storage">
-                        <iframe data-src="https://yandex.ru/map-widget/v1/-/CCQ~vLEY~B" allowfullscreen="true" class="lazyload"></iframe>
-                    </div>
-                </div>
+                    <div class="more">
+                        <button class="g-show-more more__btn" onclick="global.toggle(this)">
+                            <span class="g-show-more__icon">
+                                <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+                                <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+                            </span>
 
-                <div class="delivery__content" data-tab="delivery-3">
-                    <h2 class="g-title-tertiary">
-                        Доставка в ХМАО, ЯНАО и другие регионы:
-                    </h2>
+                            <span class="g-show-more__text">
+                                <span class="g-show-more__text-more">Показать еще 25 фото</span>
+                                <span class="g-show-more__text-less">Скрыть</span>
+                            </span>
+                        </button>
 
-                    <p>
-                        Осуществляем доставку до любой выбранной вами транспортной компании. Стоимость доставки - 1000р. <br>
-                        Стоимость доставки от транспортной компании до пункта назначения рассчитывается по тарифам выбранной вами ТК.
-                    </p>
+                        <div class="more__note">
+                            Всего 700 фото
+                        </div>
 
-                    <div class="delivery__map">
-                        <iframe data-src="https://yandex.ru/map-widget/v1/-/CCQ~7KtYWD" allowfullscreen="true" class="lazyload"></iframe>
+                        <nav class="pagination">
+                            <a href="#" class="pagination__item is-active">1</a>
+                            <a href="#" class="pagination__item">2</a>
+                            <a href="#" class="pagination__item">3</a>
+                            <a href="#" class="pagination__item">...</a>
+                            <a href="#" class="pagination__item">21</a>
+                        </nav>
                     </div>
                 </div>
             </div>
-        </article>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">

@@ -40,7 +40,7 @@
 		color: $black;
 	}
 
-	&.active
+	&.is-active
 	{
 		color: $black;
 		font-weight: bold;
@@ -53,7 +53,7 @@
 	height: 0;
 	overflow: hidden;
 
-	&.active
+	&.is-active
 	{
 		height: auto;
 		overflow: visible;

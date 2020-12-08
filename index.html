@@ -1507,7 +1507,7 @@
                 </div>
 
                 <ul class="products__nav">
-                    <li class="products__nav-item active" data-nav-for="products-1">
+                    <li class="products__nav-item is-active" data-nav-for="products-1">
                         Популярные товары
                     </li>
 
@@ -1516,7 +1516,7 @@
                     </li>
                 </ul>
 
-                <div class="products__tab active" data-tab="products-1">
+                <div class="products__tab is-active" data-tab="products-1">
                     <div class="_productsCarousel splide products__carousel">
                         <div class="splide__arrows">
                             <button class="splide__arrow splide__arrow--prev">
@@ -2491,17 +2491,17 @@
                     </div>
                 </div>
 
-                <div class="g-show-more" onclick="global.toggle(this, '._services')">
-                    <div class="g-show-more__icon">
+                <button class="g-show-more" onclick="global.toggle(this, '._services')">
+                    <span class="g-show-more__icon">
                         <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
                         <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
-                    </div>
+                    </span>
 
-                    <div class="g-show-more__text">
+                    <span class="g-show-more__text">
                         <span class="g-show-more__text-more">Показать еще 2 преимущества</span>
                         <span class="g-show-more__text-less">Скрыть</span>
-                    </div>
-                </div>
+                    </span>
+                </button>
             </div>
         </section>
         <section class="advantages">
@@ -2608,17 +2608,17 @@
                     </div>
                 </div>
 
-                <div class="g-show-more" onclick="global.toggle(this, '._advantages')">
-                    <div class="g-show-more__icon">
+                <button class="g-show-more" onclick="global.toggle(this, '._advantages')">
+                    <span class="g-show-more__icon">
                         <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
                         <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
-                    </div>
+                    </span>
 
-                    <div class="g-show-more__text">
+                    <span class="g-show-more__text">
                         <span class="g-show-more__text-more">Показать еще 2 преимущества</span>
                         <span class="g-show-more__text-less">Скрыть</span>
-                    </div>
-                </div>
+                    </span>
+                </button>
 
                 <div class="advantages__stats">
                     <div class="advantages__stat">
@@ -2701,8 +2701,8 @@
                                 <div class="review">
                                     <div class="review__gallery">
                                         <div class="review__gallery-primary">
-                                            <div class="review-video _reviewVideo" data-embed="dQw4w9WgXcQ">
-                                                <div class="review-video__play">
+                                            <div class="youtube-video _youtube" data-embed="dQw4w9WgXcQ">
+                                                <div class="youtube-video__play">
                                                     <img src="./img/icons/play.svg" alt="">
                                                 </div>
                                             </div>
@@ -2710,15 +2710,15 @@
 
                                         <div class="review__gallery-secondary">
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
 
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
 
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
                                         </div>
                                     </div>
@@ -2734,7 +2734,7 @@
                                             <div class="review__info-value">
                                                 <div class="review__rate">
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -2748,7 +2748,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -2762,7 +2762,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -2776,7 +2776,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -2790,7 +2790,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -2820,17 +2820,17 @@
                                             <strong class="review__info-type">Материалы:</strong>
 
                                             <div class="review__info-value review__info-value--long">
-                                                <div class="g-show-more" onclick="global.toggle(this)">
-                                                    <div class="g-show-more__icon">
+                                                <button class="g-show-more" onclick="global.toggle(this)">
+                                                    <span class="g-show-more__icon">
                                                         <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
                                                         <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
-                                                    </div>
+                                                    </span>
 
-                                                    <div class="g-show-more__text">
+                                                    <span class="g-show-more__text">
                                                         <span class="g-show-more__text-more">Показать еще</span>
                                                         <span class="g-show-more__text-less">Скрыть</span>
-                                                    </div>
-                                                </div>
+                                                    </span>
+                                                </button>
 
                                                 <div class="review__info-value-text">
                                                     Фиброцементный сайдинг Кедрал, утеплитель Тизол EURO-Лайт 35, фасадные панели Стоунн Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa provident facilis aut facere corrupti adipisci rem fugiat, maxime odio aliquid illum eveniet eos cupiditate modi ullam, optio placeat fugit!
@@ -2857,8 +2857,8 @@
                                 <div class="review">
                                     <div class="review__gallery">
                                         <div class="review__gallery-primary">
-                                            <div class="review-video _reviewVideo" data-embed="dQw4w9WgXcQ">
-                                                <div class="review-video__play">
+                                            <div class="youtube-video _youtube" data-embed="dQw4w9WgXcQ">
+                                                <div class="youtube-video__play">
                                                     <img src="./img/icons/play.svg" alt="">
                                                 </div>
                                             </div>
@@ -2866,15 +2866,15 @@
 
                                         <div class="review__gallery-secondary">
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
 
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
 
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
                                         </div>
                                     </div>
@@ -2890,7 +2890,7 @@
                                             <div class="review__info-value">
                                                 <div class="review__rate">
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -2904,7 +2904,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -2918,7 +2918,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -2932,7 +2932,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -2946,7 +2946,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -2976,17 +2976,17 @@
                                             <strong class="review__info-type">Материалы:</strong>
 
                                             <div class="review__info-value review__info-value--long">
-                                                <div class="g-show-more" onclick="global.toggle(this)">
-                                                    <div class="g-show-more__icon">
+                                                <button class="g-show-more" onclick="global.toggle(this)">
+                                                    <span class="g-show-more__icon">
                                                         <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
                                                         <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
-                                                    </div>
+                                                    </span>
 
-                                                    <div class="g-show-more__text">
+                                                    <span class="g-show-more__text">
                                                         <span class="g-show-more__text-more">Показать еще</span>
                                                         <span class="g-show-more__text-less">Скрыть</span>
-                                                    </div>
-                                                </div>
+                                                    </span>
+                                                </button>
 
                                                 <div class="review__info-value-text">
                                                     Фиброцементный сайдинг Кедрал, утеплитель Тизол EURO-Лайт 35, фасадные панели Стоунн Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa provident facilis aut facere corrupti adipisci rem fugiat, maxime odio aliquid illum eveniet eos cupiditate modi ullam, optio placeat fugit!
@@ -3013,8 +3013,8 @@
                                 <div class="review">
                                     <div class="review__gallery">
                                         <div class="review__gallery-primary">
-                                            <div class="review-video _reviewVideo" data-embed="dQw4w9WgXcQ">
-                                                <div class="review-video__play">
+                                            <div class="youtube-video _youtube" data-embed="dQw4w9WgXcQ">
+                                                <div class="youtube-video__play">
                                                     <img src="./img/icons/play.svg" alt="">
                                                 </div>
                                             </div>
@@ -3022,15 +3022,15 @@
 
                                         <div class="review__gallery-secondary">
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
 
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
 
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
                                         </div>
                                     </div>
@@ -3046,7 +3046,7 @@
                                             <div class="review__info-value">
                                                 <div class="review__rate">
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -3060,7 +3060,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -3074,7 +3074,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -3088,7 +3088,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -3102,7 +3102,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -3132,17 +3132,17 @@
                                             <strong class="review__info-type">Материалы:</strong>
 
                                             <div class="review__info-value review__info-value--long">
-                                                <div class="g-show-more" onclick="global.toggle(this)">
-                                                    <div class="g-show-more__icon">
+                                                <button class="g-show-more" onclick="global.toggle(this)">
+                                                    <span class="g-show-more__icon">
                                                         <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
                                                         <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
-                                                    </div>
+                                                    </span>
 
-                                                    <div class="g-show-more__text">
+                                                    <span class="g-show-more__text">
                                                         <span class="g-show-more__text-more">Показать еще</span>
                                                         <span class="g-show-more__text-less">Скрыть</span>
-                                                    </div>
-                                                </div>
+                                                    </span>
+                                                </button>
 
                                                 <div class="review__info-value-text">
                                                     Фиброцементный сайдинг Кедрал, утеплитель Тизол EURO-Лайт 35, фасадные панели Стоунн Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa provident facilis aut facere corrupti adipisci rem fugiat, maxime odio aliquid illum eveniet eos cupiditate modi ullam, optio placeat fugit!
@@ -3169,8 +3169,8 @@
                                 <div class="review">
                                     <div class="review__gallery">
                                         <div class="review__gallery-primary">
-                                            <div class="review-video _reviewVideo" data-embed="dQw4w9WgXcQ">
-                                                <div class="review-video__play">
+                                            <div class="youtube-video _youtube" data-embed="dQw4w9WgXcQ">
+                                                <div class="youtube-video__play">
                                                     <img src="./img/icons/play.svg" alt="">
                                                 </div>
                                             </div>
@@ -3178,15 +3178,15 @@
 
                                         <div class="review__gallery-secondary">
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
 
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
 
                                             <div class="review__gallery-item">
-                                                <img data-src="./img/gallery-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
+                                                <img data-src="./img/review-pholder.jpg" src="./img/pholder.svg" alt="" class="lazyload">
                                             </div>
                                         </div>
                                     </div>
@@ -3202,7 +3202,7 @@
                                             <div class="review__info-value">
                                                 <div class="review__rate">
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -3216,7 +3216,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -3230,7 +3230,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -3244,7 +3244,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -3258,7 +3258,7 @@
 
                                                     </div>
 
-                                                    <div class="review__rate-star active">
+                                                    <div class="review__rate-star is-active">
                                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g>
                                                                 <path d="M14.602 5.36567L9.99072 4.6613L7.92384 0.2588C7.76947 -0.0699499 7.23009 -0.0699499 7.07572 0.2588L5.00947 4.6613L0.398218 5.36567C0.0194683 5.4238 -0.131782 5.88442 0.133843 6.1563L3.48384 9.59005L2.69197 14.4444C2.62884 14.83 3.04072 15.1194 3.38134 14.93L7.50009 12.6538L11.6188 14.9307C11.9563 15.1182 12.372 14.8344 12.3082 14.445L11.5163 9.59067L14.8663 6.15692C15.132 5.88442 14.9801 5.4238 14.602 5.36567Z" fill="#D2D2D2" />
@@ -3288,17 +3288,17 @@
                                             <strong class="review__info-type">Материалы:</strong>
 
                                             <div class="review__info-value review__info-value--long">
-                                                <div class="g-show-more" onclick="global.toggle(this)">
-                                                    <div class="g-show-more__icon">
+                                                <button class="g-show-more" onclick="global.toggle(this)">
+                                                    <span class="g-show-more__icon">
                                                         <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
                                                         <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
-                                                    </div>
+                                                    </span>
 
-                                                    <div class="g-show-more__text">
+                                                    <span class="g-show-more__text">
                                                         <span class="g-show-more__text-more">Показать еще</span>
                                                         <span class="g-show-more__text-less">Скрыть</span>
-                                                    </div>
-                                                </div>
+                                                    </span>
+                                                </button>
 
                                                 <div class="review__info-value-text">
                                                     Фиброцементный сайдинг Кедрал, утеплитель Тизол EURO-Лайт 35, фасадные панели Стоунн Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa provident facilis aut facere corrupti adipisci rem fugiat, maxime odio aliquid illum eveniet eos cupiditate modi ullam, optio placeat fugit!
@@ -3476,7 +3476,7 @@
                     </div>
 
                     <div class="contacts__offices">
-                        <div class="contacts__office active" data-nav-for="contacts-1">
+                        <div class="contacts__office is-active" data-nav-for="contacts-1">
                             <div class="contacts__office-title">
                                 Офис №1
                             </div>
@@ -3655,8 +3655,8 @@
                     </div>
                 </div>
 
-                <div class="contacts__tab active" data-tab="contacts-1">
-                    <div class="contacts__office active">
+                <div class="contacts__tab is-active" data-tab="contacts-1">
+                    <div class="contacts__office is-active">
                         <div class="contacts__office-title">
                             Офис №1
                         </div>
@@ -3711,7 +3711,7 @@
                 </div>
 
                 <div class="contacts__tab" data-tab="contacts-2">
-                    <div class="contacts__office active">
+                    <div class="contacts__office is-active">
                         <div class="contacts__office-title">
                             Офис №2
                         </div>

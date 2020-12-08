@@ -22,7 +22,7 @@ var global =
 		this.header.dropdownShowSubList();
 		this.tabs();
 		this.selects();
-		this.reviewLazy();
+		this.youtubeLazy();
 		this.sliders.init();
 		Maska.create('._masked');
 	},
@@ -73,12 +73,12 @@ var global =
 			
 			for (let i = 0; i < $triggerList.length; i++) {
 				$triggerList[i].addEventListener('mouseenter', () => {
-					$subList.forEach((elem) => { elem.classList.remove('active'); })
-					$subList[i].classList.add('active');
+					$subList.forEach((elem) => { elem.classList.remove('is-active'); })
+					$subList[i].classList.add('is-active');
 				});
 				
 				$triggerList[i].addEventListener('mouseleave', () => {
-					$subList.forEach((elem) => { elem.classList.remove('active'); })
+					$subList.forEach((elem) => { elem.classList.remove('is-active'); })
 				});
 			}
 		},
@@ -86,14 +86,14 @@ var global =
 		// активность поля для поиска и появление дропдауна с результатами
 		search(instance)
 		{
-			if(instance.value && instance === document.activeElement)
+			if(instance.value && instance === document.is-activeElement)
 			{
-				document.querySelector('._searchDropdown').classList.add('active');
+				document.querySelector('._searchDropdown').classList.add('is-active');
 				document.querySelector('._search').classList.add('g-search--has-value');
 			}
 			else
 			{
-				document.querySelector('._searchDropdown').classList.remove('active');
+				document.querySelector('._searchDropdown').classList.remove('is-active');
 				setTimeout(() => document.querySelector('._search').classList.remove('g-search--has-value'), 100);
 			}
 		},
@@ -110,10 +110,10 @@ var global =
 	toggle(instance, elem)
 	{
 		if(instance)
-			instance.classList.toggle('active');
+			instance.classList.toggle('is-active');
 		
 		if(elem)
-			document.querySelector(elem).classList.toggle('active');
+			document.querySelector(elem).classList.toggle('is-active');
 	},
 	
 	// получить соседние элементы
@@ -151,22 +151,22 @@ var global =
 		for(let i = 0; i < $btns.length; i++) {
 			
 			$btns[i].addEventListener('click', function() {
-				global.getSiblings(this).forEach((elem) => { elem.classList.remove('active') });
-				this.classList.add('active');
+				global.getSiblings(this).forEach((elem) => { elem.classList.remove('is-active') });
+				this.classList.add('is-active');
 				
 				$tabs.forEach((elem) => {
-					elem.classList.remove('active');
+					elem.classList.remove('is-active');
 					
 					if(elem.getAttribute('data-tab') === $btns[i].getAttribute('data-nav-for'))
-					elem.classList.add('active');
+					elem.classList.add('is-active');
 				});
 			});
 		}
 	},
 
-	reviewLazy()
+	youtubeLazy()
 	{
-		let $youtube = document.querySelectorAll( '._reviewVideo' );
+		let $youtube = document.querySelectorAll( '._youtube' );
 		
 		for (let i = 0; i < $youtube.length; i++) {
 			let source = 'https://img.youtube.com/vi/'+ $youtube[i].dataset.embed +'/hqdefault.jpg';
@@ -201,7 +201,7 @@ var global =
 		
 		$select.forEach(a => {
 			a.addEventListener('click', b => {
-				b.target.parentElement.classList.toggle('active');
+				b.target.parentElement.classList.toggle('is-active');
 			})
 		})
 
@@ -209,7 +209,7 @@ var global =
 			a.addEventListener('click', b => {
 				const parent = b.target.closest('._select');
 				
-				parent.classList.remove('active');
+				parent.classList.remove('is-active');
 
 				if(b.target.hasAttribute('data-value'))
 					parent.children[0].setAttribute('data-value', b.target.getAttribute('data-value'));
@@ -226,14 +226,18 @@ var global =
 			this.productsCarousel();
 			this.reviewsCarousel();
 			this.suppliersCarousel();
+			this.videoGalleryCarousel();
 		},
 
 		productsCarousel()
 		{
 			if(document.documentElement.clientWidth > 1023)
 				return
-
+	
 			let $productsCarousel = document.querySelectorAll('._productsCarousel');
+
+			if(!$productsCarousel.length)
+				return
 
 			$productsCarousel.forEach(elem => {
 				new Splide(elem, {
@@ -270,6 +274,9 @@ var global =
 
 		reviewsCarousel()
 		{
+			if(!document.querySelectorAll('._reviewsCarousel').length)
+				return
+
 			new Splide( '._reviewsCarousel', {
 				perPage: 2,
 				perMove: 1,
@@ -292,8 +299,38 @@ var global =
 			} ).mount();
 		},
 
+		videoGalleryCarousel()
+		{
+			if(!document.querySelectorAll('._videoGalleryCarousel').length)
+				return
+
+			new Splide( '._videoGalleryCarousel', {
+				perPage: 4,
+				perMove: 4,
+				lazyLoad: 'nearby',
+				gap: '30px',
+				breakpoints: {
+					1023: {
+						perPage: 3,
+						perMove: 3,
+					},
+
+					600:
+					{
+						perPage: 2,
+						perMove: 2,
+						fixedWidth: '135px',
+						gap: '12px',
+					}
+				}
+			} ).mount();
+		},
+
 		suppliersCarousel()
 		{
+			if(!document.querySelectorAll('._suppliersCarousel').length)
+				return
+
 			new Splide( '._suppliersCarousel', {
 				perPage: 4,
 				perMove: 1,

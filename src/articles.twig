@@ -13,6 +13,26 @@
 					{% include "./blocks/article-preview.twig" %}
 				{% endfor %}
 			</div>
+
+			<div class="more">
+				<button class="g-show-more more__btn" onclick="global.toggle(this)">
+					<span class="g-show-more__icon">
+						<img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+						<img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+					</span>
+		
+					<span class="g-show-more__text">
+						<span class="g-show-more__text-more">Показать еще 14 статей</span>
+						<span class="g-show-more__text-less">Скрыть</span>
+					</span>
+				</button>
+
+				<div class="more__note">
+					Всего 44 статьи
+				</div>
+
+				{% include "./blocks/pagination.twig" %}
+			</div>
 		</div>
 	</section>
 {% endblock %}

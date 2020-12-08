@@ -52,7 +52,7 @@
 	transition: .3s;
 	cursor: pointer;
 
-	&.active
+	&.is-active
 	{
 		background-color: rgba($spindle, .2);
 		background-clip: padding-box;
@@ -123,7 +123,7 @@
 {
 	display: none;
 
-	&.active
+	&.is-active
 	{
 		display: block;
 	}
