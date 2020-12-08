@@ -13,6 +13,9 @@
 	height: 55px;
 	width: 326px;
 	appearance: none;
+	background-image: url('../img/icons/arrow-down.svg');
+	background-position: 95% center;
+	background-repeat: no-repeat;
 }
 #calc-roof-color
 {
@@ -153,9 +156,53 @@
 	text-align: left;
 }
 
-
+.zabor__table
+{
+	width: 55%;
+	tbody
+	{
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+	tr
+	{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-bottom: 20px;
+		td
+		{
+			width: 210px;
+			&:last-child
+			{
+				width: auto;
+			}
+		}
+	}
+}
+.calc__zabor
+{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+.calc__zabor-img
+{
+	width: 400px;
+	img
+	{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
 @media (max-width: 1199px)
 {
+	.calc__zabor
+	{
+		flex-direction: column;
+	}
 	.calc-roof-top
 	{
 		flex-direction: column;
@@ -226,9 +273,45 @@
 }
 
 
-@media (max-width: 787px)
+@media (max-width: 767px)
 {
-	.calc-roof__select
+	.calc__zabor
+	{
+		width: 100%;
+	}
+	.zabor__table
+	{
+		tbody
+		{
+			tr
+			{
+				justify-content: flex-start;
+				align-items: flex-start;
+				flex-direction: column;
+				td
+				{
+					&:first-child
+					{
+						margin-bottom: 10px;
+					}
+					&:last-child
+					{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.calc-roof__select
+		{
+			width: 100% !important;
+		}
+
+	}
+	.calc__zabor-img
+	{
+		width: 100%;
+	}
+	.zabor__table
 	{
 		width: 100%;
 	}

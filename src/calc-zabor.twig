@@ -1,0 +1,319 @@
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+
+	<article class="calcs">
+		<div class="container">
+			<h1 class="calcs__title">
+				Калькулятор кровли
+			</h1>
+
+			<div class="calcs__descr">
+				<p>
+					Данный кровельный калькулятор крыши поможет вам вычислить необходимые материалы и их стоимость для разных типов крыш: вальмовой, двускатной (двухскатной), шатровой, мансардной и многоскатной. Расчет кровли из металлочерепицы имеет свои особенности. Для того, чтобы произвести приблизительный расчет крыши из металочерепицы необходимо заполнить лишь несколько размеров коньков и карнизов. Для более точного расчета крыши позвоните нам.
+				</p>
+			</div>
+
+			<div class="calc__zabor">
+				<div class="calc__zabor-img">
+					<img src="./img/zabor-cxema.jpg" alt="">
+				</div>
+				<table class="zabor__table">
+					<tbody>
+						<tr>
+							<td><label for="type">Тип материала</label></td>
+							<td><select style="width:193px;" class="calc-roof__select" id="type" name="type">
+								<option value="1">Профнастил</option>
+								<option value="2">Штакетник</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td><label for="material">Материал</label></td>
+							<td><select class="calc-roof__select" id="material" name="material"><option value="1" selected="">С8 оцинкованный</option><option value="2">С8 окрашенный</option><option value="3">МП-20 оцинкованный</option><option value="4">МП-20 окрашенный</option></select></td>
+						</tr>
+						<tr>
+							<td><label for="height">Высота забора, м</label></td>
+							<td><input id="height" type="text" name="height" class="single-line" placeholder="Например, 102" value="1.8" size="10"></td>
+						</tr>
+						<tr id="tr_shtaket" style="display: none;">
+							<td><label for="rasst_shtaket">Расстояние м/у штакетами: </label></td>
+							<td><select style="width:137px;"  class="calc-roof__select" id="rasst_shtaket" name="rasst_shtaket">
+								<option value="0.07">7см</option>
+								<option value="0.08">8см</option>
+								<option value="0.09">9см</option>
+								<option value="0.10">10см</option>
+								<option value="0.11">11см</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td><label for="rasst_stolb">Расстояние м/у столбами, м: </label></td>
+							<td><select style="width:137px;" class="calc-roof__select" id="rasst_stolb" name="rasst_stolb">
+								<option selected="selected" value="2.5">2,5м</option>
+								<option value="3">3м</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td><label for="vorota">Ворота: </label></td>
+							<td><select style="width:137px;" class="calc-roof__select" id="vorota" name="vorota">
+								<option selected="selected" value="0">Нет</option>
+								<option value="1">2,5м</option>
+								<option value="2">3м</option>
+								<option value="3">3,5м</option>
+								<option value="4">4м</option>
+								<option value="5">4,5м</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td><label for="kalitka">Калитка: </label></td>
+							<td><select style="width:137px;" class="calc-roof__select" id="kalitka" name="kalitka">
+								<option value="0">Нет</option>
+								<option value="1">1 м</option>
+								<option value="2">1 м в воротах</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td><label for="length">Длина забора <span style="font-weight: bold;">без ворот и калитки</span>, м.:</label></td>
+							<td><input id="length" type="text" class="single-line" name="length" placeholder="Например, 102" size="10"></td>
+						</tr>
+						<tr>
+							<td><button id="calc" class="g-btn" type="button" value="Рассчитать">Рассчитать</button></td>
+							<td><button id="clear" class="g-btn-transp" type="button" value="Очистить">Очистить</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- <button id="calc" class="g-btn" type="button" value="Рассчитать">Рассчитать</button>
+			<button id="clear" class="g-btn-transp" type="button" value="Очистить">Очистить</button> -->
+			<a name="result"></a>
+			<div id="result" class="result">&nbsp;</div>
+		</div>
+	</article>
+	<script type="text/javascript" src="https://тфкк.рф/assets/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		//Цена за:  С8 ОЦ, С8 ОКР, МП-20 ОЦ, МП-20 ОКР, штак оцинк, штак окр, штак под дерево
+		//var cena_material = new Array(0,210,265,220,270,45,65,90);
+		var cena_material = new Array(0,300,300,300,300,50,65,90);
+		var cena_truba73 = 245;
+		var cena_truba40x20 = 520;
+		var cena_samorez = 4.5;
+		//Высота забора 0,1,2
+		var zabor_height = new Array(0,1.5,2);
+		//Ворота длина 0,1,2,3,4,5
+		var vorota_dlina = new Array(0,2.5,3,3.5,4,4.5);
+		//Цена за ворота: ворота 0; 2,5м; 3м; 3,5м; 4м; 4,5 м
+		//var vorota_cena = new Array(0,9000,11000,11000,13000,15000);
+		var vorota_cena = new Array(0,11000,11700,12600,12700,14700);
+		//Цена за калитку 1м отдельно и в воротах;
+		var kalitka_cena = new Array(0, 5000, 4000);
+		//Цена за монтаж ворот
+		var vorota_cena_montazh = 4000;
+		//Цена за монтаж калитки
+		var kalitka_cena_montazh = new Array(0,1500, 1000);
+		//Ширина листа: С8,МП20
+		var shirina_list = new Array(1.18,1.15);
+		//Цена мешка песка
+		var cena_pesok = 220;
+		var cena_cement = 350;
+		var cena_keramzit = 250;
+		var stolb_vorota = new Array(0,2,2,2,2,2);
+		var stolb_kalitka = new Array(0,1,0);
+		//Расстояние между столбами
+		var rasst_stolb = 3;
+		//Чистая ширина листа С8
+		var widthC8_clear = 1.12;
+		//Чистая ширина листа МП20
+		var widthMP20_clear = 1.1;
+		//Саморезов на один метр профнастила в расчете на одну лагу
+		var sam1M1L = 5;
+		//На какое расстояние закапываем столб
+		var stolb_zemlya = 0.7;
+		//Длина 1 профиля 40х20
+		var truba40x20_length = 5.9;
+		//Стоимость монтажа 1 м.п. профнастила
+		var r_profnastil = 290;
+		//Стоимость бурения и заливки одной лунки
+		var r_lunka = 390;
+		//Стоимость монтажа 1 м.п. штакетника
+		var r_shtaket = 350;
+
+
+
+		var res = '';
+
+		$(document).ready(function() {
+		    $('#calc').click(function () {
+		        clear();
+				calc();
+			});
+
+			function IsNumeric(sText) {
+			   var ValidChars = "0123456789.,";
+			   var IsNumber=true;
+			   var Char;
+			   for (i = 0; i < sText.length && IsNumber == true; i++)
+				  {
+				  Char = sText.charAt(i);
+				  if (ValidChars.indexOf(Char) == -1)
+					 {
+						 IsNumber = false;
+					 }      }
+			   return IsNumber;
+			};
+		    $('#type').change(function() {
+		        change_type($('#type').val());
+
+		    });
+		    change_type("1");
+		    function change_type(type){
+		        switch($('#type').val()){
+		        case "1": //Профнастил
+		            $('#material').empty().append('<option value="1" selected>С8 оцинкованный</option><option value="2">С8 окрашенный</option><option value="3">МП-20 оцинкованный</option><option value="4">МП-20 окрашенный</option>');
+		            $('#tr_shtaket').hide();
+		            $('#height').val('1.8');
+		        break
+		        case "2": //Штакетник
+		            $('#material').empty().append('<option value="5" selected>Оцинкованный</option><option value="6">Окрашенный</option><option value="7">Под дерево</option>');
+		            $('#tr_shtaket').show();
+		            $('#height').val('1.5');
+		        break
+				}
+		    }
+
+		    $('#clear').click(function () {
+		        clear();
+		    });
+
+		    function clear() {
+				res = '';
+		        $('.result').html('');
+		    }
+			function scrollToAnchor(aid){
+				var aTag = $("a[name='"+ aid +"']");
+				$('html,body').animate({
+					scrollTop: aTag.offset().top
+				},'slow');
+			}
+
+
+			function calc() {
+				var err="";
+				err_num=0;
+				if ($('#length').val()==0 || $('#length').val()==null) {
+					err+="Укажите длину забора\n";
+					err_num+=1;
+				}
+				else {
+					if (!IsNumeric($('#length').val())) {
+							err+="Укажите длину забора в формате 0.00\n";
+							err_num+=1;
+						}
+				}
+				if ($('#height').val()==0 || $('#height').val()==null) {
+					err+="Укажите высоту забора\n";
+					err_num+=1;
+				}
+				else {
+					if (!IsNumeric($('#height').val())) {
+							err+="Укажите высоту забора в формате 0.00\n";
+							err_num+=1;
+						}
+				}
+				if ($('#material').val()=='') {
+					err+="Выберите материал\n";
+					err_num+=1;
+				}
+				if ($('#steps').val()=='') {
+					err+="Укажите шаг между столбами\n";
+					err_num+=1;
+				}
+				if (err_num>0) {
+					alert (err);
+				}
+				else {
+				// ========================
+				// НАЧАЛО РАСЧЕТА
+				// ========================
+					var material = $('#material').val();	//читаем номер материала из выпадающего списка
+					var length = Number($('#length').val().replace(',','.'));	//читаем длину забора
+					var height = Number($('#height').val().replace(',','.'));	//читаем высоту забора
+					var vorota = Number($('#vorota').val());	//читаем номер ворот
+					var kalitka = Number($('#kalitka').val());	//читаем номер калитки
+					var rasst_stolb = Number($('#rasst_stolb').val().replace(',','.'));	//читаем расстояние между столбами
+					var rasst_shtaket = Number($('#rasst_shtaket').val());	//читаем расстояние между штакетами
+					var lags = 2;	//количество лаг
+
+					var stolb = Math.ceil(length/rasst_stolb+1);	//вычисляем количество столбов
+					var profnastil_c8 = Math.ceil(length/widthC8_clear);	//вычисляем необходимое целое число листов профнастила с8
+					var profnastil_mp20 = Math.ceil(length/widthMP20_clear);	//вычисляем необходимое целое число листов профнастила мп20
+					if (material == 1 || material == 2){	//если с8
+						var profnastil = profnastil_c8;	//запоминаем число листов
+						var profnastil_square = profnastil_c8*shirina_list[0]*height; //вычисляем площадь профнастила
+					}
+					else if (material == 3 || material == 4){ //если мп20
+						var profnastil = profnastil_mp20;	//запоминаем число листов
+						var profnastil_square = profnastil_mp20*shirina_list[1]*height; //вычисляем площадь профнастила
+					}
+					else if (material == 5 || material == 6 || material == 7){ //если штакетник
+						var shtaket_dlina = Math.ceil(length/(0.07+rasst_shtaket))*height;	//запоминаем число листов
+					}
+		            var vorota_k = 0; // семафоры: 0 - без ворот, 1 - с воротами
+		            var kalitka_k = 0; // --//--
+					if (vorota>0) vorota_k = 1;
+					if (kalitka>0) kalitka_k= 1;
+
+					var samorez = Math.ceil(length*lags*sam1M1L/100)*100; //вычисляем количество саморезов округленные до десяти
+					var truba73 = stolb*(height+stolb_zemlya); //общая длина трубы 73мм
+					var truba40x20 = Math.ceil(length*lags/truba40x20_length); // число палок профилированной трубы
+
+					var summ_profnastil = profnastil_square * cena_material[material]; //стоимость профнастила
+					var summ_shtaket = shtaket_dlina * cena_material[material]; //стоимость профнастила
+					var summ_truba73 = truba73 * cena_truba73; //стоимость трубы 73
+					var summ_truba40x20 = truba40x20 * cena_truba40x20; //стоимость профилированной трубы
+					var summ_samorez = samorez * cena_samorez; //стоимость саморезов
+					var summ_vorota = vorota_k *vorota_cena[vorota]; //стоимость ворот
+					var summ_kalitka = kalitka_k*kalitka_cena[kalitka]; //стоимость калитки
+
+					var stolbs = stolb+stolb_vorota[vorota]+stolb_kalitka[kalitka]; //число столбов
+					var summ_pesok = stolbs; //мешков песка
+					var summ_cement = Math.ceil(stolbs/3); //мешков цемента
+					var summ_keramzit = Math.ceil(stolbs/2); //мешков керамзита
+		//			var summ_sipuchka = summ_pesok*cena_pesok+summ_cement*cena_cement+summ_keramzit*cena_keramzit;  //стоимость всей сыпучки
+					var summ_sipuchka = 0;//пока не учитываем сыпучку
+
+					var sumr_vorota = vorota_k*vorota_cena_montazh; //стоимость монтажа ворот
+					var sumr_kalitka = kalitka_k*kalitka_cena_montazh[kalitka]; //стоимость монтажа калитки
+					var sumr_profnastil = length*r_profnastil; //стоимость монтажа профнастила
+					var sumr_lunki = stolb*r_lunka; //стоимость бурения лунок
+					var sumr_shtaket = length*r_shtaket; //стоимость монтажа шакета
+
+		                        if(material<=4){ //профнастил
+					    var summ = summ_profnastil+summ_truba73+summ_truba40x20+summ_samorez+summ_vorota+summ_kalitka+summ_sipuchka; //стоимость всех материалов
+					    var sumr = sumr_vorota+sumr_kalitka+sumr_profnastil+sumr_lunki; //стоимость всех работ
+					} else { //штакет
+					    var summ = summ_shtaket+summ_truba73+summ_truba40x20+summ_samorez+summ_vorota+summ_kalitka+summ_sipuchka; //стоимость всех материалов
+					    var sumr = sumr_vorota+sumr_kalitka+sumr_shtaket+sumr_lunki; //стоимость всех работ
+		                        }
+					res = '<table><thead><tr><th>Наименование</th><th>Кол-во</th></tr></thead><tbody>';
+		                        if(material<=4){ //профнастил
+					    res += '<tr><td>Всего листов</td><td>' + profnastil + ' шт</td></tr>';
+		                        }
+					res += '<tr><td>Всего столбов</td><td>' + stolb + ' шт</td></tr>';
+					res += '<tr><td>Всего прожилин</td><td>' + truba40x20 + ' шт</td></tr>';
+					res += '<tr><td>Стоимость материалов</td><td>' + Math.ceil(summ) + ' руб</td></tr>';
+					res += '<tr><td>Стоимость работ</td><td>' + Math.ceil(sumr) + ' руб</td></tr>';
+					res+='</tbody></table>'
+
+					res += '<p style="font-size:18px"><span style="font-weight:bold;">Итого стоимость: ' + Math.ceil(summ+sumr) + ' руб.</span><br/><br/></p>';
+					res+='<p style="font-size:16px"><span style="font-weight:bold;">Внимание: цена приблизительная и указана без учета скидок, доставки и сыпучих материалов. Для более точного расчета позвоните нам.</span></p>';
+					res+='<p style="font-size:12px">Обращаем Ваше внимание на то, что вся представленная на сайте информация, касающаяся комплектаций, характеристик, цветовых сочетаний, а так же стоимости носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации, пожалуйста, обращайтесь в офис фирмы.</p>';
+					$('.result').html('').append(res);
+					scrollToAnchor('result');
+				// ========================
+				// КОНЕЦ РАСЧЕТА
+				// ========================
+				}
+			}
+		});
+		</script>
+{% endblock %}
