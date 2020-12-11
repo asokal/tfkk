@@ -34,7 +34,7 @@
 	{
 		&:nth-last-child(-n+3)
 		{
-			border-bottom: 0; 
+			border-bottom: 0;
 		}
 
 		&:nth-child(3n+3)
@@ -86,6 +86,14 @@
 	padding: 0 40px;
 }
 
+.advantages__stats--inner
+{
+	background: rgba(191,215,234,0.25);
+	padding: 55px 105px;
+	border-radius: 4px;
+	margin: 50px 0;
+}
+
 .advantages__stats-devider
 {
 	flex-basis: 145px;
@@ -111,6 +119,20 @@
 
 @media (max-width: 1023px)
 {
+	.advantages__stats--inner
+	{
+		flex-wrap: wrap;
+		.advantages__stat
+		{
+			flex-basis: 50%;
+			text-align: center;
+			margin-bottom: 20px;
+			&:last-child
+			{
+				margin-bottom: 0;
+			}
+		}
+	}
 	.advantages
 	{
 		padding: 65px 0 75px;
@@ -129,7 +151,7 @@
 
 		&:nth-last-child(-n+2)
 		{
-			border-bottom: 0; 
+			border-bottom: 0;
 		}
 
 		&:nth-child(even)
@@ -141,6 +163,10 @@
 	.advantages__stats
 	{
 		padding: 0;
+		&.advantages__stats--inner
+		{
+			padding: 25px 10px;
+		}
 	}
 
 	.advantages__stats-devider
@@ -202,7 +228,7 @@
 		margin-bottom: 0;
 		margin-right: 15px;
 	}
-	
+
 	.advantages__item-title
 	{
 		font-size: 15px;
