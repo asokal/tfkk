@@ -1,5 +1,6 @@
 /* vendors */
 @import 'vendors/splide-core';
+@import 'vendors/nouislider';
 
 /* base */
 @import 'base/variables';
@@ -39,6 +40,10 @@
 @import 'blocks/social';
 @import 'blocks/photo-gallery';
 @import 'blocks/video-gallery';
+@import 'blocks/catalog';
+@import 'blocks/price-range';
+@import 'blocks/product';
+@import 'blocks/filters';
 @import 'blocks/footer';
 
 @import 'pages/index';

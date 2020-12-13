@@ -23,6 +23,7 @@ var global =
 		this.tabs();
 		this.selects();
 		this.youtubeLazy();
+		this.rangeSlider();
 		this.sliders.init();
 		Maska.create('._masked');
 	},
@@ -219,11 +220,55 @@ var global =
 		})
 	},
 
+	rangeSlider()
+	{
+		const $productLimitSlider = document.querySelector('._priceRange'),
+			  $minValueInput = document.querySelector('._priceMin'),
+			  $maxValueInput = document.querySelector('._priceMax');
+			
+			noUiSlider.create($productLimitSlider, {
+				start: [1600, 8000],
+				connect: true,
+				tooltips: false,
+				step: 1,
+				range: {
+					'min': 50,
+					'max': 11547
+				},
+				
+				format: {
+					from: function(value)
+					{
+						return parseInt(value);
+					},
+					
+					to: function(value)
+					{
+						return parseInt(value);
+					}
+				},
+			});
+
+			$productLimitSlider.noUiSlider.on('update', function( values, handle ) {
+				$minValueInput.value = values[0];
+				$maxValueInput.value = values[1];
+			});
+
+			$minValueInput.addEventListener('input', function () {
+				$productLimitSlider.noUiSlider.set([this.value, null]);
+			});
+
+			$maxValueInput.addEventListener('input', function () {
+				$productLimitSlider.noUiSlider.set([null, this.value]);
+			});
+	},
+
 	sliders:
 	{
 		init()
 		{
 			this.productsCarousel();
+			this.productSlider();
 			this.reviewsCarousel();
 			this.suppliersCarousel();
 			this.videoGalleryCarousel();
@@ -270,6 +315,75 @@ var global =
 					}
 				} ).mount(window.splide.Extensions );
 			})
+		},
+
+		productSlider()
+		{
+			let $productSlider = document.querySelectorAll('._productSlider');
+
+			if(!document.querySelectorAll('._productSlider').length)
+				return
+
+			$productSlider.forEach(elem => {
+				new Splide(elem, {
+					rewind     : true,
+					heightRatio: 0.5,
+					pagination : false,
+					cover  : true,
+					lazyLoad: 'nearby',
+					fixedWidth: '340px',
+					fixedHeight: '340px',
+
+					breakpoints: {
+						1099:
+						{
+							fixedWidth: '280px',
+							fixedHeight: '280px',
+						},
+
+						1099:
+						{
+							fixedWidth: '290px',
+							fixedHeight: '290px',
+						}
+					}
+				} ).mount();
+
+				// console.log(elem);
+
+				// let images = document.querySelectorAll( '._productThumbs li' );
+	
+				// let activeImage;
+				// let activeClass = 'is-active';
+	
+				// for ( let i = 0, len = images.length; i < len; i++ ) {
+				// 	let image = images[ i ];
+	
+				// 	elem.on( 'click', function () {
+				// 		if ( activeImage !== image ) {
+				// 			elem.go( i );
+				// 		}
+				// 	}, image );
+				// }
+	
+				// elem.on( 'mounted move', function ( newIndex ) {
+				// 	// newIndex will be undefined through the "mounted" event.
+				// 	let image = images[ newIndex !== undefined ? newIndex : splide.index ];
+	
+				// 	if ( image && activeImage !== image ) {
+				// 		if ( activeImage ) {
+				// 			activeImage.classList.remove( activeClass );
+				// 		}
+	
+				// 		image.classList.add( activeClass );
+				// 		activeImage = image;
+				// 	}
+				// } );
+	
+				// $elem.mount();
+
+			})
+
 		},
 
 		reviewsCarousel()
