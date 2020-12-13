@@ -1,0 +1,67 @@
+.price-range
+{
+	padding-top: 10px;
+}
+
+.price-range__slider
+{
+	margin-bottom: 39px;
+	height: 5px;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0;
+	background-color: rgba($black, .1);
+
+	.noUi-handle
+	{
+		width: 22px;
+		height: 22px;
+		right: -10px;
+		top: -8px;
+		border-radius: 50%;
+		background: #FFFFFF;
+		border: 1px solid $red;
+		border-radius: 50%;
+		cursor: pointer;
+		box-shadow: none;
+
+		&:before, &:after
+		{
+			display: none;
+		}
+	}
+
+	.noUi-connect
+	{
+		background-color: $red;
+	}
+}
+
+.price-range__inputs
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.price-range__input
+{
+	flex-basis: 87px;
+	max-width: 87px;
+	text-align: center;
+	font-weight: 500;
+	color: rgba($black, .75);
+	font-size: 16px;
+	line-height: 1.45;
+	height: 40px;
+	background-color: rgba($spindle, .3);
+	border-radius: 2px;
+	border: 0;
+}
+
+.price-range__inputs-devider
+{
+	width: 24px;
+	height: 1px;
+	background-color: $black;
+}
