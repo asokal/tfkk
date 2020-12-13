@@ -1,0 +1,698 @@
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+
+	<article class="calcs">
+		<div class="container">
+			<h1 class="calcs__title">
+				Калькулятор кровли
+			</h1>
+
+			<div class="calcs__descr">
+				<p>
+					Данный кровельный калькулятор крыши поможет вам вычислить необходимые материалы и их стоимость для разных типов крыш: вальмовой, двускатной (двухскатной), шатровой, мансардной и многоскатной. Расчет кровли из металлочерепицы имеет свои особенности. Для того, чтобы произвести приблизительный расчет крыши из металочерепицы необходимо заполнить лишь несколько размеров коньков и карнизов. Для более точного расчета крыши позвоните нам.
+				</p>
+			</div>
+
+
+			<div id="calc-roof">
+				<div class="calc-roof-top">
+					<div id="calc-roof-color">
+						<p>
+							<span>Выберите материал:</span>
+							<select id="material" name="material" class="calc-roof__select">
+								<option value="mMonterey">Металлочерепица Монтеррей</option>
+								<option value="mEurope">Металлочерепица Европа</option>
+								<option value="mCascade">Металлочерепица Каскад</option>
+								<option value="mProf8">Профнастил С-8</option>
+								<option value="mProf15">Профнастил С-15</option>
+								<option value="mProf18">Профнастил С-18</option>
+								<option value="mProf20">Профнастил МП-20</option>
+							</select>
+						</p>
+					</div>
+					<div id="calc-roof-cover" style="display: block;">
+						<p>
+							<span>Выберите покрытие:</span>
+							<select id="cover" name="cover" class="calc-roof__select">
+								<option value="cColor">Окрашенный</option>
+								<option value="cZink" style="display: none;">Оцинкованный</option>
+							</select>
+						</p>
+					</div>
+				</div>
+				<ul class="calc-roof-list">
+					<li><a id="s-1" href="javascript:void(0)"> <img class="" style="border: 2px solid rgb(255, 255, 255);" src="./img/roof_type_1.jpg" alt="двухскатная"></a>
+						<p>Двускатная</p>
+					</li>
+					<li><a id="s-2" href="javascript:void(0)"> <img src="./img/roof_type_2.jpg" alt="вальмовая" style="border: 2px solid rgb(255, 255, 255);" class=""></a>
+						<p>Вальмовая</p>
+					</li>
+					<li><a id="s-3" href="javascript:void(0)"> <img src="./img/roof_type_3.jpg" alt="шатровая" style="border: 2px solid rgb(255, 255, 255);" class=""></a>
+						<p>Шатровая</p>
+					</li>
+					<li><a id="s-4" href="javascript:void(0)"> <img src="./img/roof_type_4.jpg" alt="мансардная" style="border: 2px solid rgb(255, 255, 255);" class=""></a>
+						<p>Мансардная</p>
+					</li>
+					<li><a id="s-5" href="javascript:void(0)"> <img src="./img/roof_type_5.jpg" alt="многоскатная" style="border: 2px solid #57ACE5" class="img_active"></a>
+						<p>Многоскатная</p>
+					</li>
+				</ul>
+				<div id="tabs" class="roof-parameters-group">
+					<div id="tabs-1" class="roof-parameters" style="display: none;">
+						<table class="mainTable"><colgroup> <col style="width: 250px;"> <col style="width: 100px;"> <col style="width: 400px;"> </colgroup>
+							<tbody>
+								<tr>
+									<td class="table__img"><img src="./img/s_type_1.jpg" alt="двухскатная"></td>
+									<td>
+										<table class="calc-table-input">
+											<tbody>
+												<tr>
+													<td><label for="X">X ( м )</label></td>
+													<td><input id="X" class="text-box single-line" type="text" name="X" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L1">L1 ( м )</label></td>
+													<td><input id="L1" class="text-box single-line" type="text" name="L1" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L2">L2 ( м )</label></td>
+													<td><input id="L2" class="text-box single-line" type="text" name="L2" value=""></td>
+												</tr>
+												<tr class="table__buttons">
+													<td><button id="calc" class="g-btn __calc" type="button" value="Рассчитать">Рассчитать</button></td>
+													<td><button id="clear" class="g-btn-transp __clear" type="button" value="Очистить">Очистить</button></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="tabs-2" class="roof-parameters" style="display: none;">
+						<table class="mainTable"><colgroup> <col style="width: 250px;"> <col style="width: 100px;"> <col style="width: 400px;"> </colgroup>
+							<tbody>
+								<tr>
+									<td class="table__img"><img src="./img/s_type_2.jpg" alt="вальмовая"></td>
+									<td>
+										<table class="calc-table-input">
+											<tbody>
+												<tr>
+													<td><label for="X1">X1 ( м )</label></td>
+													<td><input id="X1" class="text-box single-line" type="text" name="X1" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="X2">X2 ( м )</label></td>
+													<td><input id="X2" class="text-box single-line" type="text" name="X2" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="X3">X3 ( м )</label></td>
+													<td><input id="X3" class="text-box single-line" type="text" name="X3" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L1">L1 ( м )</label></td>
+													<td><input id="L1" class="text-box single-line" type="text" name="L1" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L2">L2 ( м )</label></td>
+													<td><input id="L2" class="text-box single-line" type="text" name="L2" value=""></td>
+												</tr>
+												<tr class="table__buttons">
+													<td><button id="calc" class="g-btn __calc" type="button" value="Рассчитать">Рассчитать</button></td>
+													<td><button id="clear" class="g-btn-transp __clear" type="button" value="Очистить">Очистить</button></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="tabs-3" class="roof-parameters" style="display: none;">
+						<table class="mainTable"><colgroup> <col style="width: 250px;"> <col style="width: 100px;"> <col style="width: 400px;"> </colgroup>
+							<tbody>
+								<tr>
+									<td class="table__img"><img src="./img/s_type_3.jpg" alt="шатровая"></td>
+									<td>
+										<table class="calc-table-input">
+											<tbody>
+												<tr>
+													<td><label for="X">X ( м )</label></td>
+													<td><input id="X" class="text-box single-line" type="text" name="X" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="X2">X2 ( м )</label></td>
+													<td><input id="X2" class="text-box single-line" type="text" name="X2" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L1">L1 ( м )</label></td>
+													<td><input id="L1" class="text-box single-line" type="text" name="L1" value=""></td>
+												</tr>
+												<tr class="table__buttons">
+													<td><button id="calc" class="g-btn __calc" type="button" value="Рассчитать">Рассчитать</button></td>
+													<td><button id="clear" class="g-btn-transp __clear" type="button" value="Очистить">Очистить</button></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="tabs-4" class="roof-parameters" style="display: none;">
+						<table class="mainTable"><colgroup> <col style="width: 250px;"> <col style="width: 100px;"> <col style="width: 400px;"> </colgroup>
+							<tbody>
+								<tr>
+									<td class="table__img"><img src="./img/s_type_4.jpg" alt="мансардная"></td>
+									<td>
+										<table class="calc-table-input">
+											<tbody>
+												<tr>
+													<td><label for="X">X ( м )</label></td>
+													<td><input id="X" class="text-box single-line" type="text" name="X" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L1">L1 ( м )</label></td>
+													<td><input id="L1" class="text-box single-line" type="text" name="L1" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L2">L2</label></td>
+													<td><input id="L2" class="text-box single-line" type="text" name="L2" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L3">L3 ( м )</label></td>
+													<td><input id="L3" class="text-box single-line" type="text" name="L3" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L4">L4 ( м )</label></td>
+													<td><input id="L4" class="text-box single-line" type="text" name="L4" value=""></td>
+												</tr>
+												<tr class="table__buttons">
+													<td><button id="calc" class="g-btn __calc" type="button" value="Рассчитать">Рассчитать</button></td>
+													<td><button id="clear" class="g-btn-transp __clear" type="button" value="Очистить">Очистить</button></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="tabs-5" class="roof-parameters" style="display: block;">
+						<table class="mainTable"><colgroup> <col style="width: 250px;"> <col style="width: 100px;"> <col style="width: 400px;"> </colgroup>
+							<tbody>
+								<tr>
+									<td class="table__img"><img src="./img/s_type_5.jpg" alt="многоскатная"></td>
+									<td>
+										<table class="calc-table-input">
+											<tbody>
+												<tr>
+													<td><label for="X">X ( м )</label></td>
+													<td><input id="X" class="text-box single-line" type="text" name="X" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="X2">X2 ( м )</label></td>
+													<td><input id="X2" class="text-box single-line" type="text" name="X2" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="X3">X3 ( м )</label></td>
+													<td><input id="X3" class="text-box single-line" type="text" name="X3" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="X4">X4 ( м )</label></td>
+													<td><input id="X4" class="text-box single-line" type="text" name="X4" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L1">L1 ( м )</label></td>
+													<td><input id="L1" class="text-box single-line" type="text" name="L1" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L2">L2 ( м )</label></td>
+													<td><input id="L2" class="text-box single-line" type="text" name="L2" value=""></td>
+
+												</tr>
+												<tr>
+													<td><label for="L3">L3 ( м )</label></td>
+													<td><input id="L3" class="text-box single-line" type="text" name="L3" value=""></td>
+
+												</tr>
+												<tr class="table__buttons">
+													<td><button id="calc" class="g-btn __calc" type="button" value="Рассчитать">Рассчитать</button></td>
+													<td><button id="clear" class="g-btn-transp __clear" type="button" value="Очистить">Очистить</button></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<a name="result"></a>
+				<div id="result" class="result"><table><thead><tr><th>Наименование</th><th>Кол-во</th></tr></thead><tbody><tr><td>Металлочерепица Монтеррей</td><td>0 м<sup>2</sup></td></tr><tr><td>Конёк</td><td>0 м</td></tr><tr><td>Торцевая планка</td><td>0 м</td></tr><tr><td>Саморез 4,8*35</td><td>0 шт</td></tr></tbody></table><p style="font-size:18px"><span style="font-weight:bold;">Стоимость: 0 руб.</span><br><br></p><p style="font-size:16px"><span style="font-weight:bold;">Внимание: цена указана без учета отходов, нахлестов и монтажа. Для более точного расчета свяжитесь с нашим менеджером.</span></p><p style="font-size:12px">Обращаем Ваше внимание на то, что вся представленная на сайте информация, касающаяся комплектаций, характеристик, цветовых сочетаний, а так же стоимости носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации, пожалуйста, обращайтесь в офис фирмы.</p></div>
+			</div>
+
+			<!-- <div class="g-select _select">
+				<button class="g-select__btn _selectBtn">Выберите материал:</button>
+
+				<ul class="g-select__dropdown _selectDropdown">
+					<li class="g-select__option _selectOption" data-nav-for="delivery-1">Металлочерепица Монтеррей</li>
+					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Самовывоз</li>
+					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Другие регионы</li>
+				</ul>
+			</div>
+
+			<div class="g-select _select">
+				<button class="g-select__btn _selectBtn">Выберите покрытие:</button>
+
+				<ul class="g-select__dropdown _selectDropdown">
+					<li class="g-select__option _selectOption" data-nav-for="delivery-1">Окрашенный</li>
+					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Самовывоз</li>
+					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Другие регионы</li>
+				</ul>
+			</div>
+
+			<div class="g-tabs-nav">
+				<button class="g-tabs-nav__btn is-active" data-nav-for="delivery-1">
+					Двускатная
+				</button>
+
+				<button class="g-tabs-nav__btn" data-nav-for="delivery-2">
+					Вальмовая
+				</button>
+
+				<button class="g-tabs-nav__btn" data-nav-for="delivery-3">
+					Шатровая
+				</button>
+
+				<button class="g-tabs-nav__btn" data-nav-for="delivery-4">
+					Мансардная
+				</button>
+
+				<button class="g-tabs-nav__btn" data-nav-for="delivery-5">
+					Многоскатная
+				</button>
+
+			</div>
+
+			<div class="delivery__content is-active" data-tab="delivery-1">
+				1
+			</div>
+			<div class="delivery__content is-active" data-tab="delivery-2">
+				2
+			</div>
+			<div class="delivery__content is-active" data-tab="delivery-3">
+				3
+			</div>
+			<div class="delivery__content is-active" data-tab="delivery-4">
+				4
+			</div>
+			<div class="delivery__content is-active" data-tab="delivery-5">
+				5
+			</div> -->
+
+		</div>
+	</article>
+	<script type="text/javascript" src="https://тфкк.рф/assets/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+$(function () {
+
+    var pathname = $(location).attr('href').split('/');
+    var link = pathname[0] + '//' + pathname[2];
+
+    function calculate(s, dlKonkov, dlEndova, dlTorca, divId) {
+
+        var res = '<table><thead><tr><th>Наименование</th><th>Кол-во</th></tr></thead>';
+
+        var name = $('#material option:selected').text();
+
+        if (isNaN(s)) {
+            s = 0;
+        }
+
+        var material = $('#material option:selected').val(); // материал
+        var cover = $('#cover option:selected').val(); // читаем покрытие: окрашенная, оцинкованная
+		var mColor = '';
+		var mZink = '';
+		switch(material){
+		//в зависимости от выбранного материала устанавливаем цену за квадрат (окр, цинк)
+			case 'mMonterey':
+				mColor = '242';
+				mZink = '0';
+				break;
+			case 'mEurope':
+				mColor = '262';
+				mZink = '0';
+				break;
+			case 'mCascade':
+				mColor = '300';
+				mZink = '0';
+				break;
+			case 'mProf8':
+				mColor = '234';
+				mZink = '184';
+				break;
+			case 'mProf15':
+				mColor = '252';
+				mZink = '193';
+				break;
+			case 'mProf18':
+				mColor = '283';
+				mZink = '189';
+				break;
+			case 'mProf20':
+				mColor = '240';
+				mZink = '189';
+				break;
+		}
+		//В зависимости от покрытия устанавливаем цены доборки
+		if (cover == 'cColor'){
+			var materialPrice = mColor;
+			var cenaKonkov = '240';
+			var cenaTortsov = '200';
+			var cenaEndova = '500';
+			var cenaSamorez = '2.5';
+		}
+		else {
+			var materialPrice = mZink;
+			var cenaKonkov = '200';
+			var cenaTortsov = '180';
+			var cenaEndova = '450';
+			var cenaSamorez = '2';
+		}
+
+		var totalSquare = materialPrice * Number(s); // стоимость черепицы
+		var totalKonkov = dlKonkov * Number(cenaKonkov); // стоимость коньков
+		var totalEndova = dlEndova * Number(cenaEndova); // стоимость ендовы
+		var totalTortsov = dlTorca * Number(cenaTortsov); // стоимость торцевых планок
+		var numSamorez = Math.round(Number(s)*5 + dlTorca*3+dlEndova*3+dlKonkov*3); // количество саморезов
+		var totalSamorez = numSamorez * Number(cenaSamorez); // стоимость саморезов
+
+		var sum = Math.round(totalSquare + totalKonkov + totalEndova + totalTortsov+totalSamorez); // общая стоимость материалов
+
+		res += '<tbody><tr><td>' + name + '</td><td>' + s + ' м<sup>2</sup></td></tr>';
+
+		if (dlKonkov != null) {
+			res += '<tr><td>Конёк</td><td>' + dlKonkov + ' м</td></tr>';
+		}
+		if (totalEndova != null && totalEndova != 0) {
+			res += '<tr><td>Ендова</td><td>' + dlEndova + ' м</td></tr>';
+		}
+		if (dlTorca != null) {
+			res += '<tr><td>Торцевая планка</td><td>' + dlTorca + ' м</td></tr>';
+		}
+		if (numSamorez != null) {
+			res += '<tr><td>Саморез 4,8*35</td><td>' + numSamorez + ' шт</td></tr>';
+		}
+
+		res += '</tbody></table>';
+		res += '<p style="font-size:18px"><span style="font-weight:bold;">Стоимость: ' + sum + ' руб.</span><br/><br/></p>';
+		res+='<p style="font-size:16px"><span style="font-weight:bold;">Внимание: цена указана без учета отходов, нахлестов и монтажа. Для более точного расчета свяжитесь с нашим менеджером.</span></p>';
+		res+='<p style="font-size:12px">Обращаем Ваше внимание на то, что вся представленная на сайте информация, касающаяся комплектаций, характеристик, цветовых сочетаний, а так же стоимости носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации, пожалуйста, обращайтесь в офис фирмы.</p>';
+		$('#result').html('').append(res);
+		scrollToAnchor('result');
+    }
+
+    $(".calc-roof-list li a").click(function() {
+        $(".calc-roof-list li a img").each(function(){
+            $(this).css('border','2px solid #fff');
+            $(this).removeClass('img_active');
+        });
+        $('#tabs-1').css('display','none');
+        $('#tabs-2').css('display','none');
+        $('#tabs-3').css('display','none');
+        $('#tabs-4').css('display','none');
+        $('#tabs-5').css('display','none');
+        $(this).find('img').css('border','2px solid #57ACE5');
+        $(this).find('img').addClass('img_active');
+        $('#tab'+$(this).attr('id')).css('display','block');
+    });
+    $('#material').change(function() {
+        change_material($('#material').val());
+
+    });
+  change_material($('#material').val());
+  function change_material(material){
+        switch(material){
+        case "mMonterey":
+        case "mEurope":
+        case "mCascade":
+            $('#cover option[value="cZink"]').hide();
+        break
+        default:
+            $('#cover option[value="cZink"]').show();
+        break
+		}
+    }
+    $('.__clear').click(function () {
+        clear();
+    });
+
+    function clear() {
+        $('.result').html('');
+        $('.mainTable input[type="text"]').val('');
+    }
+
+    $('.__calc').click(function () {
+        var href = '#tab'+$('.img_active').parent().attr('id');
+        var errors = false;
+        $(href + ' input[type="text"]').each(function () {
+			this.value = Number(this.value.replace(',','.'));	//читаем длину забора
+            if (isNaN(this.value)) {
+                $('.result').html('');
+                $(this).css('border', '1px solid red');
+                $(this).parent().parent().append('<td><p class="input_error" style="color:red">Введите число.</p></td>');
+                errors = true;
+                return;
+            } else {
+                $(this).css('border-bottom', '1px solid rgba(35, 35, 35, 0.35)');
+                if(!errors){
+                    $(".input_error").each(function(){
+                        $(this).remove();
+                    });
+                }
+            }
+        });
+
+        var material = $('#material option:selected').val(); //читаем выбранный материал
+		var mListWidth = '';
+		var mListWidthPolezn = '';
+		//В зависимости от материала устанавливаем ширину общую и рабочую
+		switch(material){
+			case 'mMonterey':
+				mListWidth = 1.18; //ширина общая
+				mListWidthPolezn = 1.1; //ширина рабочая
+				break;
+			case 'mEurope':
+				mListWidth = 1.145;
+				mListWidthPolezn = 1.01;
+				break;
+			case 'mCascade':
+				mListWidth = 1.15;
+				mListWidthPolezn = 1.01;
+				break;
+			case 'mProf8':
+				mListWidth = 1.2;
+				mListWidthPolezn = 1.15;
+				break;
+			case 'mProf15':
+				mListWidth = 1.16;
+				mListWidthPolezn = 1.13;
+				break;
+			case 'mProf18':
+				mListWidth = 1.05;
+				mListWidthPolezn = 1;
+				break;
+			case 'mProf20':
+				mListWidth = 1.15;
+				mListWidthPolezn = 1.1;
+				break;
+		}
+
+
+        switch (href) {
+		//В зависимости от выбранного типа крыши считаем
+            case "#tabs-1":
+                /* двухскатная */
+
+                var x = Number($("#tabs-1 #X").val()); //читаем переменную x
+                var l1 = Number($("#tabs-1 #L1").val()); //читаем переменную l1
+                var l2 = Number($("#tabs-1 #L2").val()); //читаем переменную l2
+                var s = Math.round(Math.ceil(x/mListWidthPolezn) * (l1 + l2) * mListWidth); //вычисялем общую площадь металлочерепицы
+
+                var dlKonkov = x; //длина коньков
+                var dlTorca = 2 * (l1 + l2); // длина торцов
+
+                calculate(s, dlKonkov, 0, dlTorca, href); // вызываем глафную функцию вычисления
+
+                return;
+            case "#tabs-2":
+                /* вальмовая */
+
+                var x1 = Number($("#tabs-2 #X1").val());
+                var x2 = Number($("#tabs-2 #X2").val());
+                var x3 = Number($("#tabs-2 #X3").val());
+                var l1 = Number($("#tabs-2 #L1").val());
+                var l2 = Number($("#tabs-2 #L2").val());
+
+                var pp = (l1 + l2 + x3) / 2;
+                var s1_clear = 2 * Math.pow(pp * (pp - l1) * (pp - l2) * (pp - x3), 0.5);
+                var h1 = (2/x3) * Math.pow(pp * (pp - l1) * (pp - l2) * (pp - x3), 0.5);
+				var s1_dirty = Math.ceil(h1/mListWidthPolezn)*h1*mListWidth*2;
+				var s1 = (s1_dirty - s1_clear)/2 + s1_clear;
+
+
+
+                var m = (x2 - x1) / 2;
+                var h2 = Math.pow(l1 * l1 - m * m, 0.5);
+                var h3 = Math.pow(l2 * l2 - m * m, 0.5);
+                var s2_clear = ((x1 + x2) * h2) / 2;
+                var s3_clear = ((x1 + x2) * h3) / 2;
+				var s2_dirty = Math.ceil(h2/mListWidthPolezn)*h2*mListWidth*2;
+				var s3_dirty = Math.ceil(h3/mListWidthPolezn)*h3*mListWidth*2;
+				var s2 = (s2_dirty - s2_clear)/2 + s2_clear;
+				var s3 = (s3_dirty - s3_clear)/2 + s3_clear;
+
+
+                var s = Math.round(s1 + s2 + s3,2);
+
+                var dlKonkov = x1 + 2 * l1 + 2 * l2;
+                var dlTorca = null;
+
+                calculate(s, dlKonkov, 0, dlTorca, href);
+
+                return;
+            case "#tabs-3":
+                /* шатровая */
+
+                var x = Number($("#tabs-3 #X").val());
+                var x2 = Number($("#tabs-3 #X2").val());
+                var l1 = Number($("#tabs-3 #L1").val());
+
+                var pp1 = (x + 2 * l1) / 2;
+                var h1 = (2/x) * Math.pow(pp1 * (pp1 - l1) * (pp1 - l1) * (pp1 - x), 0.5);
+                var s1_clear = 2 * Math.pow(pp1 * (pp1 - x) * (pp1 - l1) * (pp1 - l1), 0.5);
+				var s1_dirty = Math.ceil(h1/mListWidthPolezn)*h1*mListWidth*2;
+				var s1 = (s1_dirty - s1_clear)/2 + s1_clear;
+
+                var pp2 = (x2 + 2 * l1) / 2;
+                var h2 = (2/x2) * Math.pow(pp1 * (pp1 - l1) * (pp1 - l1) * (pp1 - x2), 0.5);
+                var s2_clear = 2 * Math.pow(pp2 * (pp2 - x2) * (pp2 - l1) * (pp2 - l1), 0.5);
+				var s2_dirty = Math.ceil(h2/mListWidthPolezn)*h2*mListWidth*2;
+				var s2 = (s2_dirty - s2_clear)/2 + s2_clear;
+
+                var s = Math.round(s1 + s2, 2);
+
+                var dlKonkov = 4 * l1;
+                var dlTorca = null;
+
+                calculate(s, dlKonkov, 0, dlTorca, href);
+
+                return;
+            case "#tabs-4":
+                /* мансардная */
+
+                var x = Number($("#tabs-4 #X").val());
+                var l1 = Number($("#tabs-4 #L1").val());
+                var l2 = Number($("#tabs-4 #L2").val());
+                var l3 = Number($("#tabs-4 #L3").val());
+                var l4 = Number($("#tabs-4 #L4").val());
+
+                var s = Math.round(Math.ceil(x/mListWidthPolezn) * (l1 + l2 + l3 + l4) * mListWidth);
+
+                //var s = Math.round(x * (l1 + l2 + l3 + l4));
+
+                var dlKonkov = x;
+                var dlTorca = 2 * (l1 + l2 + l3 + l4);
+
+                calculate(s, dlKonkov, 0, dlTorca, href);
+
+                return;
+            case "#tabs-5":
+                /* многоскатная */
+
+                var x = Number($("#tabs-5 #X").val());
+                var x2 = Number($("#tabs-5 #X2").val());
+                var x3 = Number($("#tabs-5 #X3").val());
+                var x4 = Number($("#tabs-5 #X4").val());
+                var l1 = Number($("#tabs-5 #L1").val());
+                var l2 = Number($("#tabs-5 #L2").val());
+                var l3 = Number($("#tabs-5 #L3").val());
+
+                var s1 = x * l1;
+                var s2 = 2 * x3 * l2;
+                var n = x2 - x3;
+
+                var pp1 = (l3 + l2 + n) / 2;
+
+                var sq = pp1 * (pp1 - l3) * (pp1 - l2) * (pp1 - n);
+
+                if (sq < 0) {
+                    sq *= -1;
+                }
+
+                var s3 = 2 * Math.pow(sq, 0.5);
+
+                var s4 = 2 * x4 * l1;
+                var l = (x - 2 * x4) / 2;
+
+                var pp = (l3 + l1 + l) / 2;
+
+                var s5 = 2 * Math.pow(pp * (pp - l3) * (pp - l1) * (pp - l), 0.5);
+
+                var s = Math.round(s1 + s2 + s3 + s4 + s5);
+
+                var dlKonkov = x;
+                var dlTorca = 4 * l1 + 2 * l2;
+				var dlEndova = (2 * l3)*2;
+
+                calculate(s, dlKonkov, dlEndova, dlTorca, href);
+
+                return;
+        }
+    });
+});
+function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({
+        scrollTop: aTag.offset().top
+    },'slow');
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+		$('#calc-roof-cover').css('display','block');
+		$('#material').change(function() {
+			if ($(this).attr('value') == 'mEurope' || $(this).attr('value') == 'mCascade'){
+				$('#calc-roof-cover').css('display','none');
+			} else {
+				$('#calc-roof-cover').css('display','block');
+			}
+		});
+	});
+</script></script>
+{% endblock %}

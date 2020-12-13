@@ -1,0 +1,338 @@
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+	<article class="delivery">
+		<div class="container">
+			<h1 class="contacts__title">
+				Контакты123123
+			</h1>
+			<div class="g-select _select">
+					<button class="g-select__btn _selectBtn">Доставка</button>
+
+					<ul class="g-select__dropdown _selectDropdown">
+						<li class="g-select__option _selectOption" data-nav-for="delivery-1">Доставка</li>
+						<li class="g-select__option _selectOption" data-nav-for="delivery-2">Самовывоз</li>
+						<li class="g-select__option _selectOption" data-nav-for="delivery-2">Другие регионы</li>
+					</ul>
+				</div>
+
+				<div class="g-tabs-nav">
+					<button class="g-tabs-nav__btn is-active" data-nav-for="delivery-1">
+						Монтаж фасада
+					</button>
+
+					<button class="g-tabs-nav__btn" data-nav-for="delivery-2">
+						Монтаж кровли
+					</button>
+
+					<button class="g-tabs-nav__btn" data-nav-for="delivery-3">
+						Ремонт кровли
+					</button>
+					<button class="g-tabs-nav__btn" data-nav-for="delivery-4">
+						Монтаж забора
+					</button>
+				</div>
+
+				<div class="delivery__content is-active" data-tab="delivery-1">
+					<section class="video-gallery__section">
+						<h2 class="video-gallery__section-title">
+							Видео наших работ
+						</h2>
+
+						<div class="_videoGalleryCarousel video-gallery__slider splide">
+							<div class="splide__arrows">
+								<button class="splide__arrow splide__arrow--prev">
+									{% include "../img/icons/slider-arrow.svg" %}
+								</button>
+								<button class="splide__arrow splide__arrow--next">
+									{% include "../img/icons/slider-arrow.svg" %}
+								</button>
+							</div>
+
+							<div class="splide__track">
+								<div class="splide__list">
+									{% for i in 0..9 %}
+										<div class="splide__slide">
+											<div class="video-gallery__item">
+												<div class="video-gallery__item-video">
+													{% include "./blocks/youtube-video.twig" %}
+												</div>
+
+												<div class="video-gallery__item-name">
+													Отзыв о монтаже фасадных панелей. Третий заказ клиента
+												</div>
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<div class="services__table">
+						<div class="table__list">
+							<div class="table__item">
+								<div class="table__item-title">Наименование работы</div>
+								<div class="table__item-value">Цена (руб.)</div>
+							</div>
+							<div class="table__item">
+								<div class="table__item-title">Монтаж винилового сайдинга</div>
+								<div class="table__item-value">от 520 р/м2</div>
+							</div>
+							<div class="table__item">
+								<div class="table__item-title">Монтаж металлосайдинга «Корабельная доска»	</div>
+								<div class="table__item-value">от 590 р/м2</div>
+							</div>
+							<div class="table__item">
+								<div class="table__item-title">Монтаж винилового сайдинга</div>
+								<div class="table__item-value">от 520 р/м2</div>
+							</div>
+							<div class="table__item">
+								<div class="table__item-title">Монтаж винилового сайдинга</div>
+								<div class="table__item-value">от 520 р/м2</div>
+							</div>
+							<div class="table__item">
+								<div class="table__item-title">Монтаж винилового сайдинга</div>
+								<div class="table__item-value">от 520 р/м2</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="services__reasons">
+						<h2 class="g-title-tertiary reasons__title">
+							Основные причины протекания и промерзания кровли
+						</h2>
+						<div class="reasons__list">
+							<div class="reasons__item">
+								<div class="reasons__item-left">
+									50%
+								</div>
+								<div class="reasons__item-right">
+									<div class="reasons__item-procent">50%</div>
+									<div class="reasons__item-title">1. Неправильная последовательность кровельного пирога</div>
+									<div class="reasons__item-desc">
+										Гидро-, паро-, теплоизоляции, кровельный материал, а также контробрешетка
+										и обрешетка должны находиться точно на своих местах в правильной последовательности
+									</div>
+								</div>
+							</div>
+							<div class="reasons__item">
+								<div class="reasons__item-left">
+									35%
+								</div>
+								<div class="reasons__item-right">
+									<div class="reasons__item-procent">35%</div>
+									<div class="reasons__item-title">2. Отсутствие или неправильный монтаж пароизоляции</div>
+									<div class="reasons__item-desc">Кровельный пирог не справляется с большим количеством пара, поступающим из внутренних помещений, это приводит к намоканию утеплителя, большим теплопотерям и протечки конденсата в внутрь дома</div>
+								</div>
+							</div>
+							<div class="reasons__item">
+								<div class="reasons__item-left">
+									10%
+								</div>
+								<div class="reasons__item-right">
+									<div class="reasons__item-procent">10%</div>
+									<div class="reasons__item-title">3. Плохая вентиляция подкровельного пространства</div>
+									<div class="reasons__item-desc">Отсутствие или узкий вентканал, отсутствие вентконька, кровельных вентилей, вентиляционных решеток</div>
+								</div>
+							</div>
+							<div class="reasons__item">
+								<div class="reasons__item-left">
+									5%
+								</div>
+								<div class="reasons__item-right">
+									<div class="reasons__item-procent">5%</div>
+									<div class="reasons__item-title">4. Механические повреждения кровли и др.</div>
+									<div class="reasons__item-desc">А также ошибки при монтаже ендов, отсутствие карнизной сетки, слишком длинные кровельные саморезы, повреждающие гидроизоляцию. Казалось бы, должна быть самая частая причина протечек, но на практике - самая редкая</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="advantages__stats advantages__stats--inner">
+	                    <div class="advantages__stat">
+	                        <div class="advantages__stat-digit">
+	                            3 года
+	                        </div>
+
+	                        <div class="advantages__stat-descr">
+	                            гарантия работы
+	                        </div>
+	                    </div>
+
+	                    <hr class="advantages__stats-devider">
+
+	                    <div class="advantages__stat">
+	                        <div class="advantages__stat-digit">
+	                            350 фасадов
+	                        </div>
+
+	                        <div class="advantages__stat-descr">
+	                            отремонтировали
+	                        </div>
+	                    </div>
+
+	                    <hr class="advantages__stats-devider">
+
+	                    <div class="advantages__stat">
+	                        <div class="advantages__stat-digit">
+	                            11 лет
+	                        </div>
+
+	                        <div class="advantages__stat-descr">
+	                            опыт работы
+	                        </div>
+	                    </div>
+	                </div>
+
+	                <div class="services__blue">
+	                	<div class="services__blue-title">
+		                	Получите бригаду с опытом кровельных работ - 7 лет!
+		                </div>
+		                <div class="services__blue-desc">
+		                	Надежный ремонт кровли: один раз и навсегда. <br> Все работники - свои, граждане РФ
+		                </div>
+	                </div>
+
+	                <h2 class="g-title-tertiary">
+						Где заказать монтажные работы
+					</h2>
+
+					<p>
+						Строительство коттеджа или загородного дома подразумевает большое количество работ, которые будут выполняться которые будут профессиональными мастерами. Кроме того, качество и долговечность готового здания напрямую зависят от того, какие строительные материалы использовались при работе.
+					</p>
+
+					<p>
+						По этой причине очень важно правильно подбирать подрядчиков, осуществляющих работы по отделке фасада и облицовке фасада. Профессиональная компания не только предложит качественные строительные материалы для утепления фасада, но и возьмет на себя заботы по расчету необходимого количества, доставке и монтажу. Кроме того, специалисты организуют вывоз строительного мусора при необходимости. Этот этап работ осуществляется после отделки фасада.
+					</p>
+
+					<h2>Что предлагает ООО «Тюменская Фасадно-Кровельная Компания»</h2>
+
+					<p>
+						ООО «Тюменская Фасадно-Кровельная Компания» была основана в 2008 году. Команда специалистов объединила свой опыт и знания и сегодня является одной из лидирующих организаций на рынке Тюмени. Команда специалистов объединила...
+					</p>
+
+					<a href="#">Читать далее</a>
+
+					<section class="reviews reviews--white">
+						<h2 class="reviews__title">
+							Отзывы наших клиентов
+						</h2>
+
+						<div class="reviews__items">
+							{% include "./blocks/review.twig" %}
+							{% include "./blocks/review.twig" %}
+							{% include "./blocks/review.twig" %}
+							{% include "./blocks/review.twig" %}
+						</div>
+					</section>
+					<p>
+						Мы осуществляем доставку собственным транспортом: Газель 4,2 метра (длина груза до 6 метров), грузоподъёмность 1,5 тонны. <br>
+						При доставке материала длиной более 5 метров  +20% к стоимости доставки.
+					</p>
+
+					<section class="delivery__price-section">
+						<h2 class="g-title-tertiary">Доставка по югу Тюменской области нашим автомобилем:</h2>
+
+						<div class="delivery__prices">
+							<div class="delivery__price">
+								<div class="delivery__price-icon">
+									<img src="./img/icons/town.svg" alt="">
+								</div>
+
+								<div class="delivery__price-text">
+									<strong>
+										В черте города Тюмени:
+									</strong>
+
+									1000 руб.
+								</div>
+							</div>
+
+							<div class="delivery__price">
+								<div class="delivery__price-icon">
+									<img src="./img/icons/road.svg" alt="">
+								</div>
+
+								<div class="delivery__price-text">
+									<strong>
+										За городом:
+									</strong>
+
+									1000 руб. + 25 руб. за каждый километр
+								</div>
+							</div>
+						</div>
+
+						<picture class="delivery__img">
+							<source type="image/webp"
+									data-srcset="./img/services/car.webp 1x,
+									./img/services/car@2x.webp 2x">
+
+							<img data-srcset="./img/services/car.jpg 1x,
+										./img/services/car@2x.jpg 2x"
+
+								data-src="./img/services/car.jpg" alt="" class="lazyload">
+						</picture>
+					</section>
+
+				</div>
+
+				<div class="delivery__content" data-tab="delivery-2">
+					<p>
+						Большинство материалов вы забираете на заводе как только они будут изготовлены. Срок готовности как правило составляет 1-3 дня.
+					</p>
+
+					<p>
+						Накладные и доверенности вы можете получить в наших офисах у менеджера. При получении материалов на заводе рекомендуем их осмотреть и сверить с накладной, а также убедиться, что в их целостности.
+					</p>
+
+					<p>
+						Гибочные изделия вы можете получить на нашем <strong>складе по адресу:</strong>
+					</p>
+
+					<div class="delivery__location">
+						<span class="delivery__location-icon">
+							<img src="./img/icons/google-place.svg" alt="">
+						</span>
+
+						г.Тюмень, ул.Республики, 207.
+					</div>
+				</div>
+
+				<div class="delivery__content" data-tab="delivery-3">
+					<p>Устранение самих причин протечек, промерзания, конденсата, теплопотерь.</p>
+					<picture class="delivery__img">
+						<source type="image/webp"
+								data-srcset="./img/services/car.webp 1x,
+								./img/services/car@2x.webp 2x">
+
+						<img data-srcset="./img/services/car.jpg 1x,
+									./img/services/car@2x.jpg 2x"
+
+							data-src="./img/services/car.jpg" alt="" class="lazyload">
+					</picture>
+					<h2 class="g-title-tertiary">
+						Доставка в ХМАО, ЯНАО и другие регионы:
+					</h2>
+
+					<p>
+						Осуществляем доставку до любой выбранной вами транспортной компании. Стоимость доставки - 1000р. <br>
+						Стоимость доставки от транспортной компании до пункта назначения рассчитывается по тарифам выбранной вами ТК.
+					</p>
+				</div>
+				<div class="delivery__content" data-tab="delivery-4">
+					<h2 class="g-title-tertiary">
+						Доставка в ХМАО, ЯНАО и другие регионы:
+					</h2>
+
+					<p>
+						Осуществляем доставку до любой выбранной вами транспортной компании. Стоимость доставки - 1000р. <br>
+						Стоимость доставки от транспортной компании до пункта назначения рассчитывается по тарифам выбранной вами ТК.
+					</p>
+				</div>
+			</div>
+		</div>
+	</article>
+{% endblock %}
