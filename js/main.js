@@ -87,7 +87,7 @@ var global =
 		// активность поля для поиска и появление дропдауна с результатами
 		search(instance)
 		{
-			if(instance.value && instance === document.is-activeElement)
+			if(instance.value && instance === document.activeElement)
 			{
 				document.querySelector('._searchDropdown').classList.add('is-active');
 				document.querySelector('._search').classList.add('g-search--has-value');
@@ -225,6 +225,9 @@ var global =
 		const $productLimitSlider = document.querySelector('._priceRange'),
 			  $minValueInput = document.querySelector('._priceMin'),
 			  $maxValueInput = document.querySelector('._priceMax');
+
+			if(!$productLimitSlider)
+				return
 			
 			noUiSlider.create($productLimitSlider, {
 				start: [1600, 8000],
@@ -319,13 +322,13 @@ var global =
 
 		productSlider()
 		{
-			let $productSlider = document.querySelectorAll('._productSlider');
+			const $product = document.querySelectorAll('._product');
 
-			if(!document.querySelectorAll('._productSlider').length)
+			if(!document.querySelectorAll('._product').length)
 				return
 
-			$productSlider.forEach(elem => {
-				new Splide(elem, {
+			$product.forEach(elem => {
+				let $productSlider = new Splide(elem.querySelector('._productSlider'), {
 					rewind     : true,
 					heightRatio: 0.5,
 					pagination : false,
@@ -347,40 +350,42 @@ var global =
 							fixedHeight: '290px',
 						}
 					}
-				} ).mount();
+				} );
 
-				// console.log(elem);
+				let images = elem.querySelectorAll( '._productThumbs li' );
+	
+				let activeImage;
+				let activeClass = 'is-active';
+	
+				for ( let i = 0, len = images.length; i < len; i++ ) {
+					let image = images[ i ];
+	
+					$productSlider.on( 'click', function () {
+						if ( activeImage !== image ) {
+							$productSlider.go( i );
+						}
+					}, image );
+				}
+	
+				$productSlider.on( 'mounted move', function ( newIndex ) {
+					// newIndex will be undefined through the "mounted" event.
+					let image = images[ newIndex !== undefined ? newIndex : splide.index ];
+	
+					if ( image && activeImage !== image ) {
+						if ( activeImage ) {
+							activeImage.classList.remove( activeClass );
+						}
+						
+						global.getSiblings(image).forEach(elem => {
+							elem.classList.remove(activeClass);
+						})
 
-				// let images = document.querySelectorAll( '._productThumbs li' );
+						image.classList.add( activeClass );
+						activeImage = image;
+					}
+				} );
 	
-				// let activeImage;
-				// let activeClass = 'is-active';
-	
-				// for ( let i = 0, len = images.length; i < len; i++ ) {
-				// 	let image = images[ i ];
-	
-				// 	elem.on( 'click', function () {
-				// 		if ( activeImage !== image ) {
-				// 			elem.go( i );
-				// 		}
-				// 	}, image );
-				// }
-	
-				// elem.on( 'mounted move', function ( newIndex ) {
-				// 	// newIndex will be undefined through the "mounted" event.
-				// 	let image = images[ newIndex !== undefined ? newIndex : splide.index ];
-	
-				// 	if ( image && activeImage !== image ) {
-				// 		if ( activeImage ) {
-				// 			activeImage.classList.remove( activeClass );
-				// 		}
-	
-				// 		image.classList.add( activeClass );
-				// 		activeImage = image;
-				// 	}
-				// } );
-	
-				// $elem.mount();
+				$productSlider.mount();
 
 			})
 

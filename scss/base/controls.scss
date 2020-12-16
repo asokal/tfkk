@@ -54,13 +54,13 @@ button
 	border: 2px solid $blue;
 	transition: .3s;
 	
-	&::not(.g-btn-transp--arrow):hover
+	&:hover
 	{
 		background-color: $blue;
 		color: #fff;
 	}
 	
-	&::not(.g-btn-transp--arrow):focus
+	&:focus
 	{
 		color: #fff;
 		border-color: #52A5DC;
@@ -80,6 +80,18 @@ button
 		position: relative;
 		height: 55px;
 		justify-content: flex-start;
+
+		&:hover
+		{
+			background-color: transparent;
+			color: #52A5DC;
+		}
+		
+		&:focus
+		{
+			color: #52A5DC;
+			background-color: transparent;
+		}
 	
 		&::after
 		{
