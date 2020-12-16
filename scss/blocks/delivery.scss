@@ -18,7 +18,8 @@
 	margin-bottom: 25px;
 }
 
-.delivery__content
+.delivery__content,
+.compare__content
 {
 	display: none;
 
@@ -41,7 +42,7 @@
 
 	strong
 	{
-		font-weight: 500;	
+		font-weight: 500;
 	}
 
 	section:not(:last-child)
