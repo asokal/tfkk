@@ -1,0 +1,150 @@
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	<div class="catalog">
+		<div class="container">
+			<h1 class="catalog__title">
+				Черепица длинное название
+			</h1>
+			<div class="catalog__wrap">
+				<aside class="catalog__sidebar">
+					<div class="catalog__filter-controls">
+						<button class="g-btn-transp g-btn-transp--arrow" onclick="global.toggle(this, '._filtersOptions')">Открыть фильтры</button>
+					</div>
+					<ul class="filters _filtersOptions">
+						<li class="filters__item">
+							<div class="filters__item-head is-active"  onclick="global.toggle(this)">
+								<span class="filters__item-name">
+									Цена (руб.)
+								</span>
+	
+								<span class="filters__item-icon">
+									<img src="./img/icons/filter-arrow.svg" alt="">
+								</span>
+							</div>
+	
+							<div class="filters__item-content">
+								{% include "./blocks/price-range.twig" %}
+							</div>
+						</li>
+
+						<li class="filters__item">
+							<div class="filters__item-head is-active"  onclick="global.toggle(this)">
+								<span class="filters__item-name">
+									Бренд
+								</span>
+	
+								<span class="filters__item-icon">
+									<img src="./img/icons/filter-arrow.svg" alt="">
+								</span>
+							</div>
+	
+							<div class="filters__item-content">
+								<ul class="filters__list">
+									{% for item in 0..1 %}	
+										<li class="filters__list-item">
+											<label>
+												<div class="g-checkbox">
+													<input type="checkbox" name="checkbox" class="g-checkbox__input">
+													<div class="g-checkbox__custom"></div>
+												</div>
+												<span class="filters__list-item-name">
+													Aquasystem
+												</span>
+	
+												<div class="filters__list-item-quantity">
+													114
+												</div>
+											</label>
+										</li>
+
+										<li class="filters__list-item">
+											<label>
+												<div class="g-checkbox">
+													<input type="checkbox" name="checkbox" class="g-checkbox__input">
+													<div class="g-checkbox__custom"></div>
+												</div>
+												<span class="filters__list-item-name">
+													Grand Line Optima
+												</span>
+	
+												<div class="filters__list-item-quantity">
+													35
+												</div>
+											</label>
+										</li>
+
+										<li class="filters__list-item">
+											<label>
+												<div class="g-checkbox">
+													<input type="checkbox" name="checkbox" class="g-checkbox__input">
+													<div class="g-checkbox__custom"></div>
+												</div>
+												<span class="filters__list-item-name">
+													Gerard
+												</span>
+	
+												<div class="filters__list-item-quantity">
+													158
+												</div>
+											</label>
+										</li>
+									{% endfor %}
+								</ul>
+
+								<button class="g-show-more" onclick="global.toggle(this)">
+									<span class="g-show-more__icon">
+										<img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+										<img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+									</span>
+						
+									<span class="g-show-more__text">
+										<span class="g-show-more__text-more">Показать еще</span>
+										<span class="g-show-more__text-less">Скрыть</span>
+									</span>
+								</button>
+							</div>
+						</li>
+
+						<li class="filters__item">
+							<div class="filters__item-content filters__item-content--btns">
+								<button class="g-btn">Применить фильтры</button>
+								<button class="g-btn-transp">Сбросить</button>
+							</div>
+						</li>
+					</ul>
+				</aside>
+	
+				<div class="catalog__products">
+					<div class="catalog__products-list catalog__products-list--previews">
+						{% for item in 0..8 %}
+							<div class="catalog__product">
+								{% include "./blocks/product-preview.twig" %}
+							</div>
+						{% endfor %}
+					</div>
+
+					<div class="more">
+						<button class="g-show-more more__btn" onclick="global.toggle(this)">
+							<span class="g-show-more__icon">
+								<img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+								<img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+							</span>
+				
+							<span class="g-show-more__text">
+								<span class="g-show-more__text-more">Показать еще 25 товаров</span>
+								<span class="g-show-more__text-less">Скрыть</span>
+							</span>
+						</button>
+		
+						<div class="more__note">
+							Всего 1232 товара
+						</div>
+		
+						{% include "./blocks/pagination.twig" %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
