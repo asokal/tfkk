@@ -27,8 +27,8 @@ var global =
 		this.sliders.init();
 		Maska.create('._masked');
 	},
-	
-	header: 
+
+	header:
 	{
 		// прилипание меню
 		stick(instance)
@@ -37,10 +37,10 @@ var global =
 				$body         = document.querySelector('body'),
 				catalogHeight = $catalog.offsetHeight + 'px',
 				catalogOffset = 157;
-			
+
 			if(instance.scrollY > catalogOffset && $catalog.classList.contains('header-catalog--fixed'))
 				return;
-			
+
 			if(instance.scrollY > catalogOffset)
 			{
 				$catalog.classList.add('header-catalog--fixed');
@@ -52,38 +52,38 @@ var global =
 				$body.style.paddingTop = 0;
 			}
 		},
-		
+
 		// вызов прилипания при загрузке страницы и при скролле, если устройство не мобильное
 		stickCall()
 		{
 			if(document.documentElement.clientWidth < 1199)
 				return
-			
+
 			this.stick(window);
-			
+
 			window.addEventListener('scroll', () => {
 				this.stick(window);
 			});
 		},
-		
+
 		// появляние подменю в меню каталога
 		dropdownShowSubList()
 		{
 			const $triggerList = document.querySelectorAll('._subListTrigger'),
 				  $subList     = document.querySelectorAll('._subList');
-			
+
 			for (let i = 0; i < $triggerList.length; i++) {
 				$triggerList[i].addEventListener('mouseenter', () => {
 					$subList.forEach((elem) => { elem.classList.remove('is-active'); })
 					$subList[i].classList.add('is-active');
 				});
-				
+
 				$triggerList[i].addEventListener('mouseleave', () => {
 					$subList.forEach((elem) => { elem.classList.remove('is-active'); })
 				});
 			}
 		},
-		
+
 		// активность поля для поиска и появление дропдауна с результатами
 		search(instance)
 		{
@@ -98,7 +98,7 @@ var global =
 				setTimeout(() => document.querySelector('._search').classList.remove('g-search--has-value'), 100);
 			}
 		},
-		
+
 		// очистить поле поиска
 		searchClear()
 		{
@@ -112,52 +112,52 @@ var global =
 	{
 		if(instance)
 			instance.classList.toggle('is-active');
-		
+
 		if(elem)
 			document.querySelector(elem).classList.toggle('is-active');
 	},
-	
+
 	// получить соседние элементы
 	getSiblings(e)
 	{
-		let siblings = []; 
+		let siblings = [];
 		// if no parent, return no sibling
 		if(!e.parentNode)
 			return siblings;
-		
+
 		// first child of the parent node
 		let sibling  = e.parentNode.firstChild;
-		
+
 		// collecting siblings
 		while (sibling)
 		{
 			if (sibling.nodeType === 1 && sibling !== e)
 				siblings.push(sibling);
-			
+
 			sibling = sibling.nextSibling;
 		}
-		
+
 		return siblings;
 	},
-	
+
 	// инициализировать все табы на странице
 	tabs()
 	{
 		const $btns = document.querySelectorAll('[data-nav-for]');
 			  $tabs = document.querySelectorAll('[data-tab]');
-		
+
 		if(!$btns.length)
 			return
-		
+
 		for(let i = 0; i < $btns.length; i++) {
-			
+
 			$btns[i].addEventListener('click', function() {
 				global.getSiblings(this).forEach((elem) => { elem.classList.remove('is-active') });
 				this.classList.add('is-active');
-				
+
 				$tabs.forEach((elem) => {
 					elem.classList.remove('is-active');
-					
+
 					if(elem.getAttribute('data-tab') === $btns[i].getAttribute('data-nav-for'))
 					elem.classList.add('is-active');
 				});
@@ -168,16 +168,16 @@ var global =
 	youtubeLazy()
 	{
 		let $youtube = document.querySelectorAll( '._youtube' );
-		
+
 		for (let i = 0; i < $youtube.length; i++) {
 			let source = 'https://img.youtube.com/vi/'+ $youtube[i].dataset.embed +'/hqdefault.jpg';
-			
+
 			let image = new Image();
 			image.src = source;
 			image.addEventListener( 'load', function() {
 				$youtube[i].appendChild( image );
 			}.bind(this, i ) );
-	
+
 			$youtube[i].addEventListener( 'click', function() {
 				let iframe = document.createElement( 'iframe' );
 				iframe.setAttribute( 'frameborder', '0' );
@@ -186,10 +186,10 @@ var global =
 
 				this.innerHTML = '';
 				this.appendChild( iframe );
-			} );	
+			} );
 		};
 	},
-	
+
 	// инициализировать все селекты на странице
 	selects()
 	{
@@ -199,7 +199,7 @@ var global =
 
 		if(!$select.length)
 			return
-		
+
 		$select.forEach(a => {
 			a.addEventListener('click', b => {
 				b.target.parentElement.classList.toggle('is-active');
@@ -209,7 +209,7 @@ var global =
 		$option.forEach(a => {
 			a.addEventListener('click', b => {
 				const parent = b.target.closest('._select');
-				
+
 				parent.classList.remove('is-active');
 
 				if(b.target.hasAttribute('data-value'))
@@ -226,44 +226,44 @@ var global =
 			  $minValueInput = document.querySelector('._priceMin'),
 			  $maxValueInput = document.querySelector('._priceMax');
 
-			if(!$productLimitSlider)
-				return
-			
-			noUiSlider.create($productLimitSlider, {
-				start: [1600, 8000],
-				connect: true,
-				tooltips: false,
-				step: 1,
-				range: {
-					'min': 50,
-					'max': 11547
+		if(!$productLimitSlider)
+			return
+		
+		noUiSlider.create($productLimitSlider, {
+			start: [1600, 8000],
+			connect: true,
+			tooltips: false,
+			step: 1,
+			range: {
+				'min': 50,
+				'max': 11547
+			},
+
+			format: {
+				from: function(value)
+				{
+					return parseInt(value);
 				},
-				
-				format: {
-					from: function(value)
-					{
-						return parseInt(value);
-					},
-					
-					to: function(value)
-					{
-						return parseInt(value);
-					}
-				},
-			});
 
-			$productLimitSlider.noUiSlider.on('update', function( values, handle ) {
-				$minValueInput.value = values[0];
-				$maxValueInput.value = values[1];
-			});
+				to: function(value)
+				{
+					return parseInt(value);
+				}
+			},
+		});
 
-			$minValueInput.addEventListener('input', function () {
-				$productLimitSlider.noUiSlider.set([this.value, null]);
-			});
+		$productLimitSlider.noUiSlider.on('update', function( values, handle ) {
+			$minValueInput.value = values[0];
+			$maxValueInput.value = values[1];
+		});
 
-			$maxValueInput.addEventListener('input', function () {
-				$productLimitSlider.noUiSlider.set([null, this.value]);
-			});
+		$minValueInput.addEventListener('input', function () {
+			$productLimitSlider.noUiSlider.set([this.value, null]);
+		});
+
+		$maxValueInput.addEventListener('input', function () {
+			$productLimitSlider.noUiSlider.set([null, this.value]);
+		});
 	},
 
 	sliders:
@@ -281,7 +281,7 @@ var global =
 		{
 			if(document.documentElement.clientWidth > 1023)
 				return
-	
+
 			let $productsCarousel = document.querySelectorAll('._productsCarousel');
 
 			if(!$productsCarousel.length)
@@ -308,7 +308,7 @@ var global =
 							perMove: 1,
 							gap: '12px',
 							pagination: true,
-	
+
 							grid: {
 								gap : {
 									row: '10px',
