@@ -1,0 +1,60 @@
+{% extends "layouts/layout.twig" %}
+
+{% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
+	<div class="product _product">
+		<div class="container">
+			<h1 class="product__title">
+				Черепица Технониколь Shinglas Фазенда коричневая
+			</h1>
+
+			<div class="product__main">
+				<div class="product__gallery">
+					<div class="product__img">
+						<div class="_productSlider product__slider splide">
+							<div class="splide__arrows">
+								<button class="splide__arrow splide__arrow--prev">
+									{% include "../img/icons/slider-arrow-white.svg" %}
+								</button>
+								<button class="splide__arrow splide__arrow--next">
+									{% include "../img/icons/slider-arrow-white.svg" %}
+								</button>
+							</div>
+
+							<div class="splide__track">
+								<div class="splide__list">
+									{% for item in 0..2 %}
+										<div class="splide__slide">
+											<img data-splide-lazy="./img/productSlide1.jpg" alt="">
+										</div>
+
+										<div class="splide__slide">
+											<img data-splide-lazy="./img/productSlide2.jpg" alt="">
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="_productThumbs splide">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide">
+									<img data-splide-lazy="../img/productThumb.jpg">
+								</li>
+								<li class="splide__slide">
+									<img data-splide-lazy="../img/productThumb2.jpg">
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="product__details">
+
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

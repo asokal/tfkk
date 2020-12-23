@@ -1430,629 +1430,101 @@
     </header>
     <main class="wrapper">
 
-        <div class="catalog">
+        <nav class="breadcrumbs">
             <div class="container">
-                <h1 class="catalog__title">
-                    Черепица длинное название
+                <a href="#" class="breadcrumbs__item">Главная</a>
+                <a href="#" class="breadcrumbs__item">Статьи</a>
+            </div>
+        </nav>
+        <div class="product _product">
+            <div class="container">
+                <h1 class="product__title">
+                    Черепица Технониколь Shinglas Фазенда коричневая
                 </h1>
-                <div class="catalog__wrap">
-                    <aside class="catalog__sidebar">
-                        <div class="catalog__filter-controls">
-                            <button class="g-btn-transp g-btn-transp--arrow" onclick="global.toggle(this, '._filtersOptions')">Открыть фильтры</button>
-                        </div>
-                        <ul class="filters _filtersOptions">
-                            <li class="filters__item">
-                                <div class="filters__item-head is-active" onclick="global.toggle(this)">
-                                    <span class="filters__item-name">
-                                        Цена (руб.)
-                                    </span>
 
-                                    <span class="filters__item-icon">
-                                        <img src="./img/icons/filter-arrow.svg" alt="">
-                                    </span>
-                                </div>
+                <div class="product__main">
+                    <div class="product__gallery">
+                        <div class="product__img">
+                            <div class="_productSlider product__slider splide">
+                                <div class="splide__arrows">
+                                    <button class="splide__arrow splide__arrow--prev">
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle opacity="0.8" cx="22.5" cy="22.5" r="22.5" fill="white" />
+                                            <g>
+                                                <path d="M28.1714 21.429L20.9763 14.2363C20.6606 13.9213 20.1491 13.9213 19.8326 14.2363C19.5168 14.5512 19.5168 15.0627 19.8326 15.3776L26.457 21.9996L19.8334 28.6217C19.5176 28.9366 19.5176 29.4481 19.8334 29.7638C20.1491 30.0787 20.6614 30.0787 20.9771 29.7638L28.1722 22.5711C28.4831 22.2595 28.4831 21.7399 28.1714 21.429Z" fill="#DD2D1F" />
+                                            </g>
+                                            <defs>
+                                                <clipPath>
+                                                    <rect width="16" height="16" fill="white" transform="translate(32 30) rotate(-180)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
 
-                                <div class="filters__item-content">
-                                    <div class="price-range">
-                                        <div class="price-range__slider _priceRange"></div>
+                                    </button>
+                                    <button class="splide__arrow splide__arrow--next">
+                                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle opacity="0.8" cx="22.5" cy="22.5" r="22.5" fill="white" />
+                                            <g>
+                                                <path d="M28.1714 21.429L20.9763 14.2363C20.6606 13.9213 20.1491 13.9213 19.8326 14.2363C19.5168 14.5512 19.5168 15.0627 19.8326 15.3776L26.457 21.9996L19.8334 28.6217C19.5176 28.9366 19.5176 29.4481 19.8334 29.7638C20.1491 30.0787 20.6614 30.0787 20.9771 29.7638L28.1722 22.5711C28.4831 22.2595 28.4831 21.7399 28.1714 21.429Z" fill="#DD2D1F" />
+                                            </g>
+                                            <defs>
+                                                <clipPath>
+                                                    <rect width="16" height="16" fill="white" transform="translate(32 30) rotate(-180)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
 
-                                        <div class="price-range__inputs">
-                                            <input type="text" class="price-range__input _priceMin" value="150">
-                                            <div class="price-range__inputs-devider"></div>
-                                            <input type="text" class="price-range__input _priceMax" value="1157">
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="filters__item">
-                                <div class="filters__item-head is-active" onclick="global.toggle(this)">
-                                    <span class="filters__item-name">
-                                        Бренд
-                                    </span>
-
-                                    <span class="filters__item-icon">
-                                        <img src="./img/icons/filter-arrow.svg" alt="">
-                                    </span>
-                                </div>
-
-                                <div class="filters__item-content">
-                                    <ul class="filters__list">
-
-                                        <li class="filters__list-item">
-                                            <label>
-                                                <div class="g-checkbox">
-                                                    <input type="checkbox" name="checkbox" class="g-checkbox__input">
-                                                    <div class="g-checkbox__custom"></div>
-                                                </div>
-                                                <span class="filters__list-item-name">
-                                                    Aquasystem
-                                                </span>
-
-                                                <div class="filters__list-item-quantity">
-                                                    114
-                                                </div>
-                                            </label>
-                                        </li>
-
-                                        <li class="filters__list-item">
-                                            <label>
-                                                <div class="g-checkbox">
-                                                    <input type="checkbox" name="checkbox" class="g-checkbox__input">
-                                                    <div class="g-checkbox__custom"></div>
-                                                </div>
-                                                <span class="filters__list-item-name">
-                                                    Grand Line Optima
-                                                </span>
-
-                                                <div class="filters__list-item-quantity">
-                                                    35
-                                                </div>
-                                            </label>
-                                        </li>
-
-                                        <li class="filters__list-item">
-                                            <label>
-                                                <div class="g-checkbox">
-                                                    <input type="checkbox" name="checkbox" class="g-checkbox__input">
-                                                    <div class="g-checkbox__custom"></div>
-                                                </div>
-                                                <span class="filters__list-item-name">
-                                                    Gerard
-                                                </span>
-
-                                                <div class="filters__list-item-quantity">
-                                                    158
-                                                </div>
-                                            </label>
-                                        </li>
-
-                                        <li class="filters__list-item">
-                                            <label>
-                                                <div class="g-checkbox">
-                                                    <input type="checkbox" name="checkbox" class="g-checkbox__input">
-                                                    <div class="g-checkbox__custom"></div>
-                                                </div>
-                                                <span class="filters__list-item-name">
-                                                    Aquasystem
-                                                </span>
-
-                                                <div class="filters__list-item-quantity">
-                                                    114
-                                                </div>
-                                            </label>
-                                        </li>
-
-                                        <li class="filters__list-item">
-                                            <label>
-                                                <div class="g-checkbox">
-                                                    <input type="checkbox" name="checkbox" class="g-checkbox__input">
-                                                    <div class="g-checkbox__custom"></div>
-                                                </div>
-                                                <span class="filters__list-item-name">
-                                                    Grand Line Optima
-                                                </span>
-
-                                                <div class="filters__list-item-quantity">
-                                                    35
-                                                </div>
-                                            </label>
-                                        </li>
-
-                                        <li class="filters__list-item">
-                                            <label>
-                                                <div class="g-checkbox">
-                                                    <input type="checkbox" name="checkbox" class="g-checkbox__input">
-                                                    <div class="g-checkbox__custom"></div>
-                                                </div>
-                                                <span class="filters__list-item-name">
-                                                    Gerard
-                                                </span>
-
-                                                <div class="filters__list-item-quantity">
-                                                    158
-                                                </div>
-                                            </label>
-                                        </li>
-
-                                    </ul>
-
-                                    <button class="g-show-more" onclick="global.toggle(this)">
-                                        <span class="g-show-more__icon">
-                                            <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
-                                            <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
-                                        </span>
-
-                                        <span class="g-show-more__text">
-                                            <span class="g-show-more__text-more">Показать еще</span>
-                                            <span class="g-show-more__text-less">Скрыть</span>
-                                        </span>
                                     </button>
                                 </div>
-                            </li>
 
-                            <li class="filters__item">
-                                <div class="filters__item-content filters__item-content--btns">
-                                    <button class="g-btn">Применить фильтры</button>
-                                    <button class="g-btn-transp">Сбросить</button>
-                                </div>
-                            </li>
-                        </ul>
-                    </aside>
+                                <div class="splide__track">
+                                    <div class="splide__list">
 
-                    <div class="catalog__products catalog__products--previews">
-                        <div class="catalog__products-list">
-
-                            <div class="catalog__product">
-                                <div class="product-preview">
-                                    <div class="product-preview__img">
-                                        <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
-                                    </div>
-
-                                    <div class="product__action">
-                                        Акция
-                                    </div>
-
-                                    <a href="#" class="product-preview__title">
-                                        Фиброцементный сайдинг Кедрал Клик (Cedral click)
-                                    </a>
-
-                                    <div class="product-preview__price">
-                                        <div class="product-preview__price-old">
-                                            1700 руб./шт.
+                                        <div class="splide__slide">
+                                            <img data-splide-lazy="./img/productSlide1.jpg" alt="">
                                         </div>
 
-                                        <div class="product-preview__price-new">
-                                            1700 руб./шт.
+                                        <div class="splide__slide">
+                                            <img data-splide-lazy="./img/productSlide2.jpg" alt="">
                                         </div>
-                                    </div>
 
-                                    <a href="#" class="g-btn">
-                                        Посмотреть
-                                    </a>
-
-
-                                    <div class="product-preview__additional">
-                                        <button class="g-btn-transp">
-                                            Быстрый расчет
-                                        </button>
-
-                                        <div class="product-preview__thickness-title">Толщины:</div>
-
-                                        <div class="product-preview__thickness">
-                                            <span>0,4</span>
-
-                                            <span>0,45</span>
-
-                                            <span>0,5</span>
+                                        <div class="splide__slide">
+                                            <img data-splide-lazy="./img/productSlide1.jpg" alt="">
                                         </div>
+
+                                        <div class="splide__slide">
+                                            <img data-splide-lazy="./img/productSlide2.jpg" alt="">
+                                        </div>
+
+                                        <div class="splide__slide">
+                                            <img data-splide-lazy="./img/productSlide1.jpg" alt="">
+                                        </div>
+
+                                        <div class="splide__slide">
+                                            <img data-splide-lazy="./img/productSlide2.jpg" alt="">
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="catalog__product">
-                                <div class="product-preview">
-                                    <div class="product-preview__img">
-                                        <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
-                                    </div>
-
-                                    <div class="product__action">
-                                        Акция
-                                    </div>
-
-                                    <a href="#" class="product-preview__title">
-                                        Фиброцементный сайдинг Кедрал Клик (Cedral click)
-                                    </a>
-
-                                    <div class="product-preview__price">
-                                        <div class="product-preview__price-old">
-                                            1700 руб./шт.
-                                        </div>
-
-                                        <div class="product-preview__price-new">
-                                            1700 руб./шт.
-                                        </div>
-                                    </div>
-
-                                    <a href="#" class="g-btn">
-                                        Посмотреть
-                                    </a>
-
-
-                                    <div class="product-preview__additional">
-                                        <button class="g-btn-transp">
-                                            Быстрый расчет
-                                        </button>
-
-                                        <div class="product-preview__thickness-title">Толщины:</div>
-
-                                        <div class="product-preview__thickness">
-                                            <span>0,4</span>
-
-                                            <span>0,45</span>
-
-                                            <span>0,5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__product">
-                                <div class="product-preview">
-                                    <div class="product-preview__img">
-                                        <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
-                                    </div>
-
-                                    <div class="product__action">
-                                        Акция
-                                    </div>
-
-                                    <a href="#" class="product-preview__title">
-                                        Фиброцементный сайдинг Кедрал Клик (Cedral click)
-                                    </a>
-
-                                    <div class="product-preview__price">
-                                        <div class="product-preview__price-old">
-                                            1700 руб./шт.
-                                        </div>
-
-                                        <div class="product-preview__price-new">
-                                            1700 руб./шт.
-                                        </div>
-                                    </div>
-
-                                    <a href="#" class="g-btn">
-                                        Посмотреть
-                                    </a>
-
-
-                                    <div class="product-preview__additional">
-                                        <button class="g-btn-transp">
-                                            Быстрый расчет
-                                        </button>
-
-                                        <div class="product-preview__thickness-title">Толщины:</div>
-
-                                        <div class="product-preview__thickness">
-                                            <span>0,4</span>
-
-                                            <span>0,45</span>
-
-                                            <span>0,5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__product">
-                                <div class="product-preview">
-                                    <div class="product-preview__img">
-                                        <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
-                                    </div>
-
-                                    <div class="product__action">
-                                        Акция
-                                    </div>
-
-                                    <a href="#" class="product-preview__title">
-                                        Фиброцементный сайдинг Кедрал Клик (Cedral click)
-                                    </a>
-
-                                    <div class="product-preview__price">
-                                        <div class="product-preview__price-old">
-                                            1700 руб./шт.
-                                        </div>
-
-                                        <div class="product-preview__price-new">
-                                            1700 руб./шт.
-                                        </div>
-                                    </div>
-
-                                    <a href="#" class="g-btn">
-                                        Посмотреть
-                                    </a>
-
-
-                                    <div class="product-preview__additional">
-                                        <button class="g-btn-transp">
-                                            Быстрый расчет
-                                        </button>
-
-                                        <div class="product-preview__thickness-title">Толщины:</div>
-
-                                        <div class="product-preview__thickness">
-                                            <span>0,4</span>
-
-                                            <span>0,45</span>
-
-                                            <span>0,5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__product">
-                                <div class="product-preview">
-                                    <div class="product-preview__img">
-                                        <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
-                                    </div>
-
-                                    <div class="product__action">
-                                        Акция
-                                    </div>
-
-                                    <a href="#" class="product-preview__title">
-                                        Фиброцементный сайдинг Кедрал Клик (Cedral click)
-                                    </a>
-
-                                    <div class="product-preview__price">
-                                        <div class="product-preview__price-old">
-                                            1700 руб./шт.
-                                        </div>
-
-                                        <div class="product-preview__price-new">
-                                            1700 руб./шт.
-                                        </div>
-                                    </div>
-
-                                    <a href="#" class="g-btn">
-                                        Посмотреть
-                                    </a>
-
-
-                                    <div class="product-preview__additional">
-                                        <button class="g-btn-transp">
-                                            Быстрый расчет
-                                        </button>
-
-                                        <div class="product-preview__thickness-title">Толщины:</div>
-
-                                        <div class="product-preview__thickness">
-                                            <span>0,4</span>
-
-                                            <span>0,45</span>
-
-                                            <span>0,5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__product">
-                                <div class="product-preview">
-                                    <div class="product-preview__img">
-                                        <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
-                                    </div>
-
-                                    <div class="product__action">
-                                        Акция
-                                    </div>
-
-                                    <a href="#" class="product-preview__title">
-                                        Фиброцементный сайдинг Кедрал Клик (Cedral click)
-                                    </a>
-
-                                    <div class="product-preview__price">
-                                        <div class="product-preview__price-old">
-                                            1700 руб./шт.
-                                        </div>
-
-                                        <div class="product-preview__price-new">
-                                            1700 руб./шт.
-                                        </div>
-                                    </div>
-
-                                    <a href="#" class="g-btn">
-                                        Посмотреть
-                                    </a>
-
-
-                                    <div class="product-preview__additional">
-                                        <button class="g-btn-transp">
-                                            Быстрый расчет
-                                        </button>
-
-                                        <div class="product-preview__thickness-title">Толщины:</div>
-
-                                        <div class="product-preview__thickness">
-                                            <span>0,4</span>
-
-                                            <span>0,45</span>
-
-                                            <span>0,5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__product">
-                                <div class="product-preview">
-                                    <div class="product-preview__img">
-                                        <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
-                                    </div>
-
-                                    <div class="product__action">
-                                        Акция
-                                    </div>
-
-                                    <a href="#" class="product-preview__title">
-                                        Фиброцементный сайдинг Кедрал Клик (Cedral click)
-                                    </a>
-
-                                    <div class="product-preview__price">
-                                        <div class="product-preview__price-old">
-                                            1700 руб./шт.
-                                        </div>
-
-                                        <div class="product-preview__price-new">
-                                            1700 руб./шт.
-                                        </div>
-                                    </div>
-
-                                    <a href="#" class="g-btn">
-                                        Посмотреть
-                                    </a>
-
-
-                                    <div class="product-preview__additional">
-                                        <button class="g-btn-transp">
-                                            Быстрый расчет
-                                        </button>
-
-                                        <div class="product-preview__thickness-title">Толщины:</div>
-
-                                        <div class="product-preview__thickness">
-                                            <span>0,4</span>
-
-                                            <span>0,45</span>
-
-                                            <span>0,5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__product">
-                                <div class="product-preview">
-                                    <div class="product-preview__img">
-                                        <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
-                                    </div>
-
-                                    <div class="product__action">
-                                        Акция
-                                    </div>
-
-                                    <a href="#" class="product-preview__title">
-                                        Фиброцементный сайдинг Кедрал Клик (Cedral click)
-                                    </a>
-
-                                    <div class="product-preview__price">
-                                        <div class="product-preview__price-old">
-                                            1700 руб./шт.
-                                        </div>
-
-                                        <div class="product-preview__price-new">
-                                            1700 руб./шт.
-                                        </div>
-                                    </div>
-
-                                    <a href="#" class="g-btn">
-                                        Посмотреть
-                                    </a>
-
-
-                                    <div class="product-preview__additional">
-                                        <button class="g-btn-transp">
-                                            Быстрый расчет
-                                        </button>
-
-                                        <div class="product-preview__thickness-title">Толщины:</div>
-
-                                        <div class="product-preview__thickness">
-                                            <span>0,4</span>
-
-                                            <span>0,45</span>
-
-                                            <span>0,5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__product">
-                                <div class="product-preview">
-                                    <div class="product-preview__img">
-                                        <img src="./img/product-pholder.jpg" data-splide-lazy="./img/product-pholder.jpg" alt="">
-                                    </div>
-
-                                    <div class="product__action">
-                                        Акция
-                                    </div>
-
-                                    <a href="#" class="product-preview__title">
-                                        Фиброцементный сайдинг Кедрал Клик (Cedral click)
-                                    </a>
-
-                                    <div class="product-preview__price">
-                                        <div class="product-preview__price-old">
-                                            1700 руб./шт.
-                                        </div>
-
-                                        <div class="product-preview__price-new">
-                                            1700 руб./шт.
-                                        </div>
-                                    </div>
-
-                                    <a href="#" class="g-btn">
-                                        Посмотреть
-                                    </a>
-
-
-                                    <div class="product-preview__additional">
-                                        <button class="g-btn-transp">
-                                            Быстрый расчет
-                                        </button>
-
-                                        <div class="product-preview__thickness-title">Толщины:</div>
-
-                                        <div class="product-preview__thickness">
-                                            <span>0,4</span>
-
-                                            <span>0,45</span>
-
-                                            <span>0,5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
-                        <div class="more">
-                            <button class="g-show-more more__btn" onclick="global.toggle(this)">
-                                <span class="g-show-more__icon">
-                                    <img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
-                                    <img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
-                                </span>
-
-                                <span class="g-show-more__text">
-                                    <span class="g-show-more__text-more">Показать еще 25 товаров</span>
-                                    <span class="g-show-more__text-less">Скрыть</span>
-                                </span>
-                            </button>
-
-                            <div class="more__note">
-                                Всего 1232 товара
+                        <div class="_productThumbs splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img data-splide-lazy="../img/productThumb.jpg">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img data-splide-lazy="../img/productThumb2.jpg">
+                                    </li>
+                                </ul>
                             </div>
-
-                            <nav class="pagination">
-                                <a href="#" class="pagination__item is-active">1</a>
-                                <a href="#" class="pagination__item">2</a>
-                                <a href="#" class="pagination__item">3</a>
-                                <a href="#" class="pagination__item">...</a>
-                                <a href="#" class="pagination__item">21</a>
-                            </nav>
                         </div>
+                    </div>
+
+                    <div class="product__details">
+
                     </div>
                 </div>
             </div>

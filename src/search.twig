@@ -17,12 +17,12 @@
 								<span class="filters__item-name">
 									Цена (руб.)
 								</span>
-	
+
 								<span class="filters__item-icon">
 									<img src="./img/icons/filter-arrow.svg" alt="">
 								</span>
 							</div>
-	
+
 							<div class="filters__item-content">
 								{% include "./blocks/price-range.twig" %}
 							</div>
@@ -33,15 +33,15 @@
 								<span class="filters__item-name">
 									Бренд
 								</span>
-	
+
 								<span class="filters__item-icon">
 									<img src="./img/icons/filter-arrow.svg" alt="">
 								</span>
 							</div>
-	
+
 							<div class="filters__item-content">
 								<ul class="filters__list">
-									{% for item in 0..1 %}	
+									{% for item in 0..1 %}
 										<li class="filters__list-item">
 											<label>
 												<div class="g-checkbox">
@@ -51,7 +51,7 @@
 												<span class="filters__list-item-name">
 													Aquasystem
 												</span>
-	
+
 												<div class="filters__list-item-quantity">
 													114
 												</div>
@@ -67,7 +67,7 @@
 												<span class="filters__list-item-name">
 													Grand Line Optima
 												</span>
-	
+
 												<div class="filters__list-item-quantity">
 													35
 												</div>
@@ -83,7 +83,7 @@
 												<span class="filters__list-item-name">
 													Gerard
 												</span>
-	
+
 												<div class="filters__list-item-quantity">
 													158
 												</div>
@@ -97,7 +97,7 @@
 										<img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
 										<img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
 									</span>
-						
+
 									<span class="g-show-more__text">
 										<span class="g-show-more__text-more">Показать еще</span>
 										<span class="g-show-more__text-less">Скрыть</span>
@@ -114,9 +114,9 @@
 						</li>
 					</ul>
 				</aside>
-	
-				<div class="catalog__products">
-					<div class="catalog__products-list catalog__products-list--previews">
+
+				<div class="catalog__products catalog__products--previews">
+					<div class="catalog__products-list">
 						{% for item in 0..8 %}
 							<div class="catalog__product">
 								{% include "./blocks/product-preview.twig" %}
@@ -130,17 +130,17 @@
 								<img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
 								<img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
 							</span>
-				
+
 							<span class="g-show-more__text">
 								<span class="g-show-more__text-more">Показать еще 25 товаров</span>
 								<span class="g-show-more__text-less">Скрыть</span>
 							</span>
 						</button>
-		
+
 						<div class="more__note">
 							Всего 1232 товара
 						</div>
-		
+
 						{% include "./blocks/pagination.twig" %}
 					</div>
 				</div>

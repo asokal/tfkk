@@ -228,7 +228,7 @@ var global =
 
 		if(!$productLimitSlider)
 			return
-		
+
 		noUiSlider.create($productLimitSlider, {
 			start: [1600, 8000],
 			connect: true,
@@ -271,6 +271,7 @@ var global =
 		init()
 		{
 			this.productsCarousel();
+			this.catalogProductSliders();
 			this.productSlider();
 			this.reviewsCarousel();
 			this.suppliersCarousel();
@@ -320,15 +321,15 @@ var global =
 			})
 		},
 
-		productSlider()
+		catalogProductSliders()
 		{
-			const $product = document.querySelectorAll('._product');
+			const $catalogProduct = document.querySelectorAll('._catalogProduct');
 
-			if(!document.querySelectorAll('._product').length)
+			if(!document.querySelectorAll('._catalogProduct').length)
 				return
 
-			$product.forEach(elem => {
-				let $productSlider = new Splide(elem.querySelector('._productSlider'), {
+			$catalogProduct.forEach(elem => {
+				let $catalogProductSlider = new Splide(elem.querySelector('._catalogProductSlider'), {
 					rewind     : true,
 					heightRatio: 0.5,
 					pagination : false,
@@ -352,30 +353,30 @@ var global =
 					}
 				} );
 
-				let images = elem.querySelectorAll( '._productThumbs li' );
-	
+				let images = elem.querySelectorAll( '._catalogProductThumbs li' );
+
 				let activeImage;
 				let activeClass = 'is-active';
-	
+
 				for ( let i = 0, len = images.length; i < len; i++ ) {
 					let image = images[ i ];
-	
-					$productSlider.on( 'click', function () {
+
+					$catalogProductSlider.on( 'click', function () {
 						if ( activeImage !== image ) {
-							$productSlider.go( i );
+							$catalogProductSlider.go( i );
 						}
 					}, image );
 				}
-	
-				$productSlider.on( 'mounted move', function ( newIndex ) {
+
+				$catalogProductSlider.on( 'mounted move', function ( newIndex ) {
 					// newIndex will be undefined through the "mounted" event.
 					let image = images[ newIndex !== undefined ? newIndex : splide.index ];
-	
+
 					if ( image && activeImage !== image ) {
 						if ( activeImage ) {
 							activeImage.classList.remove( activeClass );
 						}
-						
+
 						global.getSiblings(image).forEach(elem => {
 							elem.classList.remove(activeClass);
 						})
@@ -384,11 +385,25 @@ var global =
 						activeImage = image;
 					}
 				} );
-	
-				$productSlider.mount();
+
+				$catalogProductSlider.mount();
 
 			})
 
+		},
+
+		productSlider()
+		{
+			if(!document.querySelectorAll('._product').length)
+				return
+
+			new Splide( '._productThumbs', {
+				fixedWidth : 90,
+				fixedHeight: 90,
+				rewind     : true,
+				gap        : 10,
+				pagination : false,
+			} ).mount();
 		},
 
 		reviewsCarousel()
