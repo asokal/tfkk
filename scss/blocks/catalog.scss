@@ -19,20 +19,23 @@
 .catalog__products
 {
 	flex-grow: 1;
-	margin: 0 -15px 30px;
+
+	&--previews
+	{
+		margin: 0 -15px 30px;
+
+		.catalog__products-list
+		{
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
 }
 
 .catalog__products-list
 {
 	width: 100%;
 	margin-bottom: 30px;
-
-	&--previews
-	{
-		display: flex;
-		flex-wrap: wrap;
-	}
-
 }
 
 .catalog__product
@@ -92,7 +95,7 @@
 			margin-bottom: 8px;
 			font-size: 14px;
 		}
-		
+
 		.g-btn-transp--arrow::after
 		{
 			top: 12px;
