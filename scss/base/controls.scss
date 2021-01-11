@@ -18,12 +18,12 @@ button
 	line-height: 19px;
 	border-radius: 3px;
 	transition: .3s;
-	
+
 	&:hover
 	{
 		background-color: $red-hover;
 	}
-	
+
 	&:focus
 	{
 		background-color: $red-click;
@@ -53,13 +53,13 @@ button
 	border-radius: 3px;
 	border: 2px solid $blue;
 	transition: .3s;
-	
+
 	&:hover
 	{
 		background-color: $blue;
 		color: #fff;
 	}
-	
+
 	&:focus
 	{
 		color: #fff;
@@ -86,13 +86,13 @@ button
 			background-color: transparent;
 			color: #52A5DC;
 		}
-		
+
 		&:focus
 		{
 			color: #52A5DC;
 			background-color: transparent;
 		}
-	
+
 		&::after
 		{
 			display: block;
@@ -115,6 +115,42 @@ button
 				transform: scale(1, -1);
 			}
 		}
+	}
+}
+
+.g-btn-compare
+{
+	display: flex;
+	align-items: center;
+	color: $black;
+	margin-right: 20px;
+	transition: .2s;
+
+	&:hover
+	{
+		color: $blue;
+
+		.g-btn-compare__icon
+		{
+			opacity: 1;
+
+			path
+			{
+				fill: $blue;
+			}
+		}
+	}
+
+}
+
+.g-btn-compare__icon
+{
+	margin-right: 10px;
+	opacity: .5;
+
+	path
+	{
+		transition: .2s;
 	}
 }
 
@@ -157,17 +193,17 @@ button
 	color: $black;
 	font-size: 16px;
 	line-height: 19px;
-	
+
 	&::-webkit-input-placeholder { /* Edge */
 		color: rgba($black, .35);
 		@include roboto(normal, italic)
 	}
-	
+
 	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
 		color: rgba($black, .35);
 		@include roboto(normal, italic)
 	}
-	
+
 	&::placeholder {
 		color: rgba($black, .35);
 		@include roboto(normal, italic)
@@ -449,7 +485,7 @@ button
 	.g-search
 	{
 		height: 40px;
-		
+
 		&--has-value
 		{
 			.g-search__btn

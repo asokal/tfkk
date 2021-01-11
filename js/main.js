@@ -273,6 +273,7 @@ var global =
 			this.productsCarousel();
 			this.catalogProductSliders();
 			this.productSlider();
+			this.productPhotoCarousel();
 			this.reviewsCarousel();
 			this.suppliersCarousel();
 			this.videoGalleryCarousel();
@@ -397,13 +398,83 @@ var global =
 			if(!document.querySelectorAll('._product').length)
 				return
 
-			new Splide( '._productThumbs', {
-				fixedWidth : 90,
-				fixedHeight: 90,
+			let secondarySlider = new Splide( '._productThumbs', {
+				fixedWidth : '90px',
+				fixedHeight: '90px',
 				rewind     : true,
 				gap        : 10,
 				pagination : false,
+				cover      : true,
+				isNavigation: true,
+
+				breakpoints: {
+					1023:
+					{
+						fixedWidth : '60px',
+						fixedHeight: '60px',
+						gap        : 13,
+					}
+				}
 			} ).mount();
+
+			let primarySlider = new Splide( '._productSlider', {
+				type       : 'fade',
+				heightRatio: 0.5,
+				fixedWidth : '470px',
+				fixedHeight: '470px',
+				pagination : false,
+				arrows     : false,
+				cover      : true,
+				lazyLoad   : 'nearby',
+				isNavigation: true,
+
+				breakpoints: {
+					1023:
+					{
+						fixedWidth : '280px',
+						fixedHeight: '280px',
+					},
+
+					767:
+					{
+						fixedWidth : '290px',
+						fixedHeight: '290px',
+					}
+				}
+			} );
+
+			primarySlider.sync( secondarySlider ).mount();
+		},
+
+		productPhotoCarousel()
+		{
+			if(!document.querySelectorAll('._productPhotoCarousel').length)
+				return
+
+				new Splide( '._productPhotoCarousel', {
+					perPage: 4,
+					perMove: 1,
+					fixedWidth : '270px',
+					fixedHeight: '214px',
+					cover      : true,
+					lazyLoad: 'nearby',
+					gap: '30px',
+					pagination: false
+					// breakpoints: {
+					// 	1023: {
+					// 		perPage: 1,
+					// 		perMove: 1,
+					// 		fixedWidth: '575px',
+					// 	},
+
+					// 	600:
+					// 	{
+					// 		perPage: 1,
+					// 		perMove: 1,
+					// 		fixedWidth: 0
+					// 	}
+					// }
+				} ).mount();
 		},
 
 		reviewsCarousel()
