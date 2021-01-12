@@ -54,6 +54,7 @@ h3, .g-title-tertiary
 
 h4, .g-title-quaternary
 {
+	@include roboto(500);
 	font-size: 19px;
 	line-height: 22px;
 }
@@ -145,7 +146,7 @@ a:focus
 {
 	opacity: .3;
 	transition: .3s;
-	
+
 	path, rect
 	{
 		transition: .3s;

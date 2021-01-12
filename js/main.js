@@ -274,6 +274,7 @@ var global =
 			this.catalogProductSliders();
 			this.productSlider();
 			this.productPhotoCarousel();
+			this.collectionCarousel();
 			this.reviewsCarousel();
 			this.suppliersCarousel();
 			this.videoGalleryCarousel();
@@ -475,6 +476,34 @@ var global =
 					// 	}
 					// }
 				} ).mount();
+		},
+
+		collectionCarousel()
+		{
+			if(!document.querySelectorAll('._collectionCarousel').length)
+				return
+
+			new Splide( '._collectionCarousel', {
+				perPage: 4,
+				perMove: 1,
+				lazyLoad: 'nearby',
+				gap: '30px',
+				pagination: false,
+				breakpoints: {
+					1023: {
+						perPage: 3,
+						perMove: 1,
+					},
+
+					600:
+					{
+						perPage: 2,
+						perMove: 1,
+						gap: '12px',
+						pagination: true,
+					}
+				}
+			} ).mount();
 		},
 
 		reviewsCarousel()
