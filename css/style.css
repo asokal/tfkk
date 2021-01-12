@@ -4690,6 +4690,11 @@ picture.article__promo-img source {
   font-size: 0;
 }
 
+#result td,
+th {
+  padding: 6px;
+}
+
 .calc-roof-top {
   display: -webkit-box;
   display: -webkit-flex;
