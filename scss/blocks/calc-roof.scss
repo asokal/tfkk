@@ -19,24 +19,6 @@
 }
 #calc-roof-color
 {
-	p
-	{
-		position: relative;
-		&::after
-		{
-			display: block;
-			content: '';
-			position: absolute;
-			right: 20px;
-			top: 20px;
-			width: 16px;
-			height: 16px;
-			background-image: url('../img/icons/arrow-down.svg');
-			background-repeat: no-repeat;
-			background-size: cover;
-			transition: .3s;
-		}
-	}
 	span
 	{
 		font-weight: 500;
@@ -45,24 +27,6 @@
 }
 #calc-roof-cover
 {
-	p
-	{
-		position: relative;
-		&::after
-		{
-			display: block;
-			content: '';
-			position: absolute;
-			right: 20px;
-			top: 20px;
-			width: 16px;
-			height: 16px;
-			background-image: url('../img/icons/arrow-down.svg');
-			background-repeat: no-repeat;
-			background-size: cover;
-			transition: .3s;
-		}
-	}
 	span
 	{
 		font-weight: 500;

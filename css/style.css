@@ -4722,51 +4722,9 @@ th {
   background-repeat: no-repeat;
 }
 
-#calc-roof-color p {
-  position: relative;
-}
-
-#calc-roof-color p::after {
-  display: block;
-  content: '';
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 16px;
-  height: 16px;
-  background-image: url("../img/icons/arrow-down.svg");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-}
-
 #calc-roof-color span {
   font-weight: 500;
   margin-right: 20px;
-}
-
-#calc-roof-cover p {
-  position: relative;
-}
-
-#calc-roof-cover p::after {
-  display: block;
-  content: '';
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 16px;
-  height: 16px;
-  background-image: url("../img/icons/arrow-down.svg");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
 }
 
 #calc-roof-cover span {
