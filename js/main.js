@@ -28,6 +28,28 @@ var global =
 		Maska.create('._masked');
 	},
 
+	popups:
+	{
+		showPopup: function(popup)
+		{
+			let $overlay = document.querySelector('._overlay'),
+				$popup = document.querySelector(popup)
+			$overlay.classList.add("_show");
+			$popup.classList.add("_show");
+		},
+		closePopup: function()
+		{
+			let $overlay = document.querySelector('._overlay'),
+				$popups = document.querySelectorAll('.popup')
+
+			for (var i = 0; i < $popups.length; i++) {
+				$popups[i].classList.remove('_show')
+			}
+			$overlay.classList.remove("_show");
+			// $('body').css('overflow', 'visible');
+		},
+	},
+
 	header:
 	{
 		// прилипание меню
