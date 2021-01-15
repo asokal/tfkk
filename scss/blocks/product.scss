@@ -634,6 +634,20 @@
 	margin-right: 27px;
 }
 
+
+
+@media (max-width: 1199px)
+{
+	.product__equipment
+	{
+		margin-left: 32px;
+	}
+	.product__btns
+	{
+		margin-left: 450px;
+	}
+}
+
 @media (max-width: 1023px)
 {
 	.product
