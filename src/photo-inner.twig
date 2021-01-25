@@ -1,9 +1,10 @@
 {% extends "layouts/layout.twig" %}
 
 {% block page %}
+	{% include "./blocks/breadcrumbs.twig" %}
 	<section class="photo-gallery">
 		<div class="container">
-			<h1 class="photo-gallery__title">Фото наших объектов</h1>
+			<h1 class="photo-gallery__title">Фото наших объектов с цокольным сайдингом</h1>
 
 			<div class="photo-gallery__wrap">
 				<nav class="photo-gallery__nav">
@@ -65,7 +66,28 @@
 				</div>
 
 				<div>
-					<div class="photo-gallery__items">
+					<div class="photo-gallery__items photo-gallery__items--three-rows">
+						<div class="photo-gallery__item">
+							<a class="photo-gallery__item-img" data-fslightbox href="./img/gallery-pholder2.jpg">
+								<picture>
+									<img src="./img/gallery-pholder2.jpg" alt="" class="lazyload">
+								</picture>
+							</a>
+						</div>
+						<div class="photo-gallery__item">
+							<a class="photo-gallery__item-img" data-fslightbox href="./img/gallery-pholder3.jpg">
+								<picture>
+									<img src="./img/gallery-pholder3.jpg" alt="" class="lazyload">
+								</picture>
+							</a>
+						</div>
+						<div class="photo-gallery__item">
+							<a class="photo-gallery__item-img" data-fslightbox href="./img/gallery-pholder4.jpg">
+								<picture>
+									<img src="./img/gallery-pholder4.jpg" alt="" class="lazyload">
+								</picture>
+							</a>
+						</div>
 						{% for i in 0..15 %}
 							<div class="photo-gallery__item">
 								<a class="photo-gallery__item-img" data-fslightbox href="./img/gallery-pholder.jpg">
@@ -82,10 +104,6 @@
 											data-src="./img/gallery-pholder.jpg" alt="" class="lazyload" src="./img/pholder.svg">
 									</picture>
 								</a>
-
-								<div class="photo-gallery__item-name">
-									Виниловый сайдинг под дерево
-								</div>
 							</div>
 						{% endfor %}
 					</div>

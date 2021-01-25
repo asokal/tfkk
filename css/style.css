@@ -5789,6 +5789,13 @@ th {
   margin: 0 -9px 20px;
 }
 
+.photo-gallery__items--three-rows .photo-gallery__item {
+  -webkit-flex-basis: calc(100% / 3);
+  -ms-flex-preferred-size: calc(100% / 3);
+  flex-basis: calc(100% / 3);
+  max-width: calc(100% / 3);
+}
+
 .photo-gallery__item {
   -webkit-flex-basis: calc(100% / 4);
   -ms-flex-preferred-size: calc(100% / 4);
@@ -5799,6 +5806,7 @@ th {
 }
 
 .photo-gallery__item-img {
+  display: block;
   width: 100%;
   height: 204px;
   margin-bottom: 15px;
