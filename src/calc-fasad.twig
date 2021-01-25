@@ -18,12 +18,15 @@
 						<tr>
 							<td><label for="type">Материал:</label></td>
 							<td>
-								<select class="calc-roof__select" id="material" name="material" tabindex="-1">
-									<option selected="selected" value="">Выберите материал...</option>
-									<option value="vinil">Виниловый сайдинг</option>
-									<option value="metalsidnig">Металлосайдинг "Корабельная доска"</option>
-									<option value="metalbrevno">Металлосайдинг под Бревно</option>
-								</select>
+								<label class="g-select__calc">
+									<select class="calc-roof__select" id="material" name="material" tabindex="-1">
+										<option selected="selected" value="">Выберите материал...</option>
+										<option value="vinil">Виниловый сайдинг</option>
+										<option value="metalsidnig">Металлосайдинг "Корабельная доска"</option>
+										<option value="metalbrevno">Металлосайдинг под Бревно</option>
+									</select>
+									{% include "../img/icons/arrow-down.svg" %}
+								</label>
 							</td>
 						</tr>
 						<tr>
@@ -39,19 +42,25 @@
 						<tr>
 							<td><label for="type">Нужен подшив карнизов?</label></td>
 							<td>
-								<select class="calc-roof__select" id="material" style="width:137px;" name="material" tabindex="-1">
-									<option selected="selected" value="">Да</option>
-									<option value="vinil">Нет</option>
-								</select>
+								<label class="g-select__calc">
+									<select class="calc-roof__select" id="material" style="width:137px;" name="material" tabindex="-1">
+										<option selected="selected" value="">Да</option>
+										<option value="vinil">Нет</option>
+									</select>
+								{% include "../img/icons/arrow-down.svg" %}
+								</label>
 							</td>
 						</tr>
 						<tr>
 							<td><label for="type">Нужно утепление?</label></td>
 							<td>
-								<select class="calc-roof__select" style="width:137px;" id="material" name="material" tabindex="-1">
-									<option selected="selected" value="">Нет</option>
-									<option value="vinil">Да</option>
-								</select>
+								<label class="g-select__calc">
+									<select class="calc-roof__select" style="width:137px;" id="material" name="material" tabindex="-1">
+										<option selected="selected" value="">Нет</option>
+										<option value="vinil">Да</option>
+									</select>
+									{% include "../img/icons/arrow-down.svg" %}
+								</label>
 							</td>
 						</tr>
 						<tr>

@@ -25,6 +25,7 @@ var global =
 		this.youtubeLazy();
 		this.rangeSlider();
 		this.sliders.init();
+		this.scrollTop.init();
 		Maska.create('._masked');
 	},
 
@@ -48,6 +49,31 @@ var global =
 			$overlay.classList.remove("_show");
 			// $('body').css('overflow', 'visible');
 		},
+	},
+
+	scrollTop:
+	{
+		init: function()
+		{
+			window.onscroll = function()
+			{
+				global.scrollTop.scrollFunction();
+			};
+		},
+		scrollFunction: function()
+		{
+			var button = document.querySelector('.scroll-top');
+
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+				button.style.display = "block";
+			else
+				button.style.display = "none";
+		},
+		topFunction: function()
+		{
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
 	},
 
 	header:

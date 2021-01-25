@@ -23,14 +23,29 @@
 					<tbody>
 						<tr>
 							<td><label for="type">Тип материала</label></td>
-							<td><select style="width:193px;" class="calc-roof__select" id="type" name="type">
-								<option value="1">Профнастил</option>
-								<option value="2">Штакетник</option>
-							</select></td>
+							<td>
+								<label class="g-select__calc">
+									<select style="width:193px;" class="calc-roof__select" id="type" name="type">
+										<option value="1">Профнастил</option>
+										<option value="2">Штакетник</option>
+									</select>
+									{% include "../img/icons/arrow-down.svg" %}
+								</label>
+							</td>
 						</tr>
 						<tr>
 							<td><label for="material">Материал</label></td>
-							<td><select class="calc-roof__select" id="material" name="material"><option value="1" selected="">С8 оцинкованный</option><option value="2">С8 окрашенный</option><option value="3">МП-20 оцинкованный</option><option value="4">МП-20 окрашенный</option></select></td>
+							<td>
+								<label class="g-select__calc">
+									<select class="calc-roof__select" id="material" name="material">
+										<option value="1" selected="">С8 оцинкованный</option>
+										<option value="2">С8 окрашенный</option>
+										<option value="3">МП-20 оцинкованный</option>
+										<option value="4">МП-20 окрашенный</option>
+									</select>
+									{% include "../img/icons/arrow-down.svg" %}
+								</label>
+							</td>
 						</tr>
 						<tr>
 							<td><label for="height">Высота забора, м</label></td>
@@ -38,39 +53,59 @@
 						</tr>
 						<tr id="tr_shtaket" style="display: none;">
 							<td><label for="rasst_shtaket">Расстояние м/у штакетами: </label></td>
-							<td><select style="width:137px;"  class="calc-roof__select" id="rasst_shtaket" name="rasst_shtaket">
-								<option value="0.07">7см</option>
-								<option value="0.08">8см</option>
-								<option value="0.09">9см</option>
-								<option value="0.10">10см</option>
-								<option value="0.11">11см</option>
-							</select></td>
+							<td>
+								<label class="g-select__calc">
+									<select style="width:137px;"  class="calc-roof__select" id="rasst_shtaket" name="rasst_shtaket">
+										<option value="0.07">7см</option>
+										<option value="0.08">8см</option>
+										<option value="0.09">9см</option>
+										<option value="0.10">10см</option>
+										<option value="0.11">11см</option>
+									</select>
+								{% include "../img/icons/arrow-down.svg" %}
+								</label>
+							</td>
 						</tr>
 						<tr>
 							<td><label for="rasst_stolb">Расстояние м/у столбами, м: </label></td>
-							<td><select style="width:137px;" class="calc-roof__select" id="rasst_stolb" name="rasst_stolb">
-								<option selected="selected" value="2.5">2,5м</option>
-								<option value="3">3м</option>
-							</select></td>
+							<td>
+								<label class="g-select__calc">
+									<select style="width:137px;" class="calc-roof__select" id="rasst_stolb" name="rasst_stolb">
+										<option selected="selected" value="2.5">2,5м</option>
+										<option value="3">3м</option>
+									</select>
+								{% include "../img/icons/arrow-down.svg" %}
+								</label>
+							</td>
 						</tr>
 						<tr>
 							<td><label for="vorota">Ворота: </label></td>
-							<td><select style="width:137px;" class="calc-roof__select" id="vorota" name="vorota">
-								<option selected="selected" value="0">Нет</option>
-								<option value="1">2,5м</option>
-								<option value="2">3м</option>
-								<option value="3">3,5м</option>
-								<option value="4">4м</option>
-								<option value="5">4,5м</option>
-							</select></td>
+							<td>
+								<label class="g-select__calc">
+									<select style="width:137px;" class="calc-roof__select" id="vorota" name="vorota">
+										<option selected="selected" value="0">Нет</option>
+										<option value="1">2,5м</option>
+										<option value="2">3м</option>
+										<option value="3">3,5м</option>
+										<option value="4">4м</option>
+										<option value="5">4,5м</option>
+									</select>
+									{% include "../img/icons/arrow-down.svg" %}
+								</label>
+							</td>
 						</tr>
 						<tr>
 							<td><label for="kalitka">Калитка: </label></td>
-							<td><select style="width:137px;" class="calc-roof__select" id="kalitka" name="kalitka">
-								<option value="0">Нет</option>
-								<option value="1">1 м</option>
-								<option value="2">1 м в воротах</option>
-							</select></td>
+							<td>
+								<label class="g-select__calc">
+									<select style="width:137px;" class="calc-roof__select" id="kalitka" name="kalitka">
+										<option value="0">Нет</option>
+										<option value="1">1 м</option>
+										<option value="2">1 м в воротах</option>
+									</select>
+								{% include "../img/icons/arrow-down.svg" %}
+								</label>
+							</td>
 						</tr>
 						<tr>
 							<td><label for="length">Длина забора <span style="font-weight: bold;">без ворот и калитки</span>, м.:</label></td>

@@ -4,6 +4,16 @@
 	justify-content: space-between;
 	margin-bottom: 50px;
 }
+.g-select__calc
+{
+	position: relative;
+	svg
+	{
+		position: absolute;
+		right: 15px;
+		top: 0;
+	}
+}
 .calc-roof__select
 {
 	border: 2px solid #57ACE5;
@@ -13,9 +23,9 @@
 	height: 55px;
 	width: 326px;
 	appearance: none;
-	background-image: url('../img/icons/arrow-down.svg');
-	background-position: 95% center;
-	background-repeat: no-repeat;
+	// background-image: url('../img/icons/arrow-down.svg');
+	// background-position: 95% center;
+	// background-repeat: no-repeat;
 }
 #calc-roof-color
 {
@@ -138,9 +148,11 @@
 		td
 		{
 			width: 210px;
+			font-weight: 700;
 			&:last-child
 			{
 				width: auto;
+				font-weight: normal;
 			}
 		}
 	}
@@ -216,7 +228,7 @@
 			width: 47%;
 			a
 			{
-				width: 136px;
+				width: 100%;
 				height: 165px;
 			}
 		}
@@ -324,6 +336,10 @@
 				right: 10px;
 				top: 43px;
 			}
+		}
+		select
+		{
+			width: 100%;
 		}
 	}
 	#calc-roof-cover
