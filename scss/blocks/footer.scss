@@ -224,6 +224,11 @@
 	.footer__column-list-item--mobile
 	{
 		display: flex;
+		a
+		{
+			font-size: 14px;
+			color: #DD2D1F;
+		}
 	}
 
 	.footer__column:nth-last-child(2)
@@ -293,6 +298,7 @@
 
 	.footer__column
 	{
+		font-size: 13px;
 		max-width: 100%;
 		flex-basis: 100%;
 		margin-bottom: 30px;
@@ -337,7 +343,7 @@
 			line-height: 15px;
 		}
 	}
-	
+
 
 	.footer__links-item
 	{

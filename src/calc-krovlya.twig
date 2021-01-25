@@ -21,24 +21,30 @@
 					<div id="calc-roof-color">
 						<p>
 							<span>Выберите материал:</span>
-							<select id="material" name="material" class="calc-roof__select">
-								<option value="mMonterey">Металлочерепица Монтеррей</option>
-								<option value="mEurope">Металлочерепица Европа</option>
-								<option value="mCascade">Металлочерепица Каскад</option>
-								<option value="mProf8">Профнастил С-8</option>
-								<option value="mProf15">Профнастил С-15</option>
-								<option value="mProf18">Профнастил С-18</option>
-								<option value="mProf20">Профнастил МП-20</option>
-							</select>
+							<label class="g-select__calc">
+								<select id="material" name="material" class="calc-roof__select">
+									<option value="mMonterey">Металлочерепица Монтеррей</option>
+									<option value="mEurope">Металлочерепица Европа</option>
+									<option value="mCascade">Металлочерепица Каскад</option>
+									<option value="mProf8">Профнастил С-8</option>
+									<option value="mProf15">Профнастил С-15</option>
+									<option value="mProf18">Профнастил С-18</option>
+									<option value="mProf20">Профнастил МП-20</option>
+								</select>
+								{% include "../img/icons/arrow-down.svg" %}
+							</label>
 						</p>
 					</div>
 					<div id="calc-roof-cover" style="display: block;">
 						<p>
 							<span>Выберите покрытие:</span>
-							<select id="cover" name="cover" class="calc-roof__select">
-								<option value="cColor">Окрашенный</option>
-								<option value="cZink" style="display: none;">Оцинкованный</option>
-							</select>
+							<label class="g-select__calc">
+								<select id="cover" name="cover" class="calc-roof__select">
+									<option value="cColor">Окрашенный</option>
+									<option value="cZink" style="display: none;">Оцинкованный</option>
+								</select>
+								{% include "../img/icons/arrow-down.svg" %}
+							</label>
 						</p>
 					</div>
 				</div>

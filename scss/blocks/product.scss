@@ -805,6 +805,7 @@
 	.product__main
 	{
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.product__gallery
@@ -831,6 +832,7 @@
 
 	.product__equipment
 	{
+		margin-left: 0;
 		padding: 15px 31px 15px 20px;
 		font-size: 13px;
 		margin-bottom: 20px;
