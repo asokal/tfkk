@@ -1,6 +1,8 @@
 # [ТФКК.РФ](https://xn--j1aawi.xn--p1ai/)
 
-Frontend [Тюменской Фасадно-Кровельной Компании](https://xn--j1aawi.xn--p1ai/)
+Frontend [Тюменской Фасадно-Кровельной Компании](https://xn--j1aawi.xn--p1ai/).
+
+Сборщик Gulp, шаблонизатор Twig, препроцессор SCSS, Vanilla JS.
 
 ## Project Setup
 
