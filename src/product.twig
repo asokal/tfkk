@@ -204,6 +204,19 @@
 								{% endfor %}
 							</ul>
 						</div>
+						<div class="g-show-more-mobile-only">
+							<button class="g-show-more more__btn" onclick="global.toggle(this)">
+								<span class="g-show-more__icon">
+									<img src="./img/icons/more.svg" class="g-show-more__icon-more" alt="">
+									<img src="./img/icons/less.svg" class="g-show-more__icon-less" alt="">
+								</span>
+
+								<span class="g-show-more__text">
+									<span class="g-show-more__text-more">Показать еще 7 модификаций</span>
+									<span class="g-show-more__text-less">Скрыть</span>
+								</span>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -215,14 +228,14 @@
 
 					Сравнить
 				</button>
-				<button class="g-btn">
+				<button class="g-btn" onclick="global.popups.showPopup('.popup__calc')">
 					<span class="g-btn__icon">
 						<img src="./img/icons/calc-btn-icon.svg" alt="">
 					</span>
 					Быстрый расчет
 				</button>
 
-				<button class="g-btn-transp">Заказать монтаж</button>
+				<button class="g-btn-transp" onclick="global.popups.showPopup('.popup__mounting')">Заказать монтаж</button>
 			</div>
 
 			<section class="product__section">

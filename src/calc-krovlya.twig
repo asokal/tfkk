@@ -21,29 +21,35 @@
 					<div id="calc-roof-color">
 						<p>
 							<span>Выберите материал:</span>
-							<select id="material" name="material" class="calc-roof__select">
-								<option value="mMonterey">Металлочерепица Монтеррей</option>
-								<option value="mEurope">Металлочерепица Европа</option>
-								<option value="mCascade">Металлочерепица Каскад</option>
-								<option value="mProf8">Профнастил С-8</option>
-								<option value="mProf15">Профнастил С-15</option>
-								<option value="mProf18">Профнастил С-18</option>
-								<option value="mProf20">Профнастил МП-20</option>
-							</select>
+							<label class="g-select__calc">
+								<select id="material" name="material" class="calc-roof__select">
+									<option value="mMonterey">Металлочерепица Монтеррей</option>
+									<option value="mEurope">Металлочерепица Европа</option>
+									<option value="mCascade">Металлочерепица Каскад</option>
+									<option value="mProf8">Профнастил С-8</option>
+									<option value="mProf15">Профнастил С-15</option>
+									<option value="mProf18">Профнастил С-18</option>
+									<option value="mProf20">Профнастил МП-20</option>
+								</select>
+								{% include "../img/icons/arrow-down.svg" %}
+							</label>
 						</p>
 					</div>
 					<div id="calc-roof-cover" style="display: block;">
 						<p>
 							<span>Выберите покрытие:</span>
-							<select id="cover" name="cover" class="calc-roof__select">
-								<option value="cColor">Окрашенный</option>
-								<option value="cZink" style="display: none;">Оцинкованный</option>
-							</select>
+							<label class="g-select__calc">
+								<select id="cover" name="cover" class="calc-roof__select">
+									<option value="cColor">Окрашенный</option>
+									<option value="cZink" style="display: none;">Оцинкованный</option>
+								</select>
+								{% include "../img/icons/arrow-down.svg" %}
+							</label>
 						</p>
 					</div>
 				</div>
 				<ul class="calc-roof-list">
-					<li><a id="s-1" href="javascript:void(0)"> <img class="" style="border: 2px solid rgb(255, 255, 255);" src="./img/roof_type_1.jpg" alt="двухскатная"></a>
+					<li><a id="s-1" href="javascript:void(0)"> <img class="img_active" style="border: 2px solid #57ACE5" src="./img/roof_type_1.jpg" alt="двухскатная"></a>
 						<p>Двускатная</p>
 					</li>
 					<li><a id="s-2" href="javascript:void(0)"> <img src="./img/roof_type_2.jpg" alt="вальмовая" style="border: 2px solid rgb(255, 255, 255);" class=""></a>
@@ -55,12 +61,12 @@
 					<li><a id="s-4" href="javascript:void(0)"> <img src="./img/roof_type_4.jpg" alt="мансардная" style="border: 2px solid rgb(255, 255, 255);" class=""></a>
 						<p>Мансардная</p>
 					</li>
-					<li><a id="s-5" href="javascript:void(0)"> <img src="./img/roof_type_5.jpg" alt="многоскатная" style="border: 2px solid #57ACE5" class="img_active"></a>
+					<li><a id="s-5" href="javascript:void(0)"> <img src="./img/roof_type_5.jpg" alt="многоскатная" style="border: 2px solid rgb(255, 255, 255);"></a>
 						<p>Многоскатная</p>
 					</li>
 				</ul>
 				<div id="tabs" class="roof-parameters-group">
-					<div id="tabs-1" class="roof-parameters" style="display: none;">
+					<div id="tabs-1" class="roof-parameters" style="display: block;">
 						<table class="mainTable"><colgroup> <col style="width: 250px;"> <col style="width: 100px;"> <col style="width: 400px;"> </colgroup>
 							<tbody>
 								<tr>
@@ -216,7 +222,7 @@
 							</tbody>
 						</table>
 					</div>
-					<div id="tabs-5" class="roof-parameters" style="display: block;">
+					<div id="tabs-5" class="roof-parameters" style="display: none;">
 						<table class="mainTable"><colgroup> <col style="width: 250px;"> <col style="width: 100px;"> <col style="width: 400px;"> </colgroup>
 							<tbody>
 								<tr>
@@ -273,67 +279,8 @@
 					</div>
 				</div>
 				<a name="result"></a>
-				<div id="result" class="result"><table><thead><tr><th>Наименование</th><th>Кол-во</th></tr></thead><tbody><tr><td>Металлочерепица Монтеррей</td><td>0 м<sup>2</sup></td></tr><tr><td>Конёк</td><td>0 м</td></tr><tr><td>Торцевая планка</td><td>0 м</td></tr><tr><td>Саморез 4,8*35</td><td>0 шт</td></tr></tbody></table><p style="font-size:18px"><span style="font-weight:bold;">Стоимость: 0 руб.</span><br><br></p><p style="font-size:16px"><span style="font-weight:bold;">Внимание: цена указана без учета отходов, нахлестов и монтажа. Для более точного расчета свяжитесь с нашим менеджером.</span></p><p style="font-size:12px">Обращаем Ваше внимание на то, что вся представленная на сайте информация, касающаяся комплектаций, характеристик, цветовых сочетаний, а так же стоимости носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации, пожалуйста, обращайтесь в офис фирмы.</p></div>
+				<div id="result" class="result"></div>
 			</div>
-
-			<!-- <div class="g-select _select">
-				<button class="g-select__btn _selectBtn">Выберите материал:</button>
-
-				<ul class="g-select__dropdown _selectDropdown">
-					<li class="g-select__option _selectOption" data-nav-for="delivery-1">Металлочерепица Монтеррей</li>
-					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Самовывоз</li>
-					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Другие регионы</li>
-				</ul>
-			</div>
-
-			<div class="g-select _select">
-				<button class="g-select__btn _selectBtn">Выберите покрытие:</button>
-
-				<ul class="g-select__dropdown _selectDropdown">
-					<li class="g-select__option _selectOption" data-nav-for="delivery-1">Окрашенный</li>
-					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Самовывоз</li>
-					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Другие регионы</li>
-				</ul>
-			</div>
-
-			<div class="g-tabs-nav">
-				<button class="g-tabs-nav__btn is-active" data-nav-for="delivery-1">
-					Двускатная
-				</button>
-
-				<button class="g-tabs-nav__btn" data-nav-for="delivery-2">
-					Вальмовая
-				</button>
-
-				<button class="g-tabs-nav__btn" data-nav-for="delivery-3">
-					Шатровая
-				</button>
-
-				<button class="g-tabs-nav__btn" data-nav-for="delivery-4">
-					Мансардная
-				</button>
-
-				<button class="g-tabs-nav__btn" data-nav-for="delivery-5">
-					Многоскатная
-				</button>
-
-			</div>
-
-			<div class="delivery__content is-active" data-tab="delivery-1">
-				1
-			</div>
-			<div class="delivery__content is-active" data-tab="delivery-2">
-				2
-			</div>
-			<div class="delivery__content is-active" data-tab="delivery-3">
-				3
-			</div>
-			<div class="delivery__content is-active" data-tab="delivery-4">
-				4
-			</div>
-			<div class="delivery__content is-active" data-tab="delivery-5">
-				5
-			</div> -->
 
 		</div>
 	</article>

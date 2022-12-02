@@ -71,6 +71,10 @@
 	}
 }
 
+.contacts__office-phone
+{
+	@include roboto(500);
+}
 .contacts__office-title
 {
 	@include roboto(500);
@@ -208,6 +212,11 @@
 		.contacts__common
 		{
 			margin-bottom: 0;
+			.social
+			{
+				margin-right: 0px;
+				width: 100%;
+			}
 		}
 	}
 
@@ -227,6 +236,10 @@
 		{
 			margin-right: 22px;
 		}
+	}
+	.contacts__adv
+	{
+		display: none;
 	}
 }
 
@@ -292,10 +305,10 @@
 	{
 		margin-top: 20px;
 
-		.social
-		{
-			margin-right: 35px;
-		}
+		// .social
+		// {
+		// 	margin-right: 35px;
+		// }
 	}
 
 	.contacts__company-info

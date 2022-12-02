@@ -166,6 +166,15 @@ body
 	}
 }
 
+.g-show-more-mobile-only
+{
+	display: none;
+	@media (max-width: 768px)
+	{
+		display: block;
+	}
+}
+
 .g-show-more
 {
 	display: flex;
