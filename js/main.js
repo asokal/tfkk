@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
 * основной объект
 * @type {object}
 */
-var global =
+const global =
 {
 	/**
-	* вызов функций, которые должны запускаться при загрузке страницы
+	* вызов функций, которые должны запускаться после загрузки DOM
 	*/
 	init()
 	{
@@ -143,7 +143,7 @@ var global =
 	// инициализировать все табы на странице
 	tabs()
 	{
-		const $btns = document.querySelectorAll('[data-nav-for]');
+		const $btns = document.querySelectorAll('[data-nav-for]'),
 			  $tabs = document.querySelectorAll('[data-tab]');
 
 		if(!$btns.length)
