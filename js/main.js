@@ -25,7 +25,55 @@ const global =
 		this.youtubeLazy();
 		this.rangeSlider();
 		this.sliders.init();
+		this.scrollTop.init();
 		Maska.create('._masked');
+	},
+
+	popups:
+	{
+		showPopup: function(popup)
+		{
+			let $overlay = document.querySelector('._overlay'),
+				$popup = document.querySelector(popup)
+			$overlay.classList.add("_show");
+			$popup.classList.add("_show");
+		},
+		closePopup: function()
+		{
+			let $overlay = document.querySelector('._overlay'),
+				$popups = document.querySelectorAll('.popup')
+
+			for (var i = 0; i < $popups.length; i++) {
+				$popups[i].classList.remove('_show')
+			}
+			$overlay.classList.remove("_show");
+			// $('body').css('overflow', 'visible');
+		},
+	},
+
+	scrollTop:
+	{
+		init: function()
+		{
+			window.onscroll = function()
+			{
+				global.scrollTop.scrollFunction();
+			};
+		},
+		scrollFunction: function()
+		{
+			var button = document.querySelector('.scroll-top');
+
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+				button.style.display = "block";
+			else
+				button.style.display = "none";
+		},
+		topFunction: function()
+		{
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
 	},
 
 	header:

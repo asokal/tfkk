@@ -1428,13 +1428,16 @@
             </div>
         </div>
     </header>
+
     <main class="wrapper">
+
         <nav class="breadcrumbs">
             <div class="container">
                 <a href="#" class="breadcrumbs__item">Главная</a>
                 <a href="#" class="breadcrumbs__item">Статьи</a>
             </div>
         </nav>
+
         <article class="calcs">
             <div class="container">
                 <h1 class="calcs__title">
@@ -1453,29 +1456,55 @@
                         <div id="calc-roof-color">
                             <p>
                                 <span>Выберите материал:</span>
-                                <select id="material" name="material" class="calc-roof__select">
-                                    <option value="mMonterey">Металлочерепица Монтеррей</option>
-                                    <option value="mEurope">Металлочерепица Европа</option>
-                                    <option value="mCascade">Металлочерепица Каскад</option>
-                                    <option value="mProf8">Профнастил С-8</option>
-                                    <option value="mProf15">Профнастил С-15</option>
-                                    <option value="mProf18">Профнастил С-18</option>
-                                    <option value="mProf20">Профнастил МП-20</option>
-                                </select>
+                                <label class="g-select__calc">
+                                    <select id="material" name="material" class="calc-roof__select">
+                                        <option value="mMonterey">Металлочерепица Монтеррей</option>
+                                        <option value="mEurope">Металлочерепица Европа</option>
+                                        <option value="mCascade">Металлочерепица Каскад</option>
+                                        <option value="mProf8">Профнастил С-8</option>
+                                        <option value="mProf15">Профнастил С-15</option>
+                                        <option value="mProf18">Профнастил С-18</option>
+                                        <option value="mProf20">Профнастил МП-20</option>
+                                    </select>
+                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M10.1781 14.4533L18.7194 5.90905C19.0934 5.53414 19.0934 4.92672 18.7194 4.55086C18.3455 4.17594 17.7381 4.17594 17.3641 4.55086L9.50043 12.4173L1.63678 4.5518C1.26281 4.17689 0.65539 4.17689 0.280476 4.5518C-0.0934918 4.92672 -0.0934918 5.53509 0.280476 5.91L8.82177 14.4542C9.19187 14.8234 9.80884 14.8234 10.1781 14.4533Z" fill="#57ACE6" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="19" height="19" fill="white" transform="translate(0 19) rotate(-90)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </label>
                             </p>
                         </div>
                         <div id="calc-roof-cover" style="display: block;">
                             <p>
                                 <span>Выберите покрытие:</span>
-                                <select id="cover" name="cover" class="calc-roof__select">
-                                    <option value="cColor">Окрашенный</option>
-                                    <option value="cZink" style="display: none;">Оцинкованный</option>
-                                </select>
+                                <label class="g-select__calc">
+                                    <select id="cover" name="cover" class="calc-roof__select">
+                                        <option value="cColor">Окрашенный</option>
+                                        <option value="cZink" style="display: none;">Оцинкованный</option>
+                                    </select>
+                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M10.1781 14.4533L18.7194 5.90905C19.0934 5.53414 19.0934 4.92672 18.7194 4.55086C18.3455 4.17594 17.7381 4.17594 17.3641 4.55086L9.50043 12.4173L1.63678 4.5518C1.26281 4.17689 0.65539 4.17689 0.280476 4.5518C-0.0934918 4.92672 -0.0934918 5.53509 0.280476 5.91L8.82177 14.4542C9.19187 14.8234 9.80884 14.8234 10.1781 14.4533Z" fill="#57ACE6" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="19" height="19" fill="white" transform="translate(0 19) rotate(-90)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </label>
                             </p>
                         </div>
                     </div>
                     <ul class="calc-roof-list">
-                        <li><a id="s-1" href="javascript:void(0)"> <img class="" style="border: 2px solid rgb(255, 255, 255);" src="./img/roof_type_1.jpg" alt="двухскатная"></a>
+                        <li><a id="s-1" href="javascript:void(0)"> <img class="img_active" style="border: 2px solid #57ACE5" src="./img/roof_type_1.jpg" alt="двухскатная"></a>
                             <p>Двускатная</p>
                         </li>
                         <li><a id="s-2" href="javascript:void(0)"> <img src="./img/roof_type_2.jpg" alt="вальмовая" style="border: 2px solid rgb(255, 255, 255);" class=""></a>
@@ -1487,12 +1516,12 @@
                         <li><a id="s-4" href="javascript:void(0)"> <img src="./img/roof_type_4.jpg" alt="мансардная" style="border: 2px solid rgb(255, 255, 255);" class=""></a>
                             <p>Мансардная</p>
                         </li>
-                        <li><a id="s-5" href="javascript:void(0)"> <img src="./img/roof_type_5.jpg" alt="многоскатная" style="border: 2px solid #57ACE5" class="img_active"></a>
+                        <li><a id="s-5" href="javascript:void(0)"> <img src="./img/roof_type_5.jpg" alt="многоскатная" style="border: 2px solid rgb(255, 255, 255);"></a>
                             <p>Многоскатная</p>
                         </li>
                     </ul>
                     <div id="tabs" class="roof-parameters-group">
-                        <div id="tabs-1" class="roof-parameters" style="display: none;">
+                        <div id="tabs-1" class="roof-parameters" style="display: block;">
                             <table class="mainTable">
                                 <colgroup>
                                     <col style="width: 250px;">
@@ -1668,7 +1697,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div id="tabs-5" class="roof-parameters" style="display: block;">
+                        <div id="tabs-5" class="roof-parameters" style="display: none;">
                             <table class="mainTable">
                                 <colgroup>
                                     <col style="width: 250px;">
@@ -1730,97 +1759,8 @@
                         </div>
                     </div>
                     <a name="result"></a>
-                    <div id="result" class="result">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Наименование</th>
-                                    <th>Кол-во</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Металлочерепица Монтеррей</td>
-                                    <td>0 м<sup>2</sup></td>
-                                </tr>
-                                <tr>
-                                    <td>Конёк</td>
-                                    <td>0 м</td>
-                                </tr>
-                                <tr>
-                                    <td>Торцевая планка</td>
-                                    <td>0 м</td>
-                                </tr>
-                                <tr>
-                                    <td>Саморез 4,8*35</td>
-                                    <td>0 шт</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p style="font-size:18px"><span style="font-weight:bold;">Стоимость: 0 руб.</span><br><br></p>
-                        <p style="font-size:16px"><span style="font-weight:bold;">Внимание: цена указана без учета отходов, нахлестов и монтажа. Для более точного расчета свяжитесь с нашим менеджером.</span></p>
-                        <p style="font-size:12px">Обращаем Ваше внимание на то, что вся представленная на сайте информация, касающаяся комплектаций, характеристик, цветовых сочетаний, а так же стоимости носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации, пожалуйста, обращайтесь в офис фирмы.</p>
-                    </div>
+                    <div id="result" class="result"></div>
                 </div>
-
-                <!-- <div class="g-select _select">
-				<button class="g-select__btn _selectBtn">Выберите материал:</button>
-
-				<ul class="g-select__dropdown _selectDropdown">
-					<li class="g-select__option _selectOption" data-nav-for="delivery-1">Металлочерепица Монтеррей</li>
-					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Самовывоз</li>
-					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Другие регионы</li>
-				</ul>
-			</div>
-
-			<div class="g-select _select">
-				<button class="g-select__btn _selectBtn">Выберите покрытие:</button>
-
-				<ul class="g-select__dropdown _selectDropdown">
-					<li class="g-select__option _selectOption" data-nav-for="delivery-1">Окрашенный</li>
-					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Самовывоз</li>
-					<li class="g-select__option _selectOption" data-nav-for="delivery-2">Другие регионы</li>
-				</ul>
-			</div>
-
-			<div class="g-tabs-nav">
-				<button class="g-tabs-nav__btn is-active" data-nav-for="delivery-1">
-					Двускатная
-				</button>
-
-				<button class="g-tabs-nav__btn" data-nav-for="delivery-2">
-					Вальмовая
-				</button>
-
-				<button class="g-tabs-nav__btn" data-nav-for="delivery-3">
-					Шатровая
-				</button>
-
-				<button class="g-tabs-nav__btn" data-nav-for="delivery-4">
-					Мансардная
-				</button>
-
-				<button class="g-tabs-nav__btn" data-nav-for="delivery-5">
-					Многоскатная
-				</button>
-
-			</div>
-
-			<div class="delivery__content is-active" data-tab="delivery-1">
-				1
-			</div>
-			<div class="delivery__content is-active" data-tab="delivery-2">
-				2
-			</div>
-			<div class="delivery__content is-active" data-tab="delivery-3">
-				3
-			</div>
-			<div class="delivery__content is-active" data-tab="delivery-4">
-				4
-			</div>
-			<div class="delivery__content is-active" data-tab="delivery-5">
-				5
-			</div> -->
 
             </div>
         </article>
@@ -2184,6 +2124,7 @@
             });
         </script>
         </script>
+
     </main>
     <footer class="footer">
         <div class="container">
@@ -2519,6 +2460,167 @@
             </div>
         </div>
     </footer>
+
+    <div class="scroll-top" onclick="global.scrollTop.topFunction();">
+        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="54" height="54" rx="3" fill="#DD2D1F" />
+            <g clip-path="url(#clip0)">
+                <path d="M27.3576 22.31L19.2658 30.4045C18.9115 30.7597 18.9115 31.3351 19.2658 31.6912C19.6201 32.0464 20.1955 32.0464 20.5498 31.6912L27.9996 24.2387L35.4494 31.6903C35.8037 32.0455 36.3791 32.0455 36.7343 31.6903C37.0886 31.3351 37.0886 30.7588 36.7343 30.4036L28.6425 22.3091C28.2919 21.9593 27.7074 21.9593 27.3576 22.31Z" fill="white" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="18" height="18" fill="white" transform="translate(37 18) rotate(90)" />
+                </clipPath>
+            </defs>
+        </svg>
+
+    </div>
+    <div onclick="global.popups.closePopup();" class="overlay _overlay">
+
+        <div onclick="event.stopPropagation();" class="popup popup__mounting _standartPopup">
+            <div onclick="global.popups.closePopup();" class="popup__close _popupClose">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M9.99418 9.00076L17.7938 1.20108C18.0684 0.926474 18.0684 0.481256 17.7938 0.206686C17.5192 -0.0678837 17.074 -0.0679188 16.7994 0.206686L8.99975 8.00637L1.2001 0.206686C0.925497 -0.0679188 0.480279 -0.0679188 0.20571 0.206686C-0.0688602 0.481291 -0.0688954 0.926509 0.20571 1.20108L8.00535 9.00072L0.20571 16.8004C-0.0688954 17.075 -0.0688954 17.5202 0.20571 17.7948C0.342994 17.9321 0.522959 18.0007 0.702923 18.0007C0.882888 18.0007 1.06282 17.9321 1.20014 17.7948L8.99975 9.99515L16.7994 17.7948C16.9367 17.9321 17.1166 18.0007 17.2966 18.0007C17.4766 18.0007 17.6565 17.9321 17.7938 17.7948C18.0684 17.5202 18.0684 17.075 17.7938 16.8004L9.99418 9.00076Z" fill="#57ACE6" />
+                    </g>
+                    <defs>
+                        <clipPath>
+                            <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="popup__title">
+                Монтаж сайдинга
+            </div>
+
+            <div class="popup__desc">
+                Наши бригады знают всё о том, как работать с сайдингом. Фасад прослужит вам долгие годы,
+                т.к. специалисты учтут все нюансы и будут точно соблюдать технологию монтажа.
+            </div>
+
+            <div class="popup__phone">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M14.7162 10.5022C13.7366 10.5022 12.7747 10.349 11.8633 10.0478C11.4167 9.89542 10.8676 10.0352 10.595 10.3151L8.796 11.6732C6.70963 10.5595 5.42446 9.27475 4.32596 7.20404L5.64408 5.45188C5.98654 5.10988 6.10938 4.61029 5.96221 4.14154C5.65971 3.22529 5.50604 2.26392 5.50604 1.28392C5.50608 0.575958 4.93013 0 4.22221 0H1.28387C0.575958 0 0 0.575958 0 1.28387C0 9.39846 6.60158 16 14.7162 16C15.4241 16 16 15.424 16 14.7161V11.786C16 11.0781 15.424 10.5022 14.7162 10.5022Z" fill="#DD2D1F" />
+                    </g>
+                    <defs>
+                        <clipPath>
+                            <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <b>Телефон отдела монтажа:</b> <a href="">8 (3452) 57-47-10</a>
+            </div>
+
+            <div class="popup__desc">
+                Оставьте заявку и <div class="red">получите скидку 5%</div> на монтаж сайдинга
+            </div>
+
+            <form action="" onsubmit="global.form.submit();" class="popup__form">
+                <div class="popup__form-item">
+                    <div class="popup__form-sort">
+                        1
+                    </div>
+                    <div class="popup__form-right">
+                        <div class="popup__form-title">Введите имя</div>
+                        <input type="text" placeholder="Иван" value="Иван" class="popup__form-input error">
+                        <span class="text__error">текст ошибки длинный</span>
+                    </div>
+                </div>
+                <div class="popup__form-item">
+                    <div class="popup__form-sort">
+                        2
+                    </div>
+                    <div class="popup__form-right">
+                        <div class="popup__form-title">Ваш телефон</div>
+                        <input type="text" placeholder="+7 (943) 000 - 00 - 00" class="popup__form-input">
+                    </div>
+                </div>
+                <button class="g-btn">
+                    Заказать монтаж
+                </button>
+                <p>Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с Политикой конфиденциальности</p>
+            </form>
+        </div>
+
+        <div onclick="event.stopPropagation();" class="popup popup__calc _callPopup">
+
+            <div onclick="global.popups.closePopup();" class="popup__close _popupClose">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M9.99418 9.00076L17.7938 1.20108C18.0684 0.926474 18.0684 0.481256 17.7938 0.206686C17.5192 -0.0678837 17.074 -0.0679188 16.7994 0.206686L8.99975 8.00637L1.2001 0.206686C0.925497 -0.0679188 0.480279 -0.0679188 0.20571 0.206686C-0.0688602 0.481291 -0.0688954 0.926509 0.20571 1.20108L8.00535 9.00072L0.20571 16.8004C-0.0688954 17.075 -0.0688954 17.5202 0.20571 17.7948C0.342994 17.9321 0.522959 18.0007 0.702923 18.0007C0.882888 18.0007 1.06282 17.9321 1.20014 17.7948L8.99975 9.99515L16.7994 17.7948C16.9367 17.9321 17.1166 18.0007 17.2966 18.0007C17.4766 18.0007 17.6565 17.9321 17.7938 17.7948C18.0684 17.5202 18.0684 17.075 17.7938 16.8004L9.99418 9.00076Z" fill="#57ACE6" />
+                    </g>
+                    <defs>
+                        <clipPath>
+                            <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="popup__title">
+                Получите быстрый
+                и точный <div class="red">расчет стоимости</div> вашей кровли
+            </div>
+
+            <form action="" onsubmit="global.form.submit();" class="popup__form">
+                <div class="popup__form-item">
+                    <div class="popup__form-sort">
+                        1
+                    </div>
+                    <div class="popup__form-right">
+                        <div class="popup__form-title">Введите площадь кровли</div>
+                        <input type="text" placeholder="Например, 180 м кв" class="popup__form-input">
+                    </div>
+                </div>
+                <div class="popup__form-item">
+                    <div class="popup__form-sort">
+                        2
+                    </div>
+                    <div class="popup__form-right">
+                        <div class="popup__form-title">Материал</div>
+                        <div>Металлочерепица Монтеррей</div>
+                    </div>
+                </div>
+                <div class="popup__form-item">
+                    <div class="popup__form-sort">
+                        3
+                    </div>
+                    <div class="popup__form-right">
+                        <div class="popup__form-title">Считаем в комплекте с доборными элементами?</div>
+                        <div class="popup__form-wr">
+                            <div>
+                                <input class="g-checkbox__radio" id="radio1" type="radio" name="yes" checked>
+                                <label for="radio1">Да</label>
+                            </div>
+                            <div>
+                                <input class="g-checkbox__radio" id="radio2" type="radio" name="yes">
+                                <label for="radio2">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__form-item">
+                    <div class="popup__form-sort">
+                        4
+                    </div>
+                    <div class="popup__form-right">
+                        <div class="popup__form-title">Ваш телефон</div>
+                        <input type="text" placeholder="+7 (943) 000 - 00 - 00" class="popup__form-input">
+                    </div>
+                </div>
+                <button class="g-btn">
+                    Получить расчет
+                </button>
+                <p>Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с Политикой конфиденциальности</p>
+            </form>
+
+        </div>
+
+    </div>
+    <script src="js/vendors/fslightbox.js"></script>
 </body>
 
 </html>
