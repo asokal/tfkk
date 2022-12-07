@@ -6,8 +6,6 @@ GitHub Pages: [asokal.github.io/tfkk](https://asokal.github.io/tfkk/page-list.ht
 
 Сборщик Gulp, шаблонизатор Twig, препроцессор SCSS, vanilla JS(ES6).
 
-Если при инсталляции пакетов или запуске Gulp всплывает ошибка node-sass - переключите node на версию 14.
-
 ## Project Setup
 
 ```sh
